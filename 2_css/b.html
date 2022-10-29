@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/b.css">
+    <title>b_css</title>
+</head>
+<>
+<pre>
+- backdrop-filter : 요소의 뒤의 영역에 그래픽효과를 적용하는데 사용(blur,brightness,contrast,drop-shadow,grayscale,invert)
+- backface-visibility : 요소의 뒷면(앞면의 미러이미지)이 표시되어야 하는지 여부를 정의합니다
+- background : 배경에 이미지를 부담 없이 깔아주는것
+attachment : 배경이미지가 페이지의 나머지 부분과 함께 스크롤되는지 또는 고정되는지 여부를 설정합니다
+blendmode : 각배경 레이어 (색상 및/또는 이미지)의 혼합 모드를 정의
+clip : 요소내에서의 배경이 확장되어야 하는 거리를 지정
+color: 배경색
+origin:배경이미지의 원점위치(배경 위치 지정영역)를 지정
+(background-origin:padding-box,content-box,border-box)
+
+position:배경이미지의 시작위치를 설정
+repeat:배경이미지의 반복여부를 정하는것
+size:배경이미지의 크기를 지정
+- border : 테두리를 의미함
+- box-shadow :
+- box-sizing :
+</pre>  
+
+<h1>
+Backdrop-filter
+</h1>
+<hr>
+<div class="background">
+    <div class="transbox">
+        <p>backdrop-filter:blur(5px)</p>
+    </div>
+</div>
+
+<h1>backface-visibility</h1>
+<div id="div1">DIV 1</div>
+<div id="div2">DIV 2</div>
+
+<h1>background</h1>
+<div class="bg">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates praesentium et voluptatibus architecto accusamus incidunt necessitatibus, soluta, sed laborum ipsam officia nam nihil numquam ut vel repellat nobis, ullam a?
+</div>
+
+<h1>background-attachement</h1>
+<pre>
+- scroll : 배경이미지가 페이지와 함께 스크롤 됨(기본값)
+- fixed : 페이지와 함께 스크롤 되지 않음
+- local : 요소의 내용과 함께 스크롤됩니다
+</pre>
+<p>
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quasi enim repudiandae tempore nam, libero facere nulla alias pariatur error. Animi nam suscipit explicabo assumenda repellendus a commodi, vel aut doloremque nihil quas? Fugiat repudiandae quisquam facere doloribus, maiores praesentium ex ab amet dolores inventore accusantium voluptatem optio provident corporis officiis hic placeat eius, dolorum explicabo. Dignissimos perspiciatis voluptas recusandae ab odit a temporibus beatae dolore hic quaerat repellendus aliquid illo id expedita dolorem, numquam aut delectus pariatur enim laborum quibusdam voluptates est suscipit? Deserunt officia repudiandae obcaecati debitis magnam laborum, saepe nisi minima iste nostrum nesciunt. Deserunt, tempora optio?
+</p>
+<div class="fixed-bg"></div>
+<div style="height:800px;background-color:yellow;">
+<!-- 태그안에 스타일 적용이 인라인 스타일 입니다-->
+this div is only here
+</div>
+
+<h1>blendmode</h1>
+<div id="myDIV"></div>
+
+<h1>background-clip</h1>
+<pre>
+- border-box : 기본값이고 배경이 테두리 뒤로 확장됩니다
+- padding-box : 테두리의 안쪽 가장자리까지 확장됩니다
+- content-box : 콘텐츠 상자의 가장자리까지 확장됩니다
+</pre>
+
+<p>border-box</p>
+<div id="ex1">기본값이고 배경이 테두리 뒤로 확장</div>
+
+<p>padding-box</p>
+<div id="ex2">테두리의 안쪽 가장자리까지 확장</div>
+
+<p>content-box</p>
+<div id="ex3">콘텐츠 상자의 가장자리까지 확장</div>
+
+<h1>background-position</h1>
+<prE>
+- left top (x%, y%, xp, yp)
+- left center
+- left bottom
+- right top
+- right center
+- right bottom
+- center top
+- center center
+- center bottom
+</prE>
+
+<h1>background-size</h1>
+<pre>
+- auto :  기본값 배경이미지가 원래크기로 표시 됩니다
+- cover : 전체 컨테이너를 덮도록 배경이미지 조정해 주는 방법
+- contain : 이미지가 완전히 보이도록 배경이미지 크기를 조정
+</pre>
+
+<h1>border, border-radius</h1>
+<pre>
+- border-collapse:collapse; 테두리 겹침 방지
+- border-spacing:인접한 셀의 경계 사이의 거리를 설정(테이블)
+</pre>
+<div class="border">
+보더적용
+</div>
+
+<h1>box-shadow</h1>
+<pre>
+- box-shadow : 5px 10px; => 그림자에 검정색으로 블러가 제외되고 실행
+- box=shadow : 5px 10px #888;
+</pre>
+
+<div class="box-shadow">
+    그림자 만들기
+</div>
+
+<h1>box-sizing</h1>
+<prE>
+- border-box : 테두리를 추가해도 원래 가지고 있는 사이즈에 변동이 없다..
+- content-box : 원래 가지고 있는 사이즈에 테두리 패딩이 더해져서
+사이즈에 변동이 생기는 것..
+</prE>
+<button class="btn border-box">box-sizing</button>
+<button class="btn content-box">box-sizing</button>
+</body>
+</html>
