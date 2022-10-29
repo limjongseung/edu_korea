@@ -1,3 +1,4 @@
+html{ font-size: 14px; }
 #div1{
 position:relative;
 height:150px;
@@ -14,3 +15,35 @@ background:#333;
 transform-style:preserve-3d;/*3d공간 생성*/
 transform:rotateX(45deg);/*x축으로 45도 회전*/
 }
+textarea{
+  resize: none;
+}
+::placeholder{
+  /* text-indent: 10px; */
+  padding-left: 10px;
+  color: #666;
+  /* em = 기본 폰트사이즈를 기준으로 크기  */
+  font-size: 0.8rem;/* 14 * 0.8 */
+  /* font-size: 2em;-> 28px */
+}
+#t1{
+  tab-size: 4;
+}
+#t2{
+  tab-size: 16;
+}
+#a{
+  quotes: "#""#""#""#";
+}
+
+
+
+
+
+
+
+
+
+
+
+
