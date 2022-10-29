@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/cutomizing.css">
+  <title>bootstrap</title>
+</head>
+<body>
+  <h1>bootstrap 4 grid systems</h1>
+  <pre>
+    - 그리드시스템은 flexbox로 구축 되었으며 페이지 전체 최대 12개의 열을 허용합니다.
+    - 그리드 class
+    - .col : (초소형기기 - 화면 너비가 576px 미만)
+    - .col-sm : (소형기기 - 화면 너비가 576px 이상)
+    - .col-md : (중형기기 - 화면 너비가 768px 이상)
+    - .col-lg : (대형기기 - 화면 너비가 992px 이상)
+    - .col-xl : (Xlarge장치 - 화면 너비가 1200px 이상)
+  </pre>
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="mt-5 mb-5">
+          Text / Typography
+        </h1>
+        <p>부트스트랩 4는 폰트사이즈가 16px의 기본값 가지고 있고, <br> 행간은 1.5입니다. <br>
+        font-family는
+        우리나라 서체는 자간을 -15 ~ -50 영문 숫자 중국어 자간 0 
+      </p>
+      <div class="flex mb-3">
+        <h1>h1-heading</h1><small>(2.5rem = 40px)</small>
+      </div>
+      <div class="flex mb-3">
+        <h2>h2-heading</h2><small>(2rem = 32px)</small>
+      </div>
+      <div class="flex mb-3">
+        <h3>h3-heading</h3><small>(1.75rem = 28px)</small>
+      </div>
+      <div class="flex mb-3">
+        <h4>h4-heading</h4><small>(1.5rem = 24px)</small>
+      </div>
+      <div class="flex mb-3">
+        <h5>h5-heading</h5><small>(1.25rem = 32px)</small>
+      </div>
+      <div class="flex mb-3">
+        <h6>h6-heading</h6><small>(1rem = 16px)</small>
+      </div>
+      </div>
+    </div><!-- row END -->
+    <div class="container-lg">
+      <div class="col-12">
+        <h1 class="mt-5">Display Heading</h1>
+        <p>display-1 ~ 4</p>
+        <p>일단 h시리즈 보다 더 크다</p>
+        <h1 class="display-1">display 1</h1>
+        <h1 class="display-2">display 2</h1>
+        <h1 class="display-3">display 3</h1>
+        <h1 class="display-4">display 4</h1>
+        <h1 class="mt-5">
+          Colors
+        </h1>
+        <p class="text-muted">text-muted</p>
+        <p class="text-primary">text-primary</p>
+        <p class="text-success">text-success</p>
+        <p class="text-info">text-info</p>
+        <p class="text-warning">text-warning</p>
+        <p class="text-danger">text-danger</p>
+        <p class="text-secondary">text-secondary</p>
+        <p class="text-dark">text-dark</p>
+        <p class="text-body">text-body</p>
+        <p class="text-light">text-light</p>
+        <p class="text-white">text-white</p>
+      </div>
+      <h1 class="pt5">BG_color</h1>
+      <aside class="bg-primary text-white-50">bg-primary</aside>
+      <aside class="bg-success text-white-50">bg-success</aside>
+      <aside class="bg-info text-white-50">bg-info</aside>
+      <aside class="bg-warning text-white-50">bg-warning</aside>
+      <aside class="bg-danger text-white-50">bg-danger</aside>
+      <aside class="bg-secondary text-white-50">bg-secondary</aside>
+      <aside class="bg-dark text-black-50">bg-dark</aside>
+      <aside class="bg-light">bg-light</aside>
+    </div>
+  </div><!-- container END -->
+  
+</body>
+</html>

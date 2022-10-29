@@ -5,11 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>bootstrap</title>
-  <link rel="stylesheet" href="css/sytle.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="css/cutomizing.css">
 </head>
 
@@ -24,21 +23,118 @@
   </pre>
   <div class="container border" ><!-- 랩핑 -->
     <div class="row border"><!-- 줄 -->
-      <div class="col-4  border h-100" style="background-color: red;">
+      <div class="col-4  border" style="background-color: red;">
         col-4
-        <br><br><br>
       </div>
-      <div class="col-4  border h-100" style="background-color: blue;">
+      <div class="col-4  border" style="background-color: blue;">
         col-4
-        <br><br><br>
       </div>
-      <div class="col-4  border h-100" style="background-color: green;">
+      <div class="col-4  border" style="background-color: green;">
         col-4
-        <br><br><br>
       </div>
     </div>
   </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="mt-5 mb-5">
+          컨테이너 분기점
+        </h1>
+        <table class="table">
+          <caption>베이직 테이블</caption>
+          <!-- <colgroup>
+            <col>
+          </colgroup> -->
+          <thead>
+            <tr>
+              <th></th>
+              <th>576px 미만</th>
+              <th>576px 이상</th>
+              <th>768px 이상</th>
+              <th>992px 이상</th>
+              <th>1200px 이상</th>
+            </tr>
+          </thead>
+          <!-- thead END -->
+          <tbody>
+            <tr>
+              <td>.container</td> 
+             <td class="cy"><mark>100%</mark></td>
+              <td>540px</td>
+              <td>720px</td>
+              <td>960px</td>
+              <td>1140px</td>
+            </tr>
+            <tr>
+              <td>.container-sm</td> 
+             <td class="cy"><mark>100%</mark></td>
+              <td>540px</td>
+              <td>720px</td>
+              <td>960px</td>
+              <td>1140px</td>
+            </tr>
+            <tr>
+              <td>.container-md</td> 
+             <td class="cy"><mark>100%</mark></td>
+             <td class="cy"><mark>100%</mark></td>
+              <td>720px</td>
+              <td>960px</td>
+              <td>1140px</td>
+            </tr>
+            <tr>
+              <td>.container-lg</td> 
+             <td class="cy"><mark>100%</mark></td>
+             <td class="cy"><mark>100%</mark></td>
+             <td class="cy"><mark>100%</mark></td>
+              <td>960px</td>
+              <td>1140px</td>
+            </tr>
+            <tr>
+              <td>.container-xl</td> 
+             <td class="cy"><mark>100%</mark></td>
+             <td class="cy"><mark>100%</mark></td>
+             <td class="cy"><mark>100%</mark></td>
+             <td class="cy"><mark>100%</mark></td>
+              <td>1140px</td>
+            </tr>
+            <tr>
+              <td>.container-fluid</td> 
+             <td class="cy"><mark>100%</mark></td>
+             <td class="cy"><mark>100%</mark></td>
+             <td class="cy"><mark>100%</mark></td>
+             <td class="cy"><mark>100%</mark></td>
+             <td class="cy"><mark>100%</mark></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th></th>
+              <th>576px 미만</th>
+              <th>576px 이상</th>
+              <th>768px 이상</th>
+              <th>992px 이상</th>
+              <th>1200px 이상</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+  <h1>background</h1>
+  <div class="container p-3 border">
+    <h1>my first</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, quidem molestiae!</p>
+  </div>
 
+  <div class="container p-3 my-3 bg-dark text-white">
+    <h1>my first</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, quidem molestiae!</p>
+  </div>
+  
+  <div class="container p-3 my-3 bg-primary text-white">
+    <h1>my first</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, quidem molestiae!</p>
+  </div>
   
 </body>
 </html>

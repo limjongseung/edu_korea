@@ -1,6 +1,20 @@
-
-
-
+caption{
+  display: none;
+}
+html,html * {
+  letter-spacing: 0px !important;
+  word-spacing: 20px;
+}
+/* grid */
+.flex{
+  display: flex;
+  justify-content: center; /* 가로정렬 */
+  align-items: center; /* 세로정렬 */
+}
+small{
+  margin: 0 0 0 5%;
+}
+/* table */
 
 
 
