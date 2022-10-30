@@ -2,8 +2,8 @@ caption{
   display: none;
 }
 html,html * {
-  letter-spacing: 0px !important;
-  word-spacing: 20px;
+  /* letter-spacing: 0px !important;
+  word-spacing: 20px; */
 }
 /* grid */
 .flex{
@@ -17,6 +17,16 @@ small{
 /* table */
 
 
+
+
+/* ************images*****************  */
+img.rounded, img.rounded-circle, img.img-thumbnail {
+  width: 80%;
+  text-align: center;
+}
+.red_bg{
+  background: red !important;
+}
 
 
 
