@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장함수</title>
+</head>
+<body>
+    <h1>eval(): 문자열을 코드로 인식하게 하는 함수입니다.</h1>
+    <p>문법 : eval(string)</p>  
+    <p>(2+2) => 4</p>
+    <script>
+        var letter = "2+2";
+        document.write("<p>" + letter + "</p>");
+        document.write("<p>" + eval(letter) + "</p>");
+    </script>
+    <h1>isFinite() : 유한한 수인지 검사</h1>
+    <script>
+        let num = 19;
+        var a = 123.123;
+        var b = Infinity;
+        var c = "난 숫자가 아님"
+        if(isFinite(num)){
+            document.write("<p>" + num + "는 유한한 수 입니다.</p>");
+        } else{
+            document.write("<p>" + num + "는 무한한 수 입니다.</p>");
+        }
+        if(isFinite(a)){
+            document.write("<p>" + a + "는 유한한 수 입니다.</p>");
+        } else{
+            document.write("<p>" + a + "는 무한한 수 입니다.</p>");
+        }
+        if(isFinite(b)){
+            document.write("<p>" + b + "는 유한한 수 입니다.</p>");
+        } else{
+            document.write("<p>" + b + "는 무한한 수 입니다.</p>");
+        }
+        if(isFinite(c)){
+            document.write("<p>" + c + "는 유한한 수 입니다.</p>");
+        } else{
+            document.write("<p>" + c + "는 무한한 수 입니다.</p>");
+        }
+    </script>
+    <h1>isNaN() : 매개변수가 숫자인지 검사하는 함수</h1>
+    <pre>
+        -  nan(not a Number)
+        - 문법 : is NaN(value)
+        - 숫자가 아니면 true 이고 숫자이면 false
+    </pre>
+    <script>
+        var z = 123.123;
+        var x = "not a number";
+        document.write(isNaN(z)+ "<br>"+isNaN(x));
+    </script>
+    <h1>Number() : 문자열을 숫자로 변환하는 함수</h1>
+    <p>숫자로 변환할수없는 값인 경우 </p>
+    <script>
+        var q = "1";
+        var w = "2";
+        var e = q + w;
+        var r = Number(q)  + Number(w);
+        document.write(e + "<br>"+ r);
+    </script>
+    <h1>parseFloat(),parseInt() : 문자열를 수로 바꾸는 함수</h1>
+    <h2>parseFloat() : 문자열을 실수로 바꾸는 함수</h2>
+    <p>수로 싲가할 때 그수를 실수로 바꾸고 띄어쓰기가 있을 때는 첫번째숫자나 바꿈 공백으로 시작하면 공백은 수시 수가 아닌 문자로 시작하면 NaN을 리턴</p>
+    <script>
+        document.write(parseFloat("12.34") + "<br>");
+        document.write(parseFloat("   123")+ "<br>");
+        document.write(parseFloat(" 1234 567")+ "<br>");
+        document.write(parseFloat(" a 1234 567")+ "<br>");
+    </script>
+    <h2>parseInt() : 문자열을 정수로 바꾸는 함수</h2>
+    <pre>
+        - 문법 : parseInt(string,n)
+        - string을 n진법을때 값으로 바꿉니다. n옵션으로 2부터 36까지 입력할 수 있습니다. 입력하지않으면 10으로 처리
+        - 소수부분은 버림
+        -0x로 시작하면 16진법으로 처리
+
+        parseint("100",2) : 100은 2진법으로 4입니다.
+        parseint("0X100") : 100은 16진법으로 256입니다.
+    </pre>
+    <script>
+        document.write(parseInt("12.68")+"<br>"+ parseInt("100",10)+"<br>" + parseInt("100",2)+"<br>"+ parseInt("0x100")+"<br>")
+    </script>
+    <h1>String : 숫자를 문자열로 변환하는 함수</h1>
+    <script>
+        var a = 1;
+        var b = 2;
+        var c =a +b;
+        var d = String(a) + String(b);
+        document.write(c + "<br>" + d);
+
+    </script>
+    
+</body>
+</html>

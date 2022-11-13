@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>자바스크립트 배열객체</h1>
+    <p><mark>단일변수에 </mark> 여러값을 저장하는데 사용됩니다.</p>
+    <p>배열 인덱스는  0부터 시작합니다.</p>
+    <pre>
+        - 하나이상의 값을 가질 수 있는 특수변수
+        - 배열을 사용하는 이유는 자동차를 탐색하는 데 3개가 300대입니다. 
+        이럴때 솔루션으로 배열을 사용하는 겁니다.
+        - 인덱스번호[0]를 참조하여 값을 액세스 할수 있음
+        - const라는 키워드로 배열을 선언하는 것이 일반적
+        -2015년에 const(재할당 할수 없음)하는 걸 사용해서 배열선언이 일반적으로 됨
+    </pre>
+    <mark id="demo"></mark>
+    <script>
+        const cars = ["Saab","Volvo","BMW"];
+        document.getElementById("demo").innerHTML = cars;
+    </script>
+    <h1>키워드 new 사용</h1>
+    <article id="demo2"></article>
+    <script>
+        const cars2 = new Array("Saab","Volvo","BMW");
+        document.getElementById("demo2").innerHTML = cars2;
+    </script>
+    <h1>배열 요소 액세스</h1>
+    <div id="view"></div>
+    <script>
+        const car3 = ["a","b","c"];
+        document.getElementById("view").innerHTML = car3[2];
+    </script>
+    <h1>배열 요소 변경</h1>
+    <p>첫번째 요소의 값을 변경합니다.</p>
+    <div id="see">
+
+    </div>
+    <script>
+        const order = ["첫번째","two","three"]
+        order[0] =  "one"
+        document.getElementById("see").innerHTML = order[0];
+    </script>
+    
+</body>
+</html>

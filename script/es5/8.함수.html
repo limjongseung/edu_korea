@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <h1>함수</h1>
+    <pre>
+        -함수를 쓰는 방법-
+        1) 
+        function function_name( argument1, argument2...){
+
+        }
+
+        2)
+        var functionname = function( argument1, argument2...){
+
+        }
+        함수호출
+        functionname(value1,..)
+    </pre>
+        <h2>방법1</h2>
+        <script>
+            function ljs(){
+                document.write("<p>내이름은 임종승입니다.</p>")
+            }
+            ljs();
+        </script>
+        <h2>방법2</h2>
+        <script>
+            var myname  = function(){
+                document.write("<p>my name is lim jong seung</p>")
+            }
+            myname();
+        </script>
+        <h2>매개변수(parameter) 사용</h2>
+        <style>
+            h1{
+                font-family: Consolas;
+            }
+            h1 span{
+                color:#2196f3;
+            }
+
+        </style>
+        <script>
+            function ljs(myName, myjob){
+                document.write("<h1>my name is  <span>" +myName+ "</span> i am a <span>" + myjob+ "</span></h1>")
+            }
+            ljs("임","학생")
+            ljs("lim","student")
+        </script>
+        <pre>
+            - 함수 사용시 주의사항 -
+            1) 호출을 해야 실행
+            2) 매개변수 사용시 매개변수 수만큼 사용
+        </pre>
+
+</body>
+</html>
