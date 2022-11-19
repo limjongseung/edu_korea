@@ -30,7 +30,52 @@
       return a <19;
     }
   </script>
-  
+  10) foreach() : 인덱스번호가 나오면서 리스트로 출력됨
+  11)from : 길이속성이 있는 객체에서 배열을 리턴
+  -공백까지 인식
+  <kbd id="kbd" ></kbd>
+  <script>
+    let text = "길이속성이 있는 객체에서 배열을 리턴"
+    const myArr = Array.from(text);
+    document.getElementById("kbd").innerHTML = myArr;
+  </script>
+  12)indexOf() : 검색한 해당키워드에 첫번째 인덱스를 리턴
+  <div id="first_name"></div>
+  <dl id="first"></dl>
+  <script>
+    const fs = ["apple","mango","orange","lemon","grape"]
+    let index = fs.indexOf("mango");
+    document.getElementById("first").innerHTML = index;
+    document.getElementById("first_name").innerHTML = fs[index];
+  </script>
+  13) isArray() : 객체가 배열이면 true, 객체가 배열이 아니면 false
+  <div id="boolean"></div>
+  <script>
+    const fs1 = "apple"
+    document.getElementById("boolean").innerHTML = Array.isArray(fs1);
+  </script>
+
+  14)join : 기존에 배열을 변경하지 않고 워딩사이에 무언가 추가할때 사용
+  <nav id="dd"></nav>
+  <script>
+    const cars = ["Benz","Auid","kia","hyundai","bmw","lamborrgini","ferry"]
+    let text1 = cars.join("그리고");
+    document.getElementById("dd").innerHTML = text1;
+  </script>
+  15)keys() : 배열을 인덱스키(숫자)로 리턴 키가 있는 Array Iterator 객체
+  <div id="ffff"></div>
+  <script>
+    const nums = [1,23,5,61,34,3]
+    const kkk = nums.keys();
+    let text2 = "";
+    for(let i of kkk){
+      text2+= i + "<br>"
+    }
+    document.getElementById("ffff").innerHTML = text2;
+  </script>
+  <script>
+
+  </script>
 </pre>
 </body>
 </html>
