@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>data</title>
+  <link rel="stylesheet" href="black.css">
+</head>
+<body>
+  <h1>date</h1>
+  <pre>
+    -date객체는 날짜 및 시간과 함께 작동됩니다.
+    -new Date(), new Date(milliseconds),new Date(dateString),new Date()
+    new Date(year,month,day,hours,minutes,seconds,milliseconds)
+    <p id="demo"></p>
+    <script>
+      const d = new Date();
+      document.getElementById("demo").innerHTML = d;
+    </script>
+    - 자바스크립트는 1970년 1월 1일 부터 날짜를 밀리초단위로 저장합니다.
+    1970년 1월 1일부터 10000000000밀리초는 대략 1973년 3월 3일
+    <p id="dd"></p>
+    <script>
+      const dd = new Date(100000000000);
+      document.getElementById("dd").innerHTML = dd;
+    </script>
+    - 날짜 강제로 넣기
+    <p id="cc"></p>
+    <script>
+      const ds = new Date("2018-03-26");
+      document.getElementById("cc").innerHTML = ds;
+    </script>
+    - 날짜 강제로 디테일하게 넣기(넘버)
+    <p id="ccc"></p>
+    <script>
+      const dsd = new Date(2018,11,24,10,33,30,0);
+      document.getElementById("ccc").innerHTML = dsd;
+    </script>
+
+    날짜메서드
+    - 1)constructor : 날짜 생성자를 가져옴 function Date(){[native code]}
+    - 2)getDate() :  해당 월의 날짜를 가져옴 (날짜의 일자를 1 ~ 31을 리턴)
+    <p id="today"></p>
+    <script>
+      const q = new Date();
+      let day = q.getDate();
+      document.getElementById("today").innerHTML  = day;
+    </script>
+    - 3)getDay() : 날짜의 요일을 리턴(인덱스번호로)
+    0~6(일요일)
+    <p id="tg"></p>
+    <script>
+      const w = new Date();
+      let gd = w.getDay();
+      document.getElementById("tg").innerHTML  = gd;
+    </script>
+    - 4)getFullYear() : 날짜의 전체년도 (4자리)를 리턴
+    - 5)getHours() : 
+    - 6)getMilliseconds() : 
+    - 7)getMinutes() : 
+    - 8)getMonth() : 
+    - 9)getSeconds() : 
+    - 10)getTime() : 
+    - 11)getTimezoneOffset() : 
+    - 12)getUTCDay() : 
+    - 13)getUTCFullYear() : 
+    - 14)getUTCHours() : 
+    - 15)getUTCMilliseconds() : 
+    - 16)getUTCMinutes() : 
+    - 17)getUTCMonth() : 
+    - 18)getUTCSeconds() : 
+    - 19)getYear() : 
+    - 20)now() : 
+    - 21)parse() : 
+    - 22)prototype : 
+    - 23)setDate() : 
+    - 24)setFullYear() : 
+    - 25)setHours() : 
+    - 26)setMiliseconds() : 
+    - 27)setMinutes() : 
+    - 28)setMonth() : 
+    - 29)setSeconds() : 
+    - 30)setTime() : 
+    - 31)setUTCDate() : 
+    - 32)setUTCFullYear() : 
+    - 33)setUTCHours() : 
+    - 34)setUTCMilliseconds() : 
+    - 35)setUTCMinutes() : 
+    - 36)setUTCMonth() : 
+    - 37)setUTCSeconds() : 
+    - 38)setYear() : 
+    - 39)toDateString() : 
+    - 40)toGMTString() : 
+    - 41)toJSON() : 
+    - 42)toLocaleDateString() : 
+    - 43)toLocaleTimeString() : 
+    - 44)toLocaleString() : 
+    - 45)toString() : 
+    - 46)toTimeString() : 
+    - 47)toUTCString() : 
+    - 48)UTC() : 
+    - 49)valueOf() : 
+  </pre>
+  
+</body>
+</html>
