@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열 메서드</title>
+</head>
+<body>
+  <pre>
+    23) reduceRight() : 배열요소에 대한 감속기함수 방법은 오른쪽에서 왼쪽으로 작동
+    <p id="test1"></p>
+    <script>
+      const number =[175,50,25];
+      document.getElementById("test1").innerHTML = number.reduceRight(myFunc);
+      let myFunc = (total,num)=>{
+        return total -num;
+      }
+    </script>
+    24) reverse() : 배열의 요소순서를 반대로 바꿉니다. 
+    <p id="test2"></p>
+    <script>
+      const fruits = ["apple","mango","watermelon","orange"]
+      document.getElementById("test2").innerHTML = fruits.reverse();
+    </script>
+    25) shift() : 배열의 첫번째 항목을 제거합니다.
+    <div id="test3"></div>
+    <script>
+      const Rem = ["제거될 대상",3,5,7,9]
+      // 기존의 배열을 변형시킨다.
+      Rem.shift();
+      document.getElementById("test3").innerHTML = Rem;
+    </script>
+    26) slice() : 배열에서 지정된 범위만큼 추출해서 새배열로 만들어 줍니다.
+    <p id="test4"></p>
+    <script>
+      const news = ["o","j","s","z","q","zmij"]
+      const citrus  = news.slice(1,3)
+      document.getElementById("test4").innerHTML = citrus;
+    </script>
+    27) some() : 배열요소가 하나라도 테스트를 통과하는지 확인하고 (콜백함수로 제공됩니다.)
+    <!-- 값이 boolean 값으로 나온다는 점 true,false -->
+    <p id="test5"></p>
+    <script>
+      const ages = [3,10,11,69,37]
+      let checkAdult = (age)=>{
+        return age > 19;
+      }
+      document.getElementById("test5").innerHTML = ages.some(checkAdult);
+    </script>
+
+    28) sort() : 배열의 요소를 정렬 원래배열을 덮어씁니다.
+    <p id="test6"></p>
+    <script>
+      const AY = [9,3,2,5,1]
+      AY.sort();
+      AY.reverse();
+      document.getElementById("test6").innerHTML = AY;
+    </script>
+    29) splice() : 배열요소를 추가 및 제거합니다.
+    <p id="test7"></p>
+    <script>
+      const fs = ["banana","orange","apple","mango"]
+      fs.splice(3,0,"lemon","kiwi");
+      document.getElementById("test7").innerHTML = fs;
+    </script>
+    30) toString() : 쉼표로 구분된 배열값이 있는 문자열로 리턴
+    <p id="test8"></p>
+    <script>
+      const Myname = ["lim","jong","seung"]
+      MyNameToString = Myname.toString();
+      document.getElementById("test8").innerHTML = MyNameToString;
+    </script>
+    31) unshift() : 배열의 시작부분에 새요소를 추가합니다.
+    <div id="test9"></div>
+    <script>
+      const star= ["b",1,2,3];
+      star.unshift("lemon","pineapple")
+
+      document.getElementById("test9").innerHTML = star;
+    </script>
+    32) valueOf() : 배열자체를 리턴(똑같이 나온다고 보면 됩니다.)
+  </pre>
+  
+</body>
+</html>

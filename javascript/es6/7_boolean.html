@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>booleans</title>
+</head>
+<body>
+  <pre>
+    Booleans
+    - 두값중에 하나를 가질수 있습니다.
+    true, false  참이냐 거짓이냐를 확인해줍니다.
+    <p id="test1"></p>
+    <script>
+      document.getElementById("test1").innerHTML = Boolean(10 >9)
+    </script>
+
+    Boolean 메서드 및 속성
+    - constructor : Javascript의 Boolean 프로토타입을 생성한 함수를 반환합니다.
+    function Boolean(){[네이티브 코드]}
+    - prototype :  프로토타입에 속성 및 메서드를 추가할수 있습니다.
+    <p id="color"></p>
+    <script>
+      Boolean.prototype.myColor = function(){
+        if(this.valueOf()==true){
+          return "green"
+        } else {
+          return "red"
+        }
+      };
+      let a = true;
+      let b = false;
+      document.getElementById("color").innerHTML = a.myColor() + "  "+  b.myColor();
+    </script>
+    - toString() : Boolean값을 문자열로 변환하고 결과를 리턴
+    Boolean에 형태가 string 
+    
+    - valueOf() : Boolean에 기본값을 리턴
+    Boolean = false;
+  </pre>
+  
+</body>
+</html>
