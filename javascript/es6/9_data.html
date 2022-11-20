@@ -56,25 +56,94 @@
       document.getElementById("tg").innerHTML  = gd;
     </script>
     - 4)getFullYear() : 날짜의 전체년도 (4자리)를 리턴
-    - 5)getHours() : 
-    - 6)getMilliseconds() : 
-    - 7)getMinutes() : 
-    - 8)getMonth() : 
-    - 9)getSeconds() : 
-    - 10)getTime() : 
-    - 11)getTimezoneOffset() : 
-    - 12)getUTCDay() : 
-    - 13)getUTCFullYear() : 
-    - 14)getUTCHours() : 
-    - 15)getUTCMilliseconds() : 
-    - 16)getUTCMinutes() : 
-    - 17)getUTCMonth() : 
-    - 18)getUTCSeconds() : 
-    - 19)getYear() : 
-    - 20)now() : 
-    - 21)parse() : 
+    <p id="tf"></p>
+    <script>
+      const e = new Date();
+      let gf = e.getFullYear();
+      document.getElementById("tf").innerHTML  = gf;
+    </script>
+    - 5)getHours() : 날짜의 시간을 리턴(0~23)
+    <p id="th"></p>
+    <script>
+      const r = new Date();
+      let gh = r.getHours();
+      document.getElementById("th").innerHTML  = gh;
+    </script>
+    - 6)getMilliseconds() : 특정날짜의 밀리초(0~999)
+    <p id="tm"></p>
+    <script>
+      const t = new Date();
+      let gm = t.getMilliseconds();
+      document.getElementById("tm").innerHTML  = gm;
+    </script>
+    - 7)getMinutes() : 날짜의 분(0~59)를 리턴합니다.
+    <p id="tgm"></p>
+    <script>
+      const y = new Date();
+      let gmt = y.getMinutes();
+      document.getElementById("tgm").innerHTML  = gmt;
+    </script>
+    - 8)getMonth() : 날짜의 월(0~11)을 리턴합니다.
+    1월 = 0 2월 = 1
+    <p id="tgmm"></p>
+    <script>
+      const u = new Date();
+      let gmtm = u.getMonth();
+      document.getElementById("tgmm").innerHTML  = gmtm;
+    </script>
+    - 9)getSeconds() : 날짜의 초를 리턴합니다.(0~59)
+    <p id="tgs"></p>
+    <script>
+      const i = new Date();
+      let gms = i.getSeconds();
+      document.getElementById("tgs").innerHTML  = gms;
+    </script>
+    - 10)getTime() : 1970년 1월 1일 00:00:00 이후의 밀리초수를 리턴
+    <p id="tgt"></p>
+    <script>
+      const o = new Date();
+      let gmst = o.getTime();
+      document.getElementById("tgt").innerHTML  = gmst;
+    </script>
+    - 11)getTimezoneOffset() : UTC시간과 현지시간 차이를 리턴합니다.
+    UTC+9
+    <p id="tu"></p>
+    <script>
+      const p = new Date();
+      let gutc = p.getTimezoneOffset();
+      document.getElementById("tu").innerHTML  = gutc;
+    </script>
+    -GMT(그리니치 표준시)와 동일
+    - 12)getUTCDate() : 날짜 객체의 일 (1~31)을 리턴
+    - 12)getUTCDay() : 날짜 객체의 요일 (0~6)을 리턴
+    - 13)getUTCFullYear() : 날짜의 연도를 리턴
+    - 14)getUTCHours() : 날짜의 시간(0~23)을 리턴
+    - 15)getUTCMilliseconds() : 날짜의 밀리초(0~999)
+    - 16)getUTCMinutes() : 날짜의 분(0~59)
+    - 17)getUTCMonth() : 날짜의 월(0~11)을 리턴
+    - 18)getUTCSeconds() : 날짜의 초(0~59)를 리턴
+    - 19)getYear() : getFullYear로 대체
+    - 20)now() : 1970년 1월 1일 이후의 밀리초 수를 리턴 
+    구문= Date.now();
+    <div id="ggg"></div>
+    <script>
+      let after = Date.now();
+      document.getElementById("ggg").innerHTML= after;
+    </script>
+    - 21)parse() : 1970년 1월 1일 이후의 시차를 리턴
+    <div id="par"></div>
+    <script>
+      let ar = Date.parse("March 20,2012");
+      document.getElementById("par").innerHTML= ar;
+    </script>
     - 22)prototype : 
-    - 23)setDate() : 
+    - 23)setDate() : 지금날짜에서 이전 날짜로 설정할때 사용
+    <div id="hold"></div>
+    <script>
+      let old = new Date();
+      old.setDate(10);
+      document.getElementById("hold").innerHTML= old;
+    </script>
     - 24)setFullYear() : 
     - 25)setHours() : 
     - 26)setMiliseconds() : 
