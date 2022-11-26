@@ -34,10 +34,54 @@
 
      2) RangeError : "범위를 벗어난 숫자가 발생했습니다."
      숫자의 유효자릴수를 500으로 설정할 수 없습니다.
-     <p></p>
+     <p id="d2"></p>
      <script>
-
-     </script>
+      let num = 1.00000;
+      try{
+        num.toPrecision(500);
+      }catch(err){
+        document.getElementById("d2").innerHTML = `${err.name}`
+      }
+    </script>
+    3)ReferenceError: 잘못된 참조가 발생했습니다.
+    <p id="d3"></p>
+    <script>
+      let x = 5;
+      let y = 1;
+      try{
+        x = z+1;
+      }catch(err){
+        document.getElementById("d3").innerHTML = err.name + "<br>" + err.message;
+      }
+    </script>
+    4)SyntaxError: 구문오류가 발생했습니다.
+    <p id="d4"></p>
+    <script>
+      try{
+        eval("'hello")
+      } catch(err){
+        document.getElementById("d4").innerHTML = err.name + "<br>" + err.message;
+      }
+    </script>
+    TypeError: 유형 오류
+    <p id="d5"></p>
+    <script>
+      let small = 1;
+      try{
+        small.toUpperCase();
+      }catch(err){
+        document.getElementById("d5").innerHTML = err.name + "<br>" + err.message;
+      }
+    </script>
+    UTIError: encodeURI()에서 오류가 발생했습니다.
+    <p id="d6"></p>
+    <script>
+      try{
+        decodeURI("http://www.daum.et");
+      }catch(err){
+        document.getElementById("d6").innerHTML = err.name +"<br>" + err.message;
+      }
+    </script>
   </pre>
 </body>
 </html>
