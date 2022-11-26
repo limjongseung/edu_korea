@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오류객체</title>
+</head>
+<body>
+  <h1>Error Object</h1>
+  <pre>
+    error 객체는 오류가 발생할때 오류 정보를 제공합니다.
+    - Error 명
+    EvalError: 평가오류(더이상 사용하지않음)
+    RangeError: "범위를 벗어난 숫자가 발생했습니다."
+    ReferenceError: 잘못된 참조가 발생했습니다
+    SyntaxError: 구문오류가 발생했습니다.
+    TypeError: 유형 오류
+    UTIError: encodeURI()에서 오류가 발생했습니다.
+
+     -Error Object Properties
+     name : 에러명
+     message : 오류메세지 
+     <br>
+     1) 참조에러에 경우
+     <p id="demo" style="color:red"></p>
+     <script>
+       try{
+         aldrt("Welcome");
+       }catch(err){
+         document.getElementById("demo").innerHTML = err.name + "<br>" + err.message
+       }
+     </script>
+
+     2) RangeError : "범위를 벗어난 숫자가 발생했습니다."
+     숫자의 유효자릴수를 500으로 설정할 수 없습니다.
+     <p></p>
+     <script>
+
+     </script>
+  </pre>
+</body>
+</html>

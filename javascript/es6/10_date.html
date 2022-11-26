@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date 함수</title>
+</head>
+<body>
+  <style>
+    body{
+      background: rgb(31, 31, 31);
+      color: bisque;
+    }
+  </style>
+ <pre>
+  - 25)setHours() : 날짜의 시간을 설정합니다.
+  - 26)setMiliseconds() : 날짜의 밀리초를 설정합니다.
+  - 27)setMinutes() : 날짜의 분을 설정합니다.
+  - 28)setMonth() : 날짜의 월을 설정(0부터 시작)
+  - 29)setSeconds() : 날짜의 초를 설정
+  - 30)setTime() : 1970년 1월1이 자정부터 지정된 밀리초수를 더하거나 빼서 날짜와 시간을 설정합니다.
+  - 31)setUTCDate() : 
+  - 32)setUTCFullYear() : 
+  - 33)setUTCHours() : 
+  - 34)setUTCMilliseconds() :  UTC에 따라 날짜 객체의 밀리초(0에서 999싸지)를 설정합니다.
+  - 35)setUTCMinutes() : UTC에 따라 날짜 객체의 분을 설정합니다.
+  - 36)setUTCMonth() : UTC에 따라 날짜 객체의 월(0에서 11까지 )을 설정합니다.
+  - 37)setUTCSeconds() : UTC시간과에 따라 날짜의 초를 설정합니다.
+  - 38)setYear() : 
+  - 39)toDateString() : 메서드는 날짜 객체의 날짜
+    <p id="demo"></p>
+    <script>
+      const q = new Date();
+      let text= q.toDateString();
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  - 40)toGMTString() : 사용안함 => toUTCString : UTC에 따라 날짜 개체를 가져옴
+  - to ISOString(): ISO 표준을 사용하여 날짜 객체를 문자열로 리턴
+    <div id="iso"></div>
+    <script>
+      const w = new Date();
+      let text2 = w.toISOString();
+      document.getElementById("iso").innerHTML = text2;
+    </script>
+  - 41)toJSON() : 메서드는 날짜 개체를 JSON날짜형식의 문자열로 반환
+  JSON 날짜는 ISO-8601표준과 동일한 형식(YYYY-MM-DDTHH: mm:ss.sssZ)을 가집니다.
+  - 42)toLocaleDateString() : 로케일 규칙을 사용하여 날짜 객체의 날짜를 문자열로 리턴
+  <div id="ref"></div>
+  <script>
+    const e = new Date();
+    let answer = e.toLocaleDateString();
+    document.getElementById("ref").innerHTML= answer;
+  </script>
+  - 43)toLocaleTimeString() :
+  - 44)toLocaleString() : 메서드는 로케일 설정을 사용하여 Date객체를 문자열로 반환한다.
+  - 45)toString() :  날짜 객체를 문자열로 반환합니다.
+  - 46)toTimeString() : 날짜 객체의 시간 부분을 문자열로 반환합니다.
+  <div id="demo3"></div>
+  <script>
+    const r= new Date();
+    let text4 = r.toTimeString();
+    document.getElementById("demo3").innerHTML = text4;
+  </script>
+  - 47)toUTCString() : UTC에 따라 날짜 객체를 문자열로 반환합니다.
+  - 48)UTC() : UTC에 따라 지정된 날짜와 1970년 1월 1일 자정사이의 밀리초 수를 반환합니다.
+  - 49)valueOf() : 1970년 1월 1일 자정(UTC) 이후의 밀리초 수로 반환됩니다.
+ </pre>
+  
+</body>
+</html>
