@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전역참조</title>
+</head>
+<body>
+  <h1>Global Reference</h1>
+  <pre>
+    1) decodeURI()
+    2) decodeURIComponent() : 인코딩후 URI를 디코딩
+    3) encodeURI() : 예전에 escape사용
+    4) encodeURIComponent() : URI 구성 요소를  인코딩
+    5) eval() : 인수를 평가하거나 실행
+    <p id="d1"></p>
+    <script>
+      let x =10;
+      let y =20;
+      let text = "x * y";
+      let result = eval(text);
+
+      document.getElementById("d1").innerHTML = result;
+    </script>
+    6) Infinity : 양과 음의 무한대의 숫자
+    7) isFinite() : 숫자가 유한한지에 대해서 true
+    <p id="d2"></p>
+    <script>
+      let result2 = isFinite(123);
+      document.getElementById("d2").innerHTML = result2;
+    </script>
+    8) isNaN : Not a Number => 숫자가 아니면 true, 숫자가 맞으면 false
+    9)Number(): 값을 숫자로 리턴
+    <p id="d3"></p>
+    <script>
+      document.getElementById("d3").innerHTML = 
+      Number(true) + "<br>" +
+      Number(false) + "<br>" +
+      Number(new Date());
+    </script>
+    10) parseFloat() : 값을 문자열로 구문분석하고 첫번째 숫자를 리턴
+    -첫번재 문자를 반환할 수 없으면 NaN
+    -선행 및 후행 공백은 무시
+    -발견된 첫번째 숫자만 리턴
+    <p id="d4"></p>
+    <script>
+      document.getElementById("d4").innerHTML = 
+      parseFloat(10) + "<br>" +
+      parseFloat("10") + "<br>" +
+      parseFloat("   10.33")+ "<br>" + 
+      parseFloat("34 45 66")+ "<br>"  +
+      parseFloat("he was 10")+ "<br>" 
+    </script>
+    11)parseInt : 문자열로 구문분석하고 첫번째 정수를 리턴
+    -기수 매개변수를 사용할 수  체계를 지정
+    - 2 = 2진수 8 = 8진수
+    - 0x로 시작하면 기수를 16으로 가정
+
+    <p id="d5"></p>
+    <script>
+      document.getElementById("d5").innerHTML = 
+      parseInt("10") + "<br>" +
+      parseInt("10.00") + "<br>" +
+      parseInt("10", 8)+ "<br>" + 
+      parseInt("0X10")+ "<br>"  +
+      parseInt("10",16)+ "<br>" 
+    </script>
+    12)String(): 메서드갑을 문자열로 리턴
+  </pre>
+  <p id="d6"></p>
+  <script>
+    document.getElementById("d6").innerHTML = 
+    String(new Date()) + "<br>" +
+    String("12345") + "<br>" +
+    String(12345) + "<br>"
+  </script>
+  13)undefined(): 정의되지않음
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+    p{color:red; font-size: 2rem;}
+    html{font-size :14px;}
+  </style>
+  
+</body>
+</html>

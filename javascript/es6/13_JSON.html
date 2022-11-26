@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON</title>
+</head>
+<body>
+  <h1>JSON(Java Script Object Notation)</h1>
+  <pre>
+    - 데이터를 저장하고 전송하기 위한 형식입니다.
+    - 텍스트고 어디든 전송될 수 있고 모든 프로그래밍 언어로 읽을 수 있습니다.
+    - 자바스크립트 객체는 json으로 변환할수 있고 Json은 다시 자바스크립트로 변환할 수 있습니다.
+    -이렇게 하게되면 구문분석이나 번역없이 javascript객체로 사용할수 있습니다.
+
+    json메서드
+    -parse() : 문자열을 구문분석하고 자바스크립트 객체를 리턴
+    -stringify() : 자바스크립트 객체를 json문자열로 리턴
+    <!-- <script>
+      var myObj = {"name" : "hwang","age":31,"city":"seoul"};
+      var myJSON = JSON.stringify(myObj);
+      window.location = "demo.html?x=" +myJSON;
+    </script> -->
+    2)
+    <p id="demo"></p>
+    <script>
+      var myjson = '{"name" : "hwang","age":31,"city":"seoul"}';
+      var myobj = JSON.parse(myjson);
+      document.getElementById("demo").innerHTML = myobj.name;
+    </script>
+    3)로컬스토리지에 저장하고 검색
+    <p id="d2"></p>
+    <script>
+      mO = {"name" : "hwang","age":31,"city":"seoul"};
+      mJ = JSON.stringify(mO);
+      localStorage.setItem("testJSON",mJ);
+
+      text = localStorage.getItem("testJSON");
+      obj = JSON.parse(text);
+      document.getElementById("d2").innerHTML = obj.name;
+
+    </script>
+    
+    
+  </pre>
+  </body>
+</html>
