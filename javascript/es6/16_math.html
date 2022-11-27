@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>math</title>
+</head>
+<body>
+  <style>
+    body{background: grey; color: antiquewhite;}
+  </style>
+  <pre>
+    24)pow(): x의 값을 y의 거듭제곱(Xy)으로 리턴
+    <p id="d1"></p>
+    <script>
+      document.getElementById("d1").innerHTML = Math.pow(0,1);
+      document.getElementById("d1").innerHTML += "<br>"+ Math.pow(1,1);
+      document.getElementById("d1").innerHTML += "<br>"+ Math.pow(1,10);
+      document.getElementById("d1").innerHTML += "<br>"+ Math.pow(3,3);
+      document.getElementById("d1").innerHTML += "<br>"+ Math.pow(-3,3);
+      document.getElementById("d1").innerHTML += "<br>"+ Math.pow(2,4);
+    </script>
+    24)random(): 0에서 최대 1(제외)까지 임의의 숫자를 리턴
+    <p id="d2"></p>
+    <script>
+      let g = Math.random() * 10;
+      document.getElementById("d2").innerHTML = g;
+    </script>
+    24)round(): 소수점을 기준으로 .5이하이면 내리고 이상이면 올림
+    <p id="d3"></p>
+    <script>
+      document.getElementById("d3").innerHTML = Math.round(2.6);
+      document.getElementById("d3").innerHTML += "<br>" +Math.round(2.5);
+      document.getElementById("d3").innerHTML += "<br>" +Math.round(2.4);
+      document.getElementById("d3").innerHTML += "<br>" +Math.round(-2.6);
+      document.getElementById("d3").innerHTML += "<br>" +Math.round(-2.49);
+    </script>
+    24)sign(): 숫자가 양수이면 1을 리턴 음수이면 -1 숫자가 0이면 0을 리턴
+    <p id="d4"></p>
+    <script>
+      document.getElementById("d4").innerHTML = Math.sign(3);
+      document.getElementById("d4").innerHTML += "<br>"+Math.sign(1);
+      document.getElementById("d4").innerHTML += "<br>"+Math.sign(-1);
+    </script>
+    34)sin(): 숫자의 사인을 리턴
+    <p id="d5"></p>
+    <script>
+      document.getElementById("d5").innerHTML = Math.sin(3.14).toFixed(2);
+    </script>
+    35)sinh(): 숫자의 하이퍼복릭 사인을 리턴
+    36)sqrt(): 숫자의 제곱근을 리턴
+    37)SQRT1_2(): 1/2의 제곱근을 반환합니다. 약 0.707리턴
+    38)SQRT2 : 2의 제곱근을 리턴 약 1.414를 리턴
+    39)tan(): 숫자의 탄젠트를 리턴
+    40)tanh(): 숫자의 하이퍼볼릭 탄젠트를 리턴
+    41)trunc(): 숫자의 정수부분을 리턴(소수점이하 자리수를 제거 숫자를 반올림하지않음)
+  </pre>
+  
+</body>
+</html>

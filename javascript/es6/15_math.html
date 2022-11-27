@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>math 내장함수</title>
+</head>
+<body>
+  <style>
+    body{background: grey; color: antiquewhite;}
+  </style>
+  <pre>
+    8)atanh(): 숫자의 하이퍼볼릭 아크탄젠트를 리턴
+    - -1과 1사이의 숫자
+    <p id="demo"></p>
+    <script>
+      document.getElementById("demo").innerHTML = Math.atanh(1);
+      document.getElementById("demo").innerHTML += "<br>" + Math.atanh(-1);
+      document.getElementById("demo").innerHTML += "<br>" + Math.atanh(0.5);
+    </script>
+    9)cbrt(): 숫자의 세제곱근을 리턴
+    <p id="d2"></p>
+    <script>
+      document.getElementById("d2").innerHTML = Math.cbrt(125);
+    </script>
+    10)ceil(): 숫자를 반올림하여 가장 가까운 정수로 반올림합니다.
+    <p id="d3"></p>
+    <script>
+      document.getElementById("d3").innerHTML = Math.ceil(0.60);
+      document.getElementById("d3").innerHTML += "<br>" +Math.ceil(0.60);
+      document.getElementById("d3").innerHTML += "<br>" +Math.ceil(0.40);
+      document.getElementById("d3").innerHTML += "<br>" +Math.ceil(5.1);
+      document.getElementById("d3").innerHTML += "<br>" +Math.ceil(-5.1);
+      document.getElementById("d3").innerHTML += "<br>" +Math.ceil(-5.9);
+    </script>
+    11)clz32(): 32비트 이진수에서 선행 0의 수를 리턴
+    - countleadingzeroes32 숫자가 0 이면 32를 리턴
+    <p id="d4"></p>
+    <script>
+      document.getElementById("d4").innerHTML = Math.clz32(0);
+      document.getElementById("d4").innerHTML += "<br>"+ Math.clz32(1);
+      document.getElementById("d4").innerHTML += "<br>"+ Math.clz32(2);
+      document.getElementById("d4").innerHTML += "<br>"+ Math.clz32(3);
+      document.getElementById("d4").innerHTML += "<br>"+ Math.clz32(4);
+    </script>
+    12)cos(): 숫자의 코싸인을 리턴 ,-1과 1사이의 숫자를 리턴,라디안 단위의 숫자를 리턴
+    <p id="d5"></p>
+    <script>
+      document.getElementById("d5").innerHTML = Math.cos(0).toFixed(2);//0도의 코싸인 1.0
+      document.getElementById("d5").innerHTML += "<br>"+ Math.cos(Math.PI/3).toFixed(2);//60도
+      document.getElementById("d5").innerHTML += "<br>"+ Math.cos(Math.PI/2).toFixed(2);//
+      document.getElementById("d5").innerHTML += "<br>"+ Math.cos(Math.PI).toFixed(2);//
+      document.getElementById("d5").innerHTML += "<br>"+ Math.cos(Math.PI*2).toFixed(2);//
+    </script>
+    0=> 0=>0
+    1=>
+    13)cosh(): 숫자의 하이퍼볼릭 코싸인을 리턴
+    <button onclick="myf()">try it</button>
+    <p id="d6"></p>
+    <script>
+      let myf = () =>{document.getElementById("d6").innerHTML = Math.cosh(3);}
+    </script>
+
+    14)E : 오일러수를 리턴
+    - 약 2,718을 리턴
+    <p id="d7"></p>
+    <script>
+      document.getElementById("d7").innerHTML = Math.E;
+    </script>
+    15)exp(): E x의 값을 반환합니다. 
+    여기서 E는 오일러 수 (약 2.7183)이고 x는 전달된 수입니다.
+
+    16)expm1(): E x 빼기 1의 값을 리턴
+    여기서 E는 오일러수 (약 2.7183)이고 x는 전달된 수입니다.
+    17)floor(): 숫자를 가장 가까운 정수로 내림
+    <p id="d8"></p>
+    <script>
+      document.getElementById("d8").innerHTML = Math.floor(1.2);
+      document.getElementById("d8").innerHTML += "<br>" + Math.floor(1.8);
+      document.getElementById("d8").innerHTML += "<br>" + Math.floor(22);
+      document.getElementById("d8").innerHTML += "<br>" + Math.floor(22.2);
+      document.getElementById("d8").innerHTML += "<br>" + Math.floor(5.9);
+    </script>
+    18)fround(): 숫자의 가장 가까운 32비트 단정밀도 부도 소수점을 리턴
+    <p id="d9"></p>
+    <script>
+      document.getElementById("d9").innerHTML = Math.floor(1.2);
+      document.getElementById("d9").innerHTML += "<br>" + Math.fround(1.8);
+      document.getElementById("d9").innerHTML += "<br>" + Math.fround(22);
+      document.getElementById("d9").innerHTML += "<br>" + Math.floor(22.2);
+      document.getElementById("d9").innerHTML += "<br>" + Math.floor(5.9);
+    </script>
+    19)LN2 : 자연로그를 리턴 약 0.693을 리턴
+    20)LN10 : 10의 자연로그를 리턴 약 2.302입니다.
+    21)log(): 자연로그(밑E)를 리턴
+    22)19g10(): 숫자의 밑이 10인 로그를 리턴
+    23)log1p(): 1+숫자의 자연로그(밑E)를 리턴
+    24)log2(): 숫자의 밑이 2인 로그를 리턴
+    24)LOG2E():E의 밑이 2인 로그를 리턴
+    - 약1.142를 리턴
+    24)LOG10E(): E의 밑이 10인 로그를 리턴
+    24)max(): 가장 높은 값을 가진 숫자를 리턴
+    <p id="d10"></p>
+    <script>
+      document.getElementById("d10").innerHTML = Math.max(1,2);
+      document.getElementById("d10").innerHTML += "<br>" + Math.max(1,8);
+      document.getElementById("d10").innerHTML += "<br>" + Math.max(2,10);
+      document.getElementById("d10").innerHTML += "<br>" + Math.min(2,3);
+      document.getElementById("d10").innerHTML += "<br>" + Math.min(5,2);
+    </script>
+    24)min(): 가장 낮은 값을 가진 숫자를 리턴
+    24)PI: 3.14를 리턴
+    <p id="d11"></p>
+    <script>
+      document.getElementById("d11").innerHTML = Math.PI;
+    </script>
+   
+  </pre>
+  
+</body>
+</html>
