@@ -2,10 +2,12 @@
 //?      1)html과 같은 방식으로 css선택자를 중첩할 수 있습니다.
 //?
 //?
+$my_color:black;
+
 nav {
   ul{
     list-style: none;
-
+    color:$my_color;
     margin:0;
     padding:0;
     display: flex;
@@ -18,9 +20,4 @@ nav {
     display: block;
     text-decoration: none;
   }
-}
-font:{
-  font-family: Helvetica, san-serif;
-  size: 18px;
-  weight:bold;
 }

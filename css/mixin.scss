@@ -9,7 +9,7 @@
   color: red;
   font-size:25px;
   font-weight:bold;
-  border:1px solid blue;
+  border:1px solid black;
   letter-spacing: -0.05;
   word-spacing:5px;
 }
@@ -17,7 +17,21 @@
   @include important-text;
   background: green;
 }
+header{
+  @include important-text;
+  nav{
 
+    ul{
+      display: flex;
+      li{
+        a{
+          text-decoration: none;
+
+        }
+      }
+    }
+  }
+}
 
 
 
