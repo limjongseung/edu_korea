@@ -1,10 +1,11 @@
-let string = "limjongseung"
-function reverse(a){
-  a="";
+function solution(my_string, n) {
   let answer ="";
-  for(let i = 0; i <a.length; i++){
-    answer[i] = a[a.length -i];  
+  let result = []
+  for(let i = 0; i < my_string.length; i++){
+     result = answer.fill(my_string[i] ,  n*i, ( n*(i+1)-1))
   }
-  return answer
+  return answer;
 }
-console.log(reverse(lim));
+console.log(solution("faa",3));
+// let m = "string"
+// console.log(m[1])
