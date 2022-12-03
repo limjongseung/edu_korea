@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정규표현식</title>
+</head>
+<body>
+  <pre>
+    메타문자
+    1). : that's hot!/h.t/
+    지정된 문자에 시작과 끝으로 끝나는 워딩이 검색
+    <p id="d1"></p>
+    <script>
+      let q = "that's hot";
+      let pat = /h.t/g;
+      let result1 = q.match(pat);
+      document.getElementById("d1").innerHTML = result1;
+    </script>
+    2)/w : 단어문자에 대한 전역검색
+    - 밑줄을 포함하는 문자 az,AZ,0-9입니다.
+    - 특수문자 제외
+    <p id="d2"></p>
+    <script>
+      let text = "Give 100%!"
+      let pattern = /\w/g;
+      let result = text.match(pattern);
+      document.getElementById("d2").innerHTML = result;
+    </script>
+    2)\W : 비단어문자에 대한 전역검색
+    - 밑줄을 포함하는 문자 az,AZ,0-9입니다.
+    - 특수문자 제외
+    <p id="d3"></p>
+    <script>
+      let text2 = "Give 100%!"
+      let pattern2 = /\W/g;
+      let result2 = text.match(pattern2);
+      document.getElementById("d3").innerHTML = result2;
+    </script>
+    4)\d : 0에서 9까지의 숫자에 대한 전역검색
+    <p id="d4"></p>
+    <script>
+      let text4 = "Give 100%!"
+      let pattern4 = /\d/g;
+      let result4 = text.match(pattern4);
+      document.getElementById("d4").innerHTML = result4;
+    </script>
+    6)\s : 공백문자에 대한전역검색
+    7)\S : 공백이 아닌 문자에 대한 전역검색
+    8)\b : 지정한 문자에 대한 인덱싱 번호 리턴
+    <p id="d5"></p>
+    <script>
+      let t3 = "HELLO, LOOK AT YOU"
+      let p3 = /\bLO/g;
+      let r3 = t3.search(p3);
+      document.getElementById("d5").innerHTML= `인덱싱번호는 몇번 입니까? ${r3}`;
+    </script>
+    9) \B : 지정한 문자가 아닌 첫번째 항목에 인덱싱번호를 리턴
+    수량자 : 갯수를 파악
+     + : 지정된 문자에 전체 갯수를 파악
+     <p id="d6"></p>
+     <script>
+      let tx = "hellooo world! hello shooooooools";
+      let pt = /o+/g;
+      let ret = tx.match(pt);
+      document.getElementById("d6").innerHTML = ret;
+     </script>
+     2) * : 지정된 문자에 뒤따르는 문자에 대한 검색
+     <p id="d7"></p>
+     <script>
+      let tet = "hellooo world! hello shooooooools";
+      let pan = /lo*/g;
+      let ress = tet.match(pan);
+      document.getElementById("d7").innerHTML = ress;
+     </script>
+     3) ? : 1 다음에 0 또는 하나의 0문자가 오는 전역검색을 실행
+     <p id="d8"></p>
+     <script>
+      let txt = "1, 100, 0, or 1000?";
+      let patt = /10?/g;
+      let res  = txt.match(patt);
+      document.getElementById("d8").innerHTML = res;
+
+     </script>
+    개체속성
+    개체 메서드
+  </pre>
+  
+</body>
+</html>
