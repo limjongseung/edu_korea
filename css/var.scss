@@ -1,0 +1,38 @@
+/* 색상정의 */
+$bgcolor:lightblue;
+$textcolor:darkblue;
+$fontsize:18px;
+$primary_1 : hotpink;
+$primary_2: green;
+$primary_3: red;
+
+body{
+  background-color: $bgcolor;
+  color:$textcolor;
+  font-size: $fontsize; 
+}
+.main_header{
+  background:$primary_1;
+}
+.menu_left{
+  background:$primary_2;
+}
+ //?     Sass변수 
+ //?     -변수는 나중에 다시 사용할 수 있는 정보를 저장하는 방벙
+ //?     -sass를 사용하면 다음과 같은 변수에 정보를 저장할 수 있습니다.
+ //?     - string
+ //?     - numbers
+ //?     - colors
+ //?     - booleans
+ //?     - nulls
+     
+ //      ?sass변수 구문
+ $myWidth:680px;
+ #container{
+  width:$myWidth;
+ }
+    
+
+
+
+

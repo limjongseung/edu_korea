@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* 색상정의 */
+body {
+  background-color: lightblue;
+  color: darkblue;
+  font-size: 18px;
+}
+
+.main_header {
+  background: hotpink;
+}
+
+.menu_left {
+  background: green;
+}
+
+#container {
+  width: 680px;
+}

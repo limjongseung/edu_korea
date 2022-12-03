@@ -1,0 +1,26 @@
+//?    Sass변수범위 
+//?    정의된 중첩 수준에서만 사용할 수 있습니다.
+
+$myColor : red;
+h1{
+  $myColor:green;
+  color: $myColor;
+}
+p{
+  color: $myColor;
+}
+
+//?    Sass ! global 사용
+//?    - 변수 범위에 기본동작을 !global 스위치를 사용하여 
+//?      재정의 할수 있습니다.
+//?    - 강제전역변수를 선언하는 것 모든 수준에서 엑세스 할 수 있습니다.
+//?    
+$itsmyC : red;
+
+h2{
+  $itsmyC : violet !global;
+  color: $itsmyC;
+}
+span{
+  color: $itsmyC;
+}
