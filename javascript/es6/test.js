@@ -1,10 +1,20 @@
-let string = "limjongseung"
-function reverse(a){
-  a="";
-  let answer ="";
-  for(let i = 0; i <a.length; i++){
-    answer[i] = a[a.length -i];  
+function solution(n) {
+  let answer = n.toString();
+
+  let result = 0
+  for(let i = 0; i < n.length; i++){
+       result += Number(answer[i]);
   }
-  return answer
+  return result
 }
-console.log(reverse(lim));
+console.log(solution(123123))
+//!     자릿수 더하기
+function solution(n) {
+  let result = 0;
+let answer = "";
+n = n.toString();
+for(let i = 0; i < n.length; i++){
+  result += parseInt(n[i]);
+}
+return result
+}
