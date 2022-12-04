@@ -1,5 +1,6 @@
 nav ul {
   list-style: none;
+  color: black;
   margin: 0;
   padding: 0;
   display: flex;
@@ -11,4 +12,4 @@ nav li {
 nav a {
   display: block;
   text-decoration: none;
-}
+}/*# sourceMappingURL=iter.css.map */
