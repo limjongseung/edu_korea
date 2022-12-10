@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/customizing.css" />
+    <title>regexp-2</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="mt-3">RegExp : 개체 속성</h1>
+          <h2>constructor : 생성자 함수</h2>
+          <p>객체의 프로토타입을 생성한 함수를 리턴</p>
+          <mark id="d1"></mark>
+          <p>function RegExp(){[]}</p>
+          <script>
+            let native = /native/g;
+            let text = native.constructor;
+            document.getElementById("d1").innerHTML = text;
+          </script>
+          <h2>global</h2>
+          <p>g 수정자가 설정되어 이쓰는지 확인</p>
+          <mark id="d2"></mark>
+          <script>
+            let pattern = /WWW/g;
+            let p_result = pattern.global;
+            document.getElementById("d2").innerHTML = p_result;
+         
+          </script>
+          <h2>ignoreCase</h2>
+          <p>i 한정자가 설정되어 있는지 확인</p>
+          <mark id="d3"></mark>
+          <script>
+            let text1 = "Visit Apple";
+            let pattern2 = /App/i;
+            let p_result2 = pattern2.ignoreCase;
+            document.getElementById("d3").innerHTML = p_result2;
+          </script>
+          <h2>lastindex</h2>
+          <p>일치하는 인덱스 지정(마지막)</p>
+          <mark id="d4"></mark>
+          <script>
+            let txtt = "the rain  in spain stays mainly inth plain";
+            let find = /ain/g;
+            let result = "";
+            while(find.test(txtt)==true){
+              result += "찾은 포지션 넘버는 " + find.lastIndex + "<br>";
+            }
+            document.getElementById("d4").innerHTML = result;
+
+          </script>
+
+          <h2>multiline</h2>
+          <p>m 한정자가 설정되어 있는지 확인</p>
+          <h2>source</h2>
+          <p>RegExp패턴의 텍스트를 리턴</p>
+        </div>
+        <div class="con-6">
+          <h1 class="mt-5">RegExp : 개체 메서드</h1>
+          <h2>compile() : 버전1.5에서 사용 not use</h2>
+
+          <h2>exec()</h2>
+          <p>문자열에서 일치하는지 테스트합니다. 첫벗째 일치 항목을 리턴</p>
+          <h2>test</h2>
+          <p>문자열에서 일치하는지 테스트랍니다. true,false리턴</p>
+          <h2>toString()</h2>
+          <p>정규표현식에서 문자열 값을 리턴</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
