@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/customizing.css" />
+    <title>js 2016~ 2021</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="mt-5">ECMA 스크립트 2016</h1>
+          <p>원래 javascript 버전번호는 ES5(2009) 및 ES6(2015)였습니다.</p>
+          <p>2016년 부터 버전 이름은 년도수로 바뀝니다.</p>
+
+          <h2>2016에 새로운 기능</h2>
+          <p>자바스크립트 지수화(**)</p>
+          <mark id="d1"></mark>
+          <br />
+          <mark id="d2"></mark>
+          <script>
+            let q = 5;
+            let w = q ** 2;
+            document.getElementById("d1").innerHTML = w;
+
+            let e = 5;
+            let r = 5;
+            let t = Math.pow(5, 2);
+            document.getElementById("d2").innerHTML = t;
+          </script>
+          <p>자바스크립트 지수화 할당(**=)</p>
+          <p>
+            지수 대입연산자(**=)는 변수값을 오른쪽 피연산자의 거듭제곱으로
+            올립니다.
+          </p>
+          <mark id="d3"></mark>
+          <script>
+            let y = 5;
+            y **= 2;
+            document.getElementById("d3").innerHTML = y;
+          </script>
+          <p>자바스크립트 배열 포함(**=)</p>
+          <p>
+            Array.includes 배열이 도입되었습니다. 이를 통해서 요소가 배열에
+            있느지를 확인할수 있습니다.
+          </p>
+          <mark id="d4"></mark>
+          <script>
+            const fruits = ["b", "o", "a", "m"];
+            document.getElementById("d4").innerHTML = fruits.includes("m");
+          </script>
+          <h2>ECAMScript 2017</h2>
+          <p>String padding : 문자열은 다른 문자열로 채워줍니다.</p>
+          <mark id="d5"></mark>
+          <script>
+            let txt_5 = "5";
+            txt_5 = txt_5.padStart(4, "0");
+            document.getElementById("d5").innerHTML = txt_5;
+          </script>
+          <p>Object entries() : 객체의 키/값을 쌍으로 리턴 합니다.</p>
+          <mark id="d6"></mark>
+          <script>
+            const person = {
+              firstName: "John",
+              lastName: "Doe",
+              age: 50,
+              eyeColor: "brown",
+            };
+            let people = Object.entries(person);
+            document.getElementById("d6").innerHTML = people;
+          </script>
+          <p>Object values()</p>
+          <p>async and await</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

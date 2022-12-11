@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/customizing.css" />
+    <title>js 2016~ 2021</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="mt-5">ECMA 스크립트 2016</h1>
+          <p>Object values()</p>
+          <mark id="d7"></mark>
+          <script>
+            const person2 = {
+              firstName: "John",
+              lastName: "doe",
+              age: 50,
+              eyecolor: "blue",
+            };
+            let val = Object.values(person2);
+            document.getElementById("d7").innerHTML = val;
+          </script>
+          <p>async and await : 비동기 함수</p>
+          <p>시간 초과를 기다리는 중</p>
+          <mark id="d8"></mark>
+          <script>
+            async function myWait() {
+              let myPromise = new Promise(function (resolve) {
+                setTimeout(function () {
+                  resolve("Free time!!");
+                }, 3000);
+              });
+              document.getElementById("d8").innerHTML = await myPromise;
+            }
+            myWait();
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

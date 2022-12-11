@@ -43,7 +43,6 @@
             let pattern = /WWW/g;
             let p_result = pattern.global;
             document.getElementById("d2").innerHTML = p_result;
-         
           </script>
           <h2>ignoreCase</h2>
           <p>i 한정자가 설정되어 있는지 확인</p>
@@ -61,28 +60,57 @@
             let txtt = "the rain  in spain stays mainly inth plain";
             let find = /ain/g;
             let result = "";
-            while(find.test(txtt)==true){
+            while (find.test(txtt) == true) {
               result += "찾은 포지션 넘버는 " + find.lastIndex + "<br>";
             }
             document.getElementById("d4").innerHTML = result;
-
           </script>
 
           <h2>multiline</h2>
           <p>m 한정자가 설정되어 있는지 확인</p>
+          <mark id="d5"></mark>
+          <script>
+            let multi = "Visit korea";
+            let mp = /korea/gi;
+            let mp_result = mp.multiline;
+            document.getElementById("d5").innerHTML = mp_result;
+          </script>
           <h2>source</h2>
           <p>RegExp패턴의 텍스트를 리턴</p>
+          <mark id="d6"></mark>
+          <script>
+            let ss = "Visit korea";
+            let ss_p = /korea/gi;
+            let ss_result = ss_p.source;
+            document.getElementById("d6").innerHTML = ss_result;
+          </script>
         </div>
         <div class="con-6">
           <h1 class="mt-5">RegExp : 개체 메서드</h1>
           <h2>compile() : 버전1.5에서 사용 not use</h2>
-
           <h2>exec()</h2>
           <p>문자열에서 일치하는지 테스트합니다. 첫벗째 일치 항목을 리턴</p>
+          <mark id="d7"></mark>
+          <script>
+            let txt = "the best things in life are free";
+            let txt_result = /the best/.exec(txt);
+            document.getElementById("d7").innerHTML = txt_result;
+          </script>
           <h2>test</h2>
           <p>문자열에서 일치하는지 테스트랍니다. true,false리턴</p>
+          <mark id="d8"></mark>
+          <script>
+            let txt2 = "the best things in life are free";
+            let txt_result2 = /the best/.test(txt);
+            document.getElementById("d8").innerHTML = txt_result2;
+          </script>
           <h2>toString()</h2>
           <p>정규표현식에서 문자열 값을 리턴</p>
+          <mark id="d9"></mark>
+          <script>
+            let ptt = /hello World/g;
+            let txt7 = ptt.toString();
+          </script>
         </div>
       </div>
     </div>
