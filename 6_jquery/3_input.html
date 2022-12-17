@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">-->
+    <!--<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script><!--최신버전 유지-->
+    <title>input</title>
+</head>
+<body>
+<h1>체크박스에 색상변경을 해봅니다 검정색으로 바뀌는걸 jquery로 콘트롤합니다</h1>
+<label for=""><input type="checkbox">one</label>
+<label for=""><input type="checkbox">two</label>
+<label for=""><input type="checkbox">three</label>
+<style>
+label{color:#888888;}
+.color{
+margin:30px 0px; padding:30px 60px; border:5px solid #dadada;
+}
+</style>
+<script>
+$(document).ready(function(){
+    $('input').change(function(){
+        $('label').has('input').css('color', '#888888');//체크 안할때
+        $('label').has('input:checked').css('color', '#000000');//체크할때
+    });
+});
+</script>
+
+<h1>select</h1>
+<select name="" id="">
+    <option value="">색상을 선택하세요!</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="red">Red</option>
+</select>
+<div class="color">Color</div>
+<script>
+$(document).ready(function(){
+    $('select').change(function(){
+        var Bg = $('option:checked').val();
+        $('.color').css('background-color',Bg);
+    });
+});
+</script>
+
+<h1>:contains() : 특정 문자열을 포함한 요소를 선택하는 선택자</h1>
+<pre>
+문자열 포함여부를 따질때 대소문자를 구분합니다
+문법
+$(':contains(text)')
+예를 들어 ab요소를 포함한 p요소를 선택한다고 하면
+$('p:contains("ab")')
+</pre>
+<h2>p요소는 선택해서 글자를 빨간색으로 만들고 lorem을 선택해서 빨간색</h2>
+<p>lorem ipsum dolor sit amet.</p>
+<p>ipsum dolor sit amet.</p>
+<p>Lorem ipsum dolor sit amet.</p>
+<p>Lorem ipsum dolor sit amet.</p>
+<script>
+    $(document).ready(function(){
+        $('p:contains("lorem")').css('color','red');
+    });
+</script>
+
+
+</body>
+</html>
