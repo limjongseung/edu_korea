@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">-->
+            <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
+            <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+          
+    <!--최신버전 유지-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>event</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <pre>
+    4) .after: 선택한 요소 뒤에 새요소를 추가하거나 다른곳에 요소를 이동 시킬수 있습니다.
+    .after(content[,content])
+    예시를
+    $("h1").after("<p>hello</p>");
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <!-- <script>
+        $(document).ready(function(){
+            $("h1").after("<p>hello world</p>")
+        })
+    </script>
+    다른곳에 요소를 이동
+    <p>good bye</p>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <script>
+        $(document).ready(function(){
+            $("h1").after("after****");
+        })
+    </script> -->
+    
+    5) .animate: 애니메이션 효과를 만듭니다.
+    .animate(properties)[.duration][,easing])
+    duration : 애니메이션 효과를 완료할때까지 걸리는 시간입니다.
+    영상에서는 300=>3초 웹에서는 3000프레임을 가지고 잇음
+    기본값은 400, fast = 200, slow =600
+
+    easing : 애니메이션에 효과 방식을 정합ㄴ다.
+    swing 과 linear이 가능하며  
+    기본값은 400
+    <h2>일반적인 애니메이션</h2>
+    <style>
+        #a {
+          width: 10%;
+          height: 100px;
+          background-color: #bbdefb;
+        }
+      </style>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script>
+        $( document ).ready( function() {
+          $( 'button' ).click( function() {
+            $( '#a' ).animate( {
+              width: '100%'
+            } );
+          } );
+        } );
+      </script>
+    <button class="btn btn-danger">click!</button>
+    <div id="a" class="mt-5"></div>
+    <button class="btn btn-secondary">click!</button>
+    <div class="" id="b"></div>
+    <div class="" id="c"></div>
+    <style>
+        div#b, div#c{
+            margin: 10px 0 ;
+            width:10%;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#b").animate({
+                    width:"100%"
+                } ,2000, "swing");
+                $("#c").animate({
+                    width:"100%"
+                } ,2000, "linear");
+            });
+        });
+    </script>
+    <button class="btn btn-primary">click!</button>
+    <div id="d"></div>
+    6) .append: 선택한  요소의 내요의 끝네 콘텐츠를 추가합니다.
+    <ul>
+        <li>lorem</li>
+        <li>ipsum</li>
+    </ul>
+    <script>
+        $(document).ready(function(){
+            $("ul").append("<li>dolor</li>");
+        })
+    </script>
+    에시 string을 오른쪽으로 붙여줍니다.
+    <section>abc</section>
+    <strong>XYZ</strong>
+    <script>
+        $(document).ready(function(){
+            $("section").append($("strong"));
+        });
+    </script>
+
+    7) .appendTo: 선택한 엘리먼트를 다른 엘리먼트에 넣어 줍니다.
+    <header>header</header>
+    <span class="menu">menu</span>
+    <script>
+        $(document).ready(function(){
+            $("span.menu").appendTo("header");
+        })
+    </script>
+
+    8) .attr: 엘리먼트의 속성값을 가져오거나 속성을 추가합나디.
+    1)요소의 속성값을 가져오기
+    arrt(attribute)
+    2)속성추가하기
+    .attr(attributeName, value)    
+    <input type="text" class="one">
+    <script>
+        $(document).ready(function(){
+            $(".one").attr("placeholder","Input your address");
+        });
+    </script>
+    3)속성 제거하기
+    속성제거 : remove attr
+    9) .before:
+    10) .children: 어떤 요소의 자식요소를 선택합니다.
+    <dl>
+        <dt>타이틀</dt>
+        <dd class="ip">냉무</dd>
+        <dd>냉무</dd>
+    </dl>
+    <script>
+        $(document).ready(function(){
+            $("dl").children(".ip").css("color","blue");
+        });
+    </script>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

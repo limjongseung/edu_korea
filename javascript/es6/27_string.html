@@ -40,9 +40,9 @@
           <p>문자열을 대문자로</p>
           <mark id="d3"></mark>
           <script>
-            let lower = "abcdefg";
+            let lower = "abAefg";
             let upper = "ABCDEFG"
-            let lower_result = lower.toLocaleLowerCase();
+            let lower_result = lower.toLowerCase();
             let upper_result = upper.toLocaleUpperCase();
             document.getElementById("d2").innerHTML = lower_result;
             document.getElementById("d3").innerHTML = upper_result;

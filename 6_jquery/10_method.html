@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">-->
+    <!--<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!--최신버전 유지-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>event</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <pre>
+    1) .add: 어떤요소를 추가로 선택할때 사용합니다.
+    .add(seletor) 예를 들어 $("ul").add("p")
+    <ul class="ex1">
+        <li>lorem</li>
+        <li>ipsum</li>
+    </ul>
+    <p>bonus</p>
+    <script>
+        $(document).ready(function(){
+            $(".ex1 li").add("p").css("color","red");
+        });
+    </script>
+    예시)    첫번째 li요소에 마우스를 올리면 빨간색으로 바뀌는 예시를 만들어 봅니다.
+    <ul class="ex2">
+        <li class="la">la</li>
+        <li class="lb">lb</li>
+    </ul>
+    <p>hoverbutton</p>
+    <script>
+        $(document).ready(function(){
+            $(".ex2 li.la").hover(function(){
+                $(this).add("p").css("color","red")}
+                ,function(){
+                    $(this).add("p").css("color","black");
+                })
+        })
+    </script>
+    2) .addBack: 현재 선택한 요소와 함계 이전에 선택한 요소도 선택하게 합니다.
+    .addBack([selector])
+    예를 들어 $("ul").find("li").addBack() 
+    ul에 하위요소중 li를 선택하고 처믕 선택했던 li를 선택합니다.
+    <div class="">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p class="ip">Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <style>
+        .border{
+            border: 1px solid blue;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("div").find("p.ip").addBack().addClass("border");
+        })
+    </script>
+
+    3) .addClass: 선택한 요소에 클래스만 추가
+    .addClass(className);
+    $("h1").addClass("ab cd ef")
+    <h1>lorem</h1>
+    <h2>ipsum</h2>
+    <style>
+        .bg{background-color: #eee;text-align: center;}
+        .bd{border: 1px solid #666; text-align: center;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("h1").addClass("bg");
+            $("h2").addClass("bg bd");
+        })
+    </script>
+    4) .after: 선택한 요소 뒤에 새요소를 추가하거나 다른곳에 요소를 이동 시킬수 있습니다.
+    .after(content[,content])
+    예시를
+    $("h1").after("<p>hello</p>");
+    
+    5) .animate:
+    6) .append:
+    7) .appendTo:
+    8) .attr:
+    9) .before:
+    10) .children:
+          </pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
