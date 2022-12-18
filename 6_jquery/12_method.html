@@ -42,11 +42,21 @@
                 <script>
                     $(document).ready(function(){
                         var CL = $("h2").css("color");
-                        $("footer").html = `색상 ${CL}`;
+                        $("footer").html("색상" + CL);
                     })
                 </script>
                 14)delay(): 실행중인 함수를 정해진 시간만큼 중지시킵니다.
                 .delay(duration[,qeueName]);
+                <button class="btn btn-info">click</button>
+                <p>slidedown & UP</p>
+                <script>
+                    $(document).ready(function(){
+                        $("button").click(function(){
+                            $("p").slideUp(200).delay(1000).slideDown(200);
+                        })
+                    })
+                </script>
+
                 15)detach():
                 16)each():
                 17)empty():
