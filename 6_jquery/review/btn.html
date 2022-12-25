@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!--최신버전 유지-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container text-center">
+        <div class="text-bg-danger p-3">
+            <h1>Jquery</h1>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <h2 class="text-bg-primary p-3">button</h2>
+                <input type="button" value="button1" class="ab">
+                <input type="button" value="button2" class="cd mb-5">
+                <script>
+                    $(document).ready(function () {
+                        $(":button").css("font-style", "italic");
+                        $(".ab:button").css("color", "red");
+                    })
+                </script>
+                <h2 class="text-bg-primary p-3">checked</h2>
+                <label for=""><input type="radio" name="color" value="blue">Blue</label>
+                <label for=""><input type="radio" name="color" value="red">Red</label>
+                <label for=""><input type="radio" name="color" value="green">Green</label>
+                <div class="color mb-5">Color</div>
+                <style>
+                    div.color {
+                        margin: 30px 0;
+                        padding: 30px 60px;
+                        border: 5px solid #dadada;
+                    }
+                </style>
+                <script>
+                    $(document).ready(function () {
+                        $("input").change(function () {
+                            var backgroundColor = $("input:checked").val();
+                            console.log(backgroundColor);
+                            $(".color").css("background-color", backgroundColor);
+                        });
+                    });
+                </script>
+
+            </div>
+            <div class="col">
+                <h2 class="text-bg-primary p-3">input</h2>
+                <label class="input" for=""><input type="checkbox">one</label>
+                <label class="input" for=""><input type="checkbox">two</label>
+                <label class="input mb-5" for=""><input type="checkbox">three</label>
+                <h2 class="text-bg-primary p-3">contains():</h2>
+                <p>lorem</p>
+                <p>Lorem</p>
+                <p>roem</p>
+                <p>lim jong seung</p>
+                <script>
+                    $(document).ready(function(){
+                        $('p:contains("lim")').css("color","blue");
+                    })
+                </script>
+
+            </div>
+            <style>
+                label.input{color: #888888;}
+            </style>
+            <script>
+                $(document).ready(function(){
+                    $("input").change(function(){
+                        $("label").has("input").css("color","#888888");
+                        $("label").has("input:checked").css("color","black");
+                    })
+                })
+            </script>
+            
+            <div class="col">
+                <p>아무말</p>
+                <p>아무말</p>
+                <p>아무말</p>
+                <p>아무말</p>
+            </div>
+            <div class="col">
+                <p>아무말</p>
+                <p>아무말</p>
+                <p>아무말</p>
+                <p>아무말</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
