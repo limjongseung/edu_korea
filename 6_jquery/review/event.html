@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery event</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!--최신버전 유지-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center text-bg-danger">event</h1>
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center text-bg-primary">dbclick</h2>
+                <h3>더블클릭</h3>
+                <p>전 더블클릭해야 사라집니다.</p>
+                <script>
+                    $(document).ready(function(){
+                        $("p").dblclick(function(){
+                            $(this).hide();
+                        });
+                    });
+                    </script>
+            </div>
+            <div class="col">
+                <h2 class="text-center text-bg-primary">mouseenter</h2>
+                <p id="d1">여기에 마우스 올려보세요</p>
+                <script>
+                    $(document).ready(function(){
+                        $("#d1").mouseenter(function(){
+                            alert("감사합니다.")
+                        });
+                    });
+                </script>
+            </div>
+            <div class="col">
+                <h2 class="text-center text-bg-primary">mouseleave</h2>
+                <p id="d2">mouseleave</p>
+                <script>
+                    $(document).ready(function(){
+                        $("#d2").mouseleave(function(){
+                            alert("mouseout");
+                        })
+                    })
+                </script>
+            </div>
+            <div class="col">
+                <h2 class="text-center text-bg-primary">mousedown</h2>
+                <p>html요소위에 있는 동안에 왼쪽,가운데,오른쪽마우스 버튼을 누르면 실행됩니다.</p>
+                <p id="d3">mousedown</p>
+                <script>
+                    $(document).ready(function(){
+                        $("#d3").mousedown(function(){
+                            alert("mousedown");
+                        })
+                    })
+                </script>
+            </div>
+
+
+        </div>
+    </div>
+    
+</body>
+</html>

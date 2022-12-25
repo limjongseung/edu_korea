@@ -62,7 +62,7 @@
                 <p>lorem</p>
                 <p>Lorem</p>
                 <p>roem</p>
-                <p>lim jong seung</p>
+                <p class="mb-5">lim jong seung</p>
                 <script>
                     $(document).ready(function(){
                         $('p:contains("lim")').css("color","blue");
@@ -81,18 +81,67 @@
                     })
                 })
             </script>
-            
             <div class="col">
-                <p>아무말</p>
-                <p>아무말</p>
-                <p>아무말</p>
-                <p>아무말</p>
+                <h2 class="text-center text-bg-primary p-3"> empty:내용이 없는 빈 요소를 선택하는 선택자</h2>
+                <table class="table mb-5">
+                    <tr>
+                        <thead>
+                            <th>Lorem</th>
+                            <th></th>
+                            <th>Ipsum</th>
+                        </thead>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Dolor</td>
+                        <td></td>
+                    </tr>
+                    
+                </table>
+                <script>
+                    $(document).ready(function(){
+                        $("th:empty").append("N/A")
+                        $("td:empty").append("N/A")
+                    })
+                </script>
+                <h2 class="text-center text-bg-primary">even:짝수 인덱스 요소를 선택합니다.</h2>
+                <ol class="mb-5">
+                    <li>lo</li>
+                    <li>lo</li>
+                    <li>lo</li>
+                    <li>lo</li>
+                </ol>
+                <script>
+                    $(document).ready(function(){
+                        $("li:even").css("color","red");
+                    })
+                </script>
+                <h2 class="text-center text-bg-primary">has:특정요소를 포함하는 요소를 선택할떼, 사용하는 선택자</h2>
+                <ul>
+                    <li><a href="">hi</a></li>
+                    <li>fake</li>
+                    <li><a href="">my name</a></li>
+                    <li>real</li>
+                    <li><a href="">lim</a></li>
+                </ul>
+                <script>
+                    $(document).ready(function(){
+                        $("ul>li:has('a')").css("border","1px solid red");
+                    })
+                </script>
             </div>
             <div class="col">
-                <p>아무말</p>
-                <p>아무말</p>
-                <p>아무말</p>
-                <p>아무말</p>
+                <h2 class="text-center text-bg-primary">$("[href]") : 링크에 대한 모든걸 선택</h2>
+                <a href="https://www.daum.net">다음</a> <br>
+                <a href="https://www.naver.com">네이버</a> <br>
+                <button class="btn btn-danger">none</button>
+                <script>
+                    $(document).ready(function(){
+                        $("button").click(function(){
+                            $("[href]").hide();
+                        });
+                    });
+                </script>
             </div>
         </div>
     </div>
