@@ -60,6 +60,21 @@
                     })
                 </script>
             </div>
+            <div class="col">
+                <h2 class="text-center text-bg-primary"> focus</h2>
+                <label for="">name:</label>
+                <input type="text" class="form-control ">
+                <script>
+                    $(document).ready(function(){
+                        $("input").focus(function(){
+                            $(this).css("background-color","yellow");
+                        });
+                        $("input").blur(function(){
+                            $(this).css("background-color","green")
+                        })
+                    })
+                </script>
+            </div>
 
 
         </div>

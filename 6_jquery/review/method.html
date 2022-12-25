@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center text-bg-danger">method</h1>
+            <div class="col">
+                <h2 class="text-center text-bg-primary">.add</h2>
+                <p>어떤 요소를 추가로 선택할때 사용합니다. </p>
+                <ul class="ex1">
+                    <li>lorem</li>
+                    <li>lorem</li>
+                </ul>
+                <p>bonus</p>
+                <script>
+                    $(document).ready(function(){
+                        $(".ex1 li").add("p").css("color","red");
+                    })
+                </script>
+            </div>
+            <div class="col">
+                <h2 class="text-center text-bg-primary">.add</h2>
+                <ul class="ex2">
+                    <li class="la">la</li>
+                    <li class="lb">lb</li>
+                </ul>
+                <p>hoverbutton</p>
+                <script>
+                    $(document).ready(function(){
+                        $(".ex2 li.la").hover(function(){
+                            $(this).add("p").css("color","red")}
+                            ,function(){
+                                $(this).add("p").css("color","black");
+                            })
+                    })
+                </script>
+            </div>
+            <div class="col">
+                <h2 class="text-center text-bg-primary">.addBack</h2>
+                <div class="">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p class="ip">Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <style>
+                    .border{
+                        border: 1px solid blue;
+                    }
+                </style>
+                <script>
+                    $(document).ready(function(){
+                        $("div").find("p.ip").addBack().addClass("border");
+                    })
+                </script>
+                <script>
+                     $("h1").after("<p class = 'text-center text-bg-info'>after</p>");
+                </script>
+            </div>
+        </div>
+        <div class="row">
+            <h1 class="text-center text-bg-danger">method2</h1>
+            <div class="row">
+                <h2 class="text-center text-bg-primary">append</h2>
+                <ul class="append">
+                    <li>lorem</li>
+                    <li>lorem</li>
+                </ul>
+                <script>
+                    $(document).ready(function(){
+                        $("ul.append").after("<li>append</li>")
+                    })
+                </script>
+                    <section>abc</section>
+                    <strong>XYZ</strong>
+                    <script>
+                        $(document).ready(function(){
+                            $("section").append($("strong"));
+                        });
+                    </script>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
