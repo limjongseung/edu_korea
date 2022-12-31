@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,6 +14,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="custom.css">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <title>event</title>
@@ -22,7 +23,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-4">
+        <div class="col-6">
             <pre>
                 11)click():
                 12)clone():선택한요소를 복제합니다.
@@ -116,16 +117,15 @@
                     });
                 </script>
                 17)empty(): 선택한 요소의 내용(content)을 지울뿐 tag는 남아 있습니다.  => 태그까지 제거하는게 remove
-                <button >Click to </button>
-                <article>태태그그</article>
+                <button class="btn btn-success" >Click to </button>
+                <article class="rect">태태그그</article>
                 <script>
-                    $(document).ready(function(){
-                        $("button").click(function(){
-                            $("article").empty();
+                    $(function(){
+                        $(".btn").click(function(){
+                            $(".rect").empty();
                         });
                     });
                 </script>
-
                 18)fadeIn(): 선택한 요소를 서서히 나타나게 합니다.
                 19)fadeOut(): 선택한 요소를 서서히 사라지게 합니다.
                 20)fadeToggle(): 선택한 요소를 서서히 나타나게 그리고 사라지게 합니다.
@@ -142,7 +142,7 @@
                 29)():
             </pre>
             </div>
-            <div class="col-4">
+            <div class="col-6">
                 <pre>
                     31)offset
                     32)parent

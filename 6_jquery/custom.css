@@ -1,0 +1,19 @@
+.rect{
+    /* padding: 20px; */
+    background:green;
+}
+.red{
+    background: red;
+    width: 80px;
+}
+div.box{
+    height: 50px;
+    border: 1px solid #bcbcbc;
+}
+.w-80{
+    width: 80%;
+}
+.box{
+    overflow: auto;
+    height: 500px !important;
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">-->
+           
+            <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+          
+    <!--최신버전 유지-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>event</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div>
+            <pre>
+                18)fadeIn(): 클릭했을때 서서히 나타나고
+                <button class="btn btn-secondary">click to</button>
+                <div class="red" id="div1"></div>
+                <div class="green" id="div1"></div>
+                <div class="blue" id="div1"></div>
+                <!-- <script>
+                    $(document).ready(function(){
+                        $("button").click(function(){
+                            //$("#div1").fadeIn();
+                            $("#div2").fadeIn("slow");
+                            $("#div3").fadeIn(1500);
+
+                        })
+                    })
+                </script> -->
+                <h2>fade toggle</h2>
+                <button class="btn btn-info">click</button>
+                <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque?</h1>
+                <script>
+                    $(function(){
+                        $("button").click(function(){
+
+                        })
+                    });
+                </script>
+                19)fadeOut(): 선택한 요소를 서서히 사라지게 합니다.
+                20)fadeToggle(): 선택한 요소를 서서히 나타나게 그리고 사라지게 합니다.
+                21)find(): 어떤 요소의 하위요소중 특정 요소를 찾을때 사용
+                .find(selector)
+                $("h1").find("span") h1 요소의 하위 요소중 span요소를 선택
+                <section class="a">
+                    <span class="lo">lorem</span>
+                    <span class="ip">lorem</span>
+                    <span class="do">lorem</span>
+                </section>
+                <dl class="b">
+                    <dt>난 타이틀</dt>
+                    <dd class="lo">lorem</dd>
+                </dl>
+                <script>
+                    $(function(){
+                        $('dl.b').find("dd.ip").css("font-size","2rem");
+                    });
+                </script>
+                21)get(): 선택한 요소를 배열(Array)로 가져옵니다.
+                <ul>
+                    <li>lorem</li>
+                    <li>ipsum</li>
+                </ul>
+                <div class="nulls"></div>
+                <script>
+                    $(function(){
+                        let hw = $("li").get();
+                        for (let i = 0; i < hw.length; i++){
+                        $(".nulls").append("<p>"+ hw[i].innerHTML + "</p>")
+                        } 
+
+                    })
+                </script>
+                22)has(): 특정요소를 가지고 있는 요소를 선택할 수 있습니다.
+                <h1>lorem, ipsum dolor.</h1>
+                <h1>lorem, <span class="text-danger">ipsum</span>dolor.</h1>
+                <script>
+                    $('h1').has("span").css("color","red");
+                </script>
+                23)hide(): 선택한 요소를 사라지게 합니다.
+                .hide(duration[,easing][,complete])
+                duration : 사라지는데 걸리는 시간
+                easing : 사라지는 방식 swing 과 linear가 가능
+                complete : 사라진 다음에 실행한 함수를 넣을수 있습니다.
+                <button class="hide1 btn btn-danger">hide</button>
+                <code>.hide()</code>
+                <div class="box box1"></div>
+                <script>
+                    $(function(){
+                        $("button.hide1").click(function(){
+                            $(".box1").hide(1000,"linear",function(){
+                                $(this).show(1000);
+                            });
+                        });
+                    });
+                </script>
+                24)hover(): mouseenter, mouseleave를 합친것
+                선택한 요소에 마우스 초린터를 올렸을때 마우스포인터가 벗어났을때
+                <p class="mt-5">
+                    Lorem,<span id="ipsum">ipsum</span> dolor
+                </p>
+                <script>
+                    $(document).ready(function () 
+                    {
+                        $('#ipsum').hover(function(){
+                            $(this).css('color','blue');
+                        }, function() {
+                            $(this).css('color','red');
+                        });
+                    });
+                    </script>
+                25)html():선택한 요소안의 내용을 가져오거나 다른내용으로 바꿉니다.text()하고 비슷하지만
+                태그의 처리가 다릅니다.
+                1)html태그를 포함하여 선택한 요소 안의 내용을 가져옵니다.
+                let bb = $("h1").html();
+                2).html(htmlstring): 
+                26)inArray(): 배열의 특정값이 있는지?
+                .inArray(value,array[,fromIndex])
+                value: 검색하고자 하는 값
+                array: 배열의 이름을 입력
+                fromIndex: 선택사항으로 몇번째 배열 값부터검색할지 정합니다.
+                입력하지 않았을때 기본값은 0으로 첫번째 배열값부터 검색
+                .inArray("as",Ary)
+                없으면 -1 0,1
+                27)trim(): 공백제거(whitespace)
+                주의사항은 문자열 앞과 뒤에 있는 공백을 제거하지만 문자열 중간에 있는건 제거하지 
+                않습니다.
+                <pre class="ab border"></pre>
+                <pre class="cd border"></pre>
+                <script>
+                    $(function(){
+                        let str =  "                    lorem          ipsum      dolor"
+                        $(".ab").html(str);
+                        $(".cd").html(jQuery.trim(str));
+                    });
+                </script>
+     
+            </pre>
+        </div>
+           
+            <div>
+                <pre>
+                    28)load():
+                    29)not():
+                    29)():
+                    31)offset
+                    32)parent
+                    32)prepend
+                    32)prop
+                    32)remove
+                    32)removeAttr
+                    32)removeClass
+                    32)replaceWith
+                    32)resize
+                    32)scrollTop
+                    32)slice
+                </pre>
+            </div>
+            <div >
+                <pre>
+                    32)scrollDown
+                    32)parent
+                    32)prepend
+                    32)prop
+                    32)remove
+                    32)removeAttr
+                    32)removeClass
+                    32)replaceWith
+                    32)resize
+                    32)scrollTop
+                    32)slice
+                    32)scrollDown
+                </pre>
+            </div>
+
+      </div>
+    </div>
+  </body>
+</html>
+
