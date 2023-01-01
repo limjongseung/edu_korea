@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">-->
+    <!--<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script><!--최신버전 유지-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>event</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+<!--<p id="d3">마우스 오른쪽 왼쪽 버튼</p>
+<script>
+$(document).ready(function(){
+    $("#d3").mousedown(function(){
+        alert("mouse down!");
+    });
+});
+</script>
+<p id="d4">마우스 오른쪽 왼쪽 버튼누르고</p>
+<script>
+$(document).ready(function(){
+    $("#d4").mouseup(function(){
+        alert("mouseup!");
+    });
+});
+</script>
+<h1>hover : mouseenter / mouseleave방법의 조합입니다</h1>
+<p id="d5">마우스를 누르고 뛸대 두가지 이벤트를 발생시킬수 있습니다</p>
+<script>
+$(document).ready(function(){
+$("#d5").hover(function(){
+alert("enter");
+},function(){
+alert("bye");
+});
+});
+</script>-->
+<h1>focus : 집중하다</h1>
+<label for="">Name : </label>
+<input type="text" class="form-controll">
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "yellow");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "green");
+    });
+});
+</script>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

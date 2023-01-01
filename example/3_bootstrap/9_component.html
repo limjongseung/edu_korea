@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Dropdowns, navs navbar</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+        <h1>기본 드롭다운</h1>
+        <p>드롭다운 메뉴는 사용자가 미리 정의된 목록에서 하나의 값을 선택할수 있는 토글가능한 메뉴입니다</p>
+        <p>드롭다운 메뉴를 열려면 의 클래스 .dropdown-toggle와 data-bs-toggle="dropdown"속성이 있는 버튼이나 링크를 사용합니다.<br>
+        .dropdown-divider : 클래스는 얇은 수평 테두리로 드롭다운 메뉴 내부의 링크를 분리하는 데 사용됩니다 .
+        </p>
+        <p>드롭다운에 방향을 추가할수 있다
+            dropdown dropright,dropdown dropleft, 
+            dropdown-menu dropdown-menu-right  
+        </p>
+        <div class="dropdown dropright">
+            <button type="button" class="btn btn-primary dropdown-toggle" 
+            data-toggle="dropdown">
+            Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+            <li>
+                <h5 class="dropdown-header">
+                Dropdown header
+                </h5>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#">Link 1</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#">Link 2</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#">Link 3</a>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li>
+                <a class="dropdown-item" href="#">Another link</a>
+            </li>
+        </ul>
+        </div>
+        <!-- data-bs-toggle  은 3하고 5버전에서-->
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mt-5">
+            드롭다운이 있는 그룹화된 버튼
+            </h1>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">
+                apple
+                </button>
+                <button type="button" class="btn btn-primary">
+                samsung
+                </button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" 
+                    data-toggle="dropdown">sony
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Tablet</a>
+                    <a class="dropdown-item" href="#">Smartphone</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

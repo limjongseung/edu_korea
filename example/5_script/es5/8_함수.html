@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+<h1>함수</h1>
+<pre>
+- 함수를 쓰는 방법 -
+1) 
+function functionname ( argument1, argument2...){
+
+}
+
+2)
+var functionname = function( argument1, argument2...){
+
+}
+
+함수호출
+functionname(value1,..)
+</pre>
+<h2>방법1</h2>
+<script>
+function hyi(){
+    document.write('<p>내이름은 황영일입니다</p>');
+}
+hyi();
+</script>
+
+<h2>방법2</h2>
+<script>
+var myname = function(){
+    document.write('<p>my name is young-il</p>');
+}
+myname();
+</script>
+
+<h2>매개변수(parameter) 사용</h2>
+<style>
+h1{font-family:Consolas;}
+h1 span{color:#2196f3;}
+</style>
+<script>
+function hyi(myName, myjob){
+document.write('<h1>My name is<span>' + myName + '</span>.I am a<span>' + myjob +'</span>.</h1>' );
+}
+hyi('황','강사');
+hyi('hwang','teacher');
+hyi('hwang');
+</script>
+
+<pre>
+- 함수사용시 주의사항 -
+1) 호출을 해야실행
+2) 매개변수 사용시 매개변수 수만큼 사용
+3) hyi(myName, myjob){ 매개변수
+4) hyi('황','강사'); 아규먼트는 함수를 이용하는 사람이 
+매개변수에 집어넣는 값을 의미 (전달값,전달인자)
+</pre>
+    
+</body>
+</html>

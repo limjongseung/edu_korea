@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/customizing.css">
+    <title>js 2016 ~ 2021</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+        <h1 class="mt-5">ECMA 스크립트 2016</h1>
+        <p>원래 javascript 버전번호는 ES5(2009) 및 ES6(2015)였습니다</p>
+        <p>2016년 부터 버전 이름은 년도수로 바뀝니다</p>
+
+        <h2>2016에 새로운 기능</h2>
+        <p>자바스크립트 지수화(**)</p>
+        <mark id="d1"></mark>
+        <mark id="d2"></mark>
+        <script>
+        let q = 5;
+        let w = q ** 2;//Math.pow(x,y)
+        document.getElementById("d1").innerHTML = w;
+
+        let e = 5;
+        let r = Math.pow(e, 2)
+        document.getElementById("d2").innerHTML = r;
+        </script>
+        <p>자바스크립트 지수화 할당(**=)</p>
+        <p>지수 대입연산자(**=)는 변수값을 오른쪽 피연산자의 거듭제곱으로 올립니다</p>
+        <mark id="d3"></mark>
+        <script>
+        let y = 5;
+        y **= 2;
+        document.getElementById("d3").innerHTML = y;
+        </script>
+
+        <p>자바스크립트 배열 포함(**=)</p>
+        <p>Array.includes배열이 도입되었습니다 : 이를 통해서 요소가 배열에 있는지를 확인할수 있습니다</p>
+        <mark id="d4"></mark>
+        <script>
+        const fruits = ["b","o","a","m"];
+        document.getElementById("d4").innerHTML = fruits.includes("m");
+        </script>
+
+<h2>ECMAScript 2017</h2>
+<p>String padding : 문자열을 다른 문자열로 채워줍니다</p>
+<mark id="d5"></mark>
+<script>
+let txt_5 = "글자";
+text_5 = txt_5.padStart(4, "m");//기존 요소를 포함한 자리수
+document.getElementById("d5").innerHTML = text_5;
+</script>
+
+<p>Object entries() : 객체의 키/값을 쌍으로 리턴합니다</p>
+<mark id="d6"></mark>
+<script>
+const person = {
+firstName : "John",
+latsName:"Doe",
+age:50,
+eyeColor:"blue"
+};
+
+let people = Object.entries(person);
+document.getElementById("d6").innerHTML = people;
+</script>
+
+<p>Object values() : 키가 아닌 값을 출력</p>
+
+<mark id="d7"></mark>
+<script>
+const person2 = {
+firstName : "John",
+latsName:"Doe",
+age:50,
+eyeColor:"blue"
+};
+let Val = Object.values(person2)
+document.getElementById("d7").innerHTML = Val;
+</script>
+
+<p>async and await : 비동기 함수</p>
+<p>시간 초과를 기다리는 중</p>
+<mark id="d8"></mark>
+<script>
+async function myWait(){
+    let myPromise = new Promise(function(resolve){
+        setTimeout(function(){resolve("Free time !!");},3000);
+    });
+    document.getElementById("d8").innerHTML = await myPromise;
+}
+myWait();
+</script>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+    <h1>math</h1>
+    <p>생성자가 아니여서 생성하지 않고 객체를 사용해서 호출할수 있습니다</p>
+<pre>
+- Math 개체 메서드 및 속성 -
+1)Math.abs() : 숫자의 절대값(음수가 아닌)을 리턴
+- 숫자가 아닌경우 NaN
+- null 값을 0으로 리턴
+
+<p id="d1"></p>
+<script>
+let a = Math.abs(-7.25);
+let b = Math.abs(0);
+let c = Math.abs("hello");
+let d = Math.abs(2-3);
+let e = Math.abs(null);
+document.getElementById("d1").innerHTML =
+a + '<br>' + b + '<br>' + c + '<br>' + d + '<br>' + e;
+</script>
+
+2)acos() : 숫자의 아크코싸인(라디안)을 리턴
+- 0과 PI사이의 값을 리턴
+- -1에서 1사이의 매개변수를 리턴
+- Math.acos(-1) : PI를 리턴
+- Math.acos(0) : PI/2 를 리턴
+- Math.acos(1) : 0 를 리턴
+- -1 ~ 1사이를 벗어나거나 숫자가 아닌경우 NaN
+
+<p id="d2"></p>
+<script>
+let f = Math.acos(-1);
+let g = Math.acos(0);
+let h = Math.acos(1);
+document.getElementById("d2").innerHTML =
+f + '<br>' + g + '<br>' + h ;
+</script>
+
+3)acosh() : 숫자의 쌍곡선 역코사인을 리턴
+- 매개변수가 1보다 작으면 매서드는 NaN을 리턴
+<p id="d3"></p>
+<script>
+let y = Math.acosh(1);
+let j = Math.acosh(2);
+let k = Math.acosh(0.5);
+document.getElementById("d3").innerHTML =
+f + '<br>' + j + '<br>' + k ;
+</script>
+
+4)asin() : 숫자의 아크사인(라디안을)리턴
+- -PI/2와 PI/2 사이의 값을 반환합니다.
+- -1에서 1 사이의 매개변수를 리턴
+- Math.asin(-1)-PI/2를 반환합니다.
+- Math.asin(0)0를 반환합니다.
+- Math.asin(1)PI/2를 반환합니다.
+<p id="d4"></p>
+<script>
+let l = Math.asin(-1);
+let m = Math.asin(0);
+let n = Math.asin();
+document.getElementById("d4").innerHTML =
+l + '<br>' + m + '<br>' + n ;
+</script>
+
+<style>
+p{color:red;}
+</style>
+5)asinh() : 쌍곡선 아크사인에 숫자를 리턴
+- 0일때 0나오고
+- 음수 양수모두되며 값에 제한이 없음
+<p id="d5"></p>
+<script>
+let o = Math.asinh(-1);
+let p = Math.asinh(0);
+let q = Math.asinh(1);
+let r = Math.asinh(2);
+document.getElementById("d5").innerHTML =
+o + '<br>' + p + '<br>' + q +'<br>' + r;
+</script>
+
+6)atan() : 숫자의 아크탄젠트를 -PI/2와 PI/2 라디안 사이의 값으로 반환합니다.
+<p id="d6"></p>
+<script>
+    document.getElementById("d6").innerHTML = Math.atan(2);
+</script>
+7)atan2() : 인수 몫의 아크탄젠트를 PI와 -PI라디안 사이의 숫자값으로 리턴
+반환된 숫자는 양의x축과 점(x,y)사이의 시계 반대방향 각도(도가 아님)을 나타냅니다
+문법-atan(y,x)
+<p id="d7"></p>
+<script>
+    document.getElementById("d7").innerHTML = Math.atan2(8, 4);
+</script>
+
+8)atanh() :
+9)cbrt() :
+10)ceil() :
+11)clz32() :
+12)cos() :
+13)cosh() :
+14)E :
+15)exp() :
+16)expm1() :
+17)floor() :
+18)fround() :
+19)LN2
+20)LN10
+21)log():
+22)10g10():
+23)log1p():
+24)log2():
+25)LOG2E
+26)LOG10E
+27)max():
+28)min():
+29)PI
+30)pow():
+31)random():
+32)round():
+33)sign():
+34)sin():
+35)sinh():
+36)sqrt():
+37)SQRT1_2
+38)SQRT2
+39)tan()
+40)tanh()
+41)trunc()
+
+</pre>  
+</body>
+</html>

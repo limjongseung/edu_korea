@@ -1,0 +1,16 @@
+/*
+mix in
+@mixin name
+property: value;
+property: value;
+....
+*/
+.danger {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+  letter-spacing: -0.05;
+  word-spacing: 5px;
+  background-color: green;
+}

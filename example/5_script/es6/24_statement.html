@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statement</title>
+</head>
+<body>
+<H1>statement</H1>   
+<p>웹브라우저에 의해 실행되는 명령입니다</p> 
+<p id="d1"></p>
+<script>
+document.getElementById("d1").innerHTML = "Hello world."
+</script>
+<pre>
+11)if...else...elseif : 조건에 따라 실행할 블록을 표시
+지정된 조건이 참이면 실행되는 코드블럭 
+조건이 거짓이면 다른 코드블럭을 실행할수도 있습니다
+1) 시간이 20시 미만이면 굿데이를 출력
+<p id="d1"></p>
+<script>
+let hour = new Date().getHours();
+if (hour < 20) {
+    document.getElementById("d1").innerHTML = "Good day";
+}
+</script>
+2) "좋은하루 또는 좋은저녁출력"
+<p id="d2"></p>
+<script>
+let h = new Date().getHours();
+let greeting;
+if (h < 20){
+    greeting = "Good day";
+}else{
+    greeting = "Good evening";
+}
+document.getElementById("d2").innerHTML = greeting;
+</script>
+조건 3단계 : 시간이 10:00미만이면 "좋은아침"
+그렇지 않은경우 20:00미만이면 좋은날
+그렇지 않으면 "안녕히 주무세요"
+<p id="d3"></p>
+<script>
+let hh = new Date().getHours();
+let gt;
+
+if(hour < 10) {
+    gt = "good morning";
+} else if (hour < 20){
+    gt = "good day";
+} else {
+    gt = "good evening";
+}
+document.getElementById("d3").innerHTML = gt;
+</script>
+12)let : 변수선언
+<p id="d4"></p>
+<script>
+let q = 5;
+let w = 6;
+document.getElementById("d4").innerHTML = q+w;
+</script>
+13)return : 함수 실행을 중지하고 해당함수에서 값을 반환합니다
+<p id="d5"></p>
+<script>
+function myPI(){
+    return Math.PI;
+}
+document.getElementById("d5").innerHTML = myPI();
+</script>
+14)switch : 다른 경우에 따라 실행될 블록을 표시
+- 한구문마다 break를 걸고 구문이 다 맞지 않을경우
+  default를 실행 편리하긴 하지만 코드블럭이 길어지는 
+  단점이 있습니다
+<input type="text" id="myInput">
+<button onclick="myF()">try it</button>
+<p id="d6"></p>
+<script>
+function myF(){
+    var text;
+    var fruits = document.getElementById("myInput").value;
+
+    switch(fruits){
+        case "banana":
+        text = "바나나 좋아";
+    break;
+        case "Orange":
+        text = "난 오렌지가 싫어"
+    break;
+        case "Apple":
+        text = "사과라 사과를 좋아하나요?"
+    break;
+    default:
+    text = "저는 과일을 별로 좋아하지 않아요.."
+    }
+    document.getElementById("d6").innerHTML = text;
+}
+
+</script>
+
+
+15)throw : 오류 발생 : 사용자 지정 오류 만들수 있습니다
+<input type="text" id="demo">
+<button type="button" onclick="myE()">test input</button>
+<p id="message"></p>
+<script>
+function myE(){
+    const message = document.getElementById("message");
+    message.innerHTML = "";
+    let u = document.getElementById("demo").value;
+    try{
+        if(u == "") throw "빈 공간";
+        if(isNaN(u)) throw "숫자가 아님";
+        if(u > 10) throw "높다";
+        if(u < 5) throw "낮다";
+    }catch(err){
+        message.innerHTML = "Input "+ err;
+    }
+}
+</script>
+16)try catch finally : try블록에서 오류 발생시 실행할 블록을 표시하고 오류처리를 구현합니다
+<p id="d7"></p>
+<script>
+try{
+adddddlert("난 경고 메세지!");
+}catch(err){
+document.getElementById("d7").innerHTML = err.message;
+}
+</script>
+
+17)var : 변수선언
+<p id="d8"></p>
+<script>
+var carName = "volvo";
+document.getElementById("d8").innerHTML = carName;
+</script>
+18)while : 조건이 참인 동안 실행할 명령문 블록을 표시합니다
+<p id="d9"></p>
+<script>
+let tx = "";
+let y = 0;
+while (y < 5){
+    tx += y + "<br>";
+    y++;
+}
+document.getElementById("d9").innerHTML = tx;
+</script>
+</pre>
+</body>
+</html>

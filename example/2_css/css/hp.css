@@ -1,0 +1,83 @@
+.a{
+background-color:lightgreen;
+}
+#b{
+width:250px;height:250px;
+}
+.c{
+width:100px;height:100px;
+border:1px solid black;
+padding:2px;
+mix-blend-mode:difference;
+}
+#d{isolation:auto;}
+#e{isolation:isolate;}
+
+.rel{
+position:relative;/*위에 요소에 영향을 받는 상대적 위치*/ 
+width:400px;height:200px;border:3px solid red;   
+}
+.left{
+position:absolute;
+width:100px;
+height:120px;
+border:3px solid blue;
+left:20px;
+top:5px;
+}
+.right{
+position:absolute;
+width:200px;
+height:120px;
+border:3px solid green;
+right:20px;
+bottom:10px;
+}
+html{
+font-size:20px;
+}
+body{
+font-size:16px;
+}
+.rem{
+font-size:1rem;
+}
+.em{
+font-size:1em;
+}
+* {
+text-transform:capitalize;
+}
+.h1-rem{
+font-size:3rem;
+color:#333;
+}
+.p-line{
+font-size:0.8rem;/*상위 html요소를 기준*/
+line-height:1.3rem;
+font-weight:100;
+letter-spacing:-1px;
+word-spacing:5px;
+}
+.object-fit{
+border:1px solid red;
+width:200px;
+height:200px;
+object-fit:cover;
+object-position: 10px 30px; /*왼쪽 위쪽*/   
+}
+
+.opacity{
+width:200px;
+border:1px solid #000;
+opacity:.2;/*투명도 20%*/
+}
+.opacity:hover{
+opacity:1;
+border:3px solid #000;    
+}
+.outline{
+border:1px solid red;
+outline:2px solid blue;
+outline-offset:20px;/*보더와 같이 아웃라인을 쓸때 간격을 벌어주고싶으면 아웃라인 오프셋을 쓰시면 됩니다*/
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>h~p_css</title>
+    <link rel="stylesheet" href="css/hp.css">
+</head>
+<body>
+<h1>height</h1>
+<p>요소의 높이를 설정합니다</p> 
+<pre>
+- pc버전을 만들때는 px
+- 모바일과 태블릿을 만들때는 %를 사용하는게 좋습니다
+- min-height : 요소의 최소 높이
+- max-height : 요소의 최대 높이를 지정합니다
+- auto : 요소가 콘텐츠에 올바르게 표시될수 있도록 자동으로 
+  조정합니다
+</pre> 
+
+<h1>image-rendering</h1>
+<p>이미지 크기 조정에 사용할 알고리즘 유형을 지정합니다</p>
+<pre>
+- auto : 브라우저가 스케일링 알고리즘을 선택하도록 해주는것 기본값
+- smooth : 이미지의 색상을 부드럽게 해주는 알고리즘
+- high-quality : 부드러움은 동일하지만 고품질 스케일링을 선호합니다
+- crisp-edges : 이미지의 대비와 가장자리를 유지하는 알고리즘을 사용합니다
+- pixelated : 이미지를 확대했을때는 화면에서 거칠게 보이고
+이미지를 축소하거나 원래크기일때는(100%)일때는 부드럽게
+보이는것
+
+- 사용예시 -
+img{
+width:100%;
+}
+.image{
+width:100px;
+height:100px;
+image-rendering:smooth;   
+}
+</pre>
+
+<h1>isolation : 격리속성</h1>
+<div id="b" class="a">
+    
+    <div id="d">
+        <div class="a c">
+        div d: isolation: auto;
+        </div>
+    </div>
+
+    <div id="e">
+        <div class="a c">
+        div e: isolation: isolate;   
+        </div>
+    </div>
+
+</div><!--end-->
+
+<h1>left,right,top,bottom</h1>
+<p>문서를 기준으로 엘리먼트가 가지고 있느 좌표에 영향을 줍니다</p>
+
+<div class="rel">
+position:relative; 
+<div class="left">absolute and left</div>
+<div class="right">absolute and right</div>  
+</div>
+
+<h1>타이포그래픽을 사용할때 써야하는 css</h1>
+<pre>
+- font-size:폰트에 크기
+em(body를 기준으로),rem(최상위요소 root html) 
+px 최소크기가 10px이하로 내려가지 않음
+태그에서 small이라고 되어있는걸 사용
+body{font-size:16px;}
+다른요소에 font-size=0.5em 이면
+0.5em = 16px x 0.5 = 8px;
+1em = 16px x 1 = 16px;
+2em = 16px x 2 = 32px;
+
+- letter-spacing:자간
+(영문,숫자,중국어는 자간을 0으로 설정)
+- line-height:행간
+- word-spacing:단어간에 간격
+- indent : 들여쓰기
+- text-transform:uppercase(대문자),lowercase(소문자)
+  capitalize(앞에 글자만 대문자로)
+</pre>
+<div class="rem">rem</div><!--최상위요소 root html을 기준으로 권고사항-->
+<div class="em">em</div><!--body를 기준으로 크기를 결정-->
+<h1 class="h1-rem">타이포 그래픽</h1>
+<p class="p-line">
+Occaecat id cillum nostrud culpa labore irure ullamco voluptate sunt aliqua sint minim. Eiusmod et irure mollit nisi. Esse labore minim aute tempor. Dolore nostrud cupidatat Lorem laborum nostrud mollit do ad adipisicing sunt cillum.
+
+Esse laboris eu pariatur cillum sint incididunt est nisi pariatur ipsum aute nulla tempor. Voluptate sint deserunt mollit enim dolore tempor aute. Tempor aliqua qui sit irure culpa labore officia dolore aliquip aliquip et proident. Voluptate ex anim ad cillum amet occaecat.
+
+Mollit exercitation ad magna ad mollit labore quis sint duis nulla Lorem tempor. Aliqua aliquip irure deserunt velit sint. Excepteur irure id consequat dolore sit irure magna elit eiusmod sit cupidatat pariatur aliquip.
+
+Lorem sint eu laborum enim laborum ullamco non incididunt consectetur veniam pariatur. Nisi aute voluptate eu ad pariatur eu eiusmod minim veniam irure deserunt dolor enim. Do excepteur nostrud proident aliquip irure ullamco est excepteur irure aute anim qui dolor. Proident cupidatat eiusmod quis sunt nulla nulla veniam esse aute sint. Excepteur minim consequat dolore consequat nisi aliquip do qui exercitation commodo adipisicing laborum. Ullamco officia commodo elit dolore esse in reprehenderit excepteur qui.
+
+Esse voluptate duis id fugiat duis nulla occaecat et nisi exercitation ex sunt. Velit incididunt aliqua ex nostrud culpa exercitation eiusmod nisi labore ut. Laboris mollit adipisicing velit ipsum ut excepteur irure amet in non do id ea eu.
+
+Commodo minim tempor voluptate ad consequat ex anim velit adipisicing tempor duis dolor do. Deserunt cillum sunt tempor nulla consequat ipsum dolore ea elit in irure commodo. Consequat Lorem dolor veniam tempor exercitation deserunt reprehenderit commodo qui culpa culpa. Cupidatat enim culpa reprehenderit anim pariatur. Enim duis non nulla velit est eu aliquip nostrud anim cupidatat est laboris. Veniam labore ullamco occaecat cillum eu velit proident reprehenderit magna.
+
+Qui culpa excepteur non mollit laboris ad magna excepteur consequat ad voluptate adipisicing. Aute aliqua proident fugiat deserunt nulla deserunt reprehenderit laborum reprehenderit duis ut. Laborum eu dolor do consequat dolor ad magna occaecat sit do. Labore tempor occaecat eu sunt id in deserunt irure velit cillum nostrud labore eiusmod exercitation.
+
+Dolore in cupidatat Lorem consectetur. Incididunt nostrud ad sint enim deserunt irure cillum labore elit non. Nisi laboris sint culpa culpa Lorem nostrud labore. Sint sunt mollit fugiat in ex ipsum nostrud sunt proident. Labore ipsum id do quis do magna ad ea nisi velit. Cupidatat magna anim qui nostrud labore incididunt sint consectetur irure fugiat.
+
+Eu ex Lorem aute amet officia duis adipisicing ullamco eiusmod pariatur ea sit. Laborum commodo sunt veniam officia aliqua fugiat. Dolore magna nisi minim proident commodo. Deserunt amet in aute aliqua occaecat nulla reprehenderit sit reprehenderit. Mollit dolore proident aute ea dolore consequat nisi velit excepteur sunt cillum deserunt fugiat. Ad tempor nulla exercitation deserunt proident anim non duis et pariatur tempor deserunt.
+
+Ut pariatur amet aliquip dolore anim laboris ea est irure nulla. Proident elit exercitation veniam pariatur est in est tempor duis nostrud. Velit sit fugiat elit id Lorem magna minim sit eu minim ipsum aute sit commodo. Aliquip eiusmod cupidatat occaecat veniam irure aute est et labore ea elit. Incididunt amet non adipisicing commodo cupidatat consequat occaecat amet do amet. Qui dolore labore nisi esse. Duis cillum eiusmod quis excepteur quis.
+</p>
+
+<h1>object-fit</h1>
+<p>컨테이너에서 지정한 css맞게 img 또는 비디오 크기를 조정하는 방법</p>
+<pre>
+- fill : 기본값 크기가 조정죔
+- contain : 콘텐츠 상자에 맞게 가로세로 비율을 유지하도록 크기가 조정됩니다
+- cover : 지정한 크기만큼 잘려서 보이게 됩니다
+- scale-down : 크기가 좀더 작아집니다
+</pre>
+
+<img src="images/flower2.jpg">
+
+<img src="images/flower2.jpg" class="object-fit">
+
+<h1>opacity</h1>
+<p>주어진 요소에 투명도 값</p>
+
+<img src="images/flower.jpg" class="opacity">
+
+<h1>테두리를 2개로 만들어야 할때</h1>
+<p>border와 outline을 동시에 사용합니다</p>
+<pre>
+- outline-color : 색상값
+- outline-offset : 보더와 쓸때 간격을 벌려줄때 사용
+- outline-style : {outline-style:dotted;}
+- outline-width : thick(두꺼운)
+</pre>
+
+<div class="outline">
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, quo?
+</div>
+
+<h1>overflow:</h1>
+<p>콘텐츠 내용이 넘칠때 숨기거나 아니면 스크롤바를 생성</p>
+<pre>
+- overflow:hidden : 넘치는 부분은 숨김
+- overflow:auto : 넘치는 부분은 스크롤바 생성
+- overflow-x,overflow-y:가로세로부분을 따로 지정
+- overflow-wrap:normal(넘치는 상태로 지속)
+  break-word:(넘치는 부분을 끊고 다시시작)
+</pre>
+
+</body>
+</html>

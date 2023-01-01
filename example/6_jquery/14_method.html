@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">-->
+    <!--<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="css/cus.css">
+    <title>method</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+<pre>
+    11)click() : 선택한 요소를 클릭했을때 특정작업을 수행
+    12)clone() : 선택한 요소를 복제 합니다
+    <h1></h1>
+    <span>나를 복사</span>
+    <script>
+    $(document).ready(function(){
+        $('span').clone().appendTo('h1');
+    });
+    </script>
+    
+    13)css() : 선택한 요소의 css속성값을 가져오거나 style속성을 추가
+    <style>
+    h2{color:aqua;}
+    </style>
+    <h2>나한테 색상을 넣어주실거죠!</h2>
+    <footer></footer>
+    <script>
+    $(document).ready(function(){
+        var Cl = $('h2').css("color");
+        $("footer").html("위에다 칠한 색상은 " + Cl);
+    });
+    </script>
+
+    14)delay() : 실행중인 함수를 정해진 시간만큼 중지시킵니다
+    .delay(duration[,queueName])
+    버튼을 클릭했다가 글자가 사라지고 1초뒤에 아래로 내려옵니다
+    <button class="btn btn-info">click</button>
+    <p>slide up,down</p>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('p').slideUp(200).delay(1000).slideDown(200);
+            });
+        });
+    </script>
+
+    15)detach() : 선택한 요소를 문서에서 제거합니다
+    제거한다는 면에서는 remove와 같으나 제거한 요소를 저장 다시 사용할수 있습니다
+    var andjt = $('h1').detach();
+    <h3 class="a">lorem</h3>
+    <h3 class="b">dolor</h3>
+    <button id="cut" class="btn btn-danger">cut</button><button id="paste" class="btn btn-info">paste</button>
+    <script>
+        $(document).ready(function(){
+        var Detach;
+            $('#cut').click(function(){
+                Detach = $('.b').detach();
+            });
+            $('#paste').click(function(){
+                $('.a').before(Detach);
+            });
+        });
+    </script>
+    16)each() : 선택한 요소가 여러개일때 각각에 대하여 반복하여 함수를 실행합니다
+    - 특정작업까지 하고 중지하려면 return false를 사용합니다
+    <style>
+        .c1{color:red;}.c2{color:blue;}.c3{color:green;}.c4{color:brown;}
+    </style>
+    <p>one</p>
+    <p>two</p>
+    <p>three</p>
+    <p>four</p>
+    <!--<script>
+    $(document).ready(function(){
+        let i = 0
+        $('p').each(function(){
+            $(this).addClass('c'+i);
+            i = i + 1;
+        });
+    });
+    </script>-->
+
+예시)반복작업을 두번만 하고 빠져나오기
+<span>one</span>
+<span>two</span>
+<span>three</span>
+<span>four</span>
+<script>
+$(document).ready(function(){
+    var q = 0
+    $('span').each(function(){
+        $(this).addClass('c'+q);
+        q = q + 1;
+        if(q == 3){
+           return false; 
+        }
+    });
+});
+</script>
+
+    17)empty() : 선택한 요소의 내용를 지웁니다
+    내용만 지울뿐 태그는 남아있습니다
+<button class="btn btn-success">Empty</button>
+<div class="rect">Lorem ipsum dolor sit amet.</div>
+<script>
+$(function(){
+    $(".btn").click(function(){
+        $(".rect").empty();
+    });
+});
+</script>
+
+    18)fadeIn() :
+    19)fadeOut() :
+    20)fadeToggle() :
+</pre>
+        </div>
+        <div class="col-3">
+21)find()
+22)get()
+23)has()
+24)hide()
+25)hover()
+26)html()
+27)inArray()
+28)trim()
+29)load()
+30)not()
+        </div>
+        <div class="col-3">
+31)offset
+32)parent
+33)prepend
+34)prop
+35).remove
+36)removeAttr
+37)removeClass
+38)replaceWith
+39)resize
+40)scrollTop
+
+        </div>
+        <div class="col-3">
+            41)slice
+            42)slideDown
+            43)slideToggle
+            44)slideUp()
+            45)submit()
+            46)text()
+            47)toggle()
+            48)toggleClass()
+            49)width()
+            50)unwrap()
+            51)val()
+            52)wrap()
+            53)wrapAll()
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

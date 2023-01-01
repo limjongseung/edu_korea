@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 매서드 및 속성</title>
+</head>
+<body>
+<pre>
+concat() : 배열을 결합하고 결합된 배열이 있는 배열을 리턴
+문법 : array1.concat(array2,.....)
+<div id="ct"></div>
+<script>
+const arr1 = [1,2,3];
+const arr2 = [4,5,6];
+
+const ps = arr1.concat(arr2);
+document.getElementById("ct").innerHTML = ps;
+</script>
+
+2)constructor : 배열생성자를 가져옴
+- 자바스크립트 배열은 constructor는
+=>function Array{[네이티브코드]}
+
+<span id="nc"></span>
+<script>
+const fruits = [1,2,2];
+let text = fruits.constructor;  
+
+document.getElementById("nc").innerHTML = text;
+</script>
+
+3)copyWithin() : 배열요소를 배열의 다른 위치에 복사합니다
+문법 : array.copyWithin(target, start, end)
+<article id="find"></article>
+
+<script>
+const als = ["a","b","c","d"];//[0,1,2,3]
+document.getElementById("find").innerHTML = als.copyWithin(2);
+</script>
+
+4)entries() : 메서드는 키/값 쌍으로 array iterator객체를 리턴
+<dl id="index"></dl>
+<script>
+const nums = ["one", "two", "three"];
+const n = nums.entries();
+
+for (let z of n){
+    document.getElementById("index").innerHTML += z+"<br>"
+}
+</script>
+
+5)every() : 함수에 대한 값이 참이냐 거짓이냐
+예시) 나이에 모든값이 18세 이상인지 확인합니다
+<dd id="old"></dd>
+
+<script>
+const ages = [32,33,16,40];
+document.getElementById("old").innerHTML = ages.every(checkAge);
+
+function checkAge(age){
+    return age > 18;
+}
+
+
+</script>
+6)fill(): 배열에 지정된 요소를 값으로 채웁니다
+- 원래배열을 덮어씁니다 
+- 문법 : array.fill("kiwi",2,4)
+  [b,o,a,m] -> [0,1,2,3]
+
+<ul id="scope"></ul>
+<script>
+const 과일 = ["바나나", "오렌지", "사과", "망고"];
+document.getElementById("scope").innerHTML = 과일.fill("키위",2,4);
+</script>
+
+7) filter() : 함수에서 제공하는 테스트를 통과하는 요소로 채워진 
+새배열을 만듭니다 원래배열을 변경하지 않습니다
+
+<p>
+    <input type="number" id="agToCheck" value="30">
+    <button onclick="ClicK()">test</button>
+</p>
+<section id="fills"></section>
+<script>
+    const ags = [32,33,12,40];
+
+    function  checkAge(ag){
+        return ag > document.getElementById("agToCheck").value;
+    }
+    function ClicK(){
+        document.getElementById("fills").innerHTML = ags.filter(checkAge);
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

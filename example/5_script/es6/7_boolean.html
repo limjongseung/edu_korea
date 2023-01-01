@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans</title>
+</head>
+<body>
+<pre>
+Booleans
+- 두값중에 하나를 가질수 있습니다
+true, false 참이냐 거짓이냐를 확인해 줍니다
+
+<p id="bool"></p>
+<script>
+document.getElementById("bool").innerHTML = Boolean(10 > 9);
+</script>
+
+부울 메서드 및 속성
+- constructor : JavaScript의 Boolean 프로토타입을 생성한 함수를 반환합니다.
+function Boolean() { [네이티브 코드] }
+
+- prototype : 프로토타입에 속성 및 메서드를 추가할수 있습니다
+<p id="color"></p>
+<script>
+Boolean.prototype.myColor = function(){
+    if(this.valueOf()==true){
+        return "green";
+    }else{
+        return "red";
+    }
+};
+let a = true;
+let b = false;
+document.getElementById("color").innerHTML = a.myColor();
+</script>
+
+- toString(): 부울값을 문자열로 변환하고 결과를 리턴
+부울에 형태가 string
+
+- valueOf(): 부울에 기본값을 리턴
+bool = false;
+</pre>
+    
+</body>
+</html>

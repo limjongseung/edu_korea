@@ -169,16 +169,14 @@
                 42)slideDown
                 43)slideToggle
                 44)slideUp
-                <button class="a btn btn-danger">click</button>
-                <div class="b bg-secondary w-75 text-center">
-                    nod
-                </div>
+                <button class="a btn btn-danger click_slide">click</button>
+                <div class="b bg-secondary w-75 h-50 text-center">nod</div>
                 <script>
-                    $(function(){
-                        $("button.a").click(function(){
-                            $(".b").slideToggle();  
-                        })
-                    })
+                $(function(){
+                    $("button.click_slide").click(function(){
+                        $(".h-50").slideToggle();
+                    });
+                })
                 </script>
                 32)scrollDown
                 32)parent

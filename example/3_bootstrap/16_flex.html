@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>flex</title>
+</head>
+<body>
+    <h1>flex</h1>
+    <p>bootstarp3과 bootstarp4차이는 이제float대신에 flexbox를 사용하여 레이아웃을 처리한다는 것 입니다</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4">
+        <h1>d-flex</h1>
+            <div class="d-flex p-3 bg-secondary text-white">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h1>d-inline-flex</h1>
+            <div class="d-inline-flex p-3 bg-secondary text-white">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>    
+        </div>
+        <div class="col-sm-4">
+            <h1>flex-row(왼쪽)</h1>
+            <div class="d-flex flex-row p-3 bg-secondary">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+            <h1>flex-row-reverse(오른쪽)</h1>
+            <div class="d-flex flex-row-reverse p-3 bg-secondary">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>     
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h1>flex-column(상단)</h1>
+            <div class="d-flex flex-column p-3 bg-secondary">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+            <h1>flex-column-reverse(하단)</h1>
+            <div class="d-flex flex-column-reverse p-3 bg-secondary">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h1>justify-content-start</h1>
+            <div class="d-flex justify-content-start bg-secondary">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+            <h1>justify-content-end</h1>
+            <div class="d-flex justify-content-end bg-secondary">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+            <h1>justify-content-center</h1>
+            <div class="d-flex justify-content-center bg-secondary">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+            <h1>justify-content-between</h1>
+            <div class="d-flex justify-content-between bg-secondary">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+            <h1>justify-content-around</h1>
+            <div class="d-flex justify-content-around bg-secondary">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h1>Fill / Equal Widths</h1>
+            <div class="d-flex">
+                <div class="p-2 bg-info flex-fill">item1</div>
+                <div class="p-2 bg-warning flex-fill">item2</div>
+                <div class="p-2 bg-primary flex-fill">item3</div>
+            </div>  
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h1>Grow flex-grow-1 : 선언하면 나머지 공간차지함</h1>
+            <div class="d-flex">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary flex-grow-1">item3</div>
+            </div> 
+        </div>
+        <div class="col-sm-4">
+            <h1>order : 순서를 바꿀수 있음</h1>
+            <div class="d-flex">
+                <div class="p-2 bg-info order-3">item1</div>
+                <div class="p-2 bg-warning order-2">item2</div>
+                <div class="p-2 bg-primary order-1">item3</div>
+            </div> 
+        </div>
+        <div class="col-sm-4">
+            <h1>mr-auto, ml-auto : 플렉스항목에서 자동여백추가</h1>
+            <div class="d-flex">
+                <div class="p-2 mr-auto bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+            <div class="d-flex">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 ml-auto bg-primary">item3</div>
+            </div>  
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h1>Warp : flex-wrap, flex-wrap-reverse, flex-nowrap</h1>
+            <div class="d-flex flex-wrap bg-light">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+                <div class="p-2 bg-info">item4</div>
+                <div class="p-2 bg-warning">item5</div>
+                <div class="p-2 bg-primary">item6</div>
+                <div class="p-2 bg-info">item7</div>
+                <div class="p-2 bg-warning">item8</div>
+                <div class="p-2 bg-primary">item9</div>
+                <div class="p-2 bg-info">item10</div>
+                <div class="p-2 bg-warning">item11</div>
+                <div class="p-2 bg-primary">item12</div>
+                <div class="p-2 bg-info">item13</div>
+                <div class="p-2 bg-warning">item14</div>
+                <div class="p-2 bg-primary">item15</div>
+                <div class="p-2 bg-info">item16</div>
+                <div class="p-2 bg-warning">item17</div>
+                <div class="p-2 bg-primary">item18</div>
+            </div>
+            <div class="d-flex flex-wrap-reverse bg-light mt-5">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+                <div class="p-2 bg-info">item4</div>
+                <div class="p-2 bg-warning">item5</div>
+                <div class="p-2 bg-primary">item6</div>
+                <div class="p-2 bg-info">item7</div>
+                <div class="p-2 bg-warning">item8</div>
+                <div class="p-2 bg-primary">item9</div>
+                <div class="p-2 bg-info">item10</div>
+                <div class="p-2 bg-warning">item11</div>
+                <div class="p-2 bg-primary">item12</div>
+                <div class="p-2 bg-info">item13</div>
+                <div class="p-2 bg-warning">item14</div>
+                <div class="p-2 bg-primary">item15</div>
+                <div class="p-2 bg-info">item16</div>
+                <div class="p-2 bg-warning">item17</div>
+                <div class="p-2 bg-primary">item18</div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h1>Align Content : align-content-start,align-content-end,
+                align-content-center,align-content-around,align-content-stretch
+            </h1>
+            <div class="d-flex flex-wrap align-content-start bg-light h-50 mb-5">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+            <div class="d-flex flex-wrap align-content-end bg-light h-50 mb-5">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+            <div class="d-flex flex-wrap align-content-center bg-light h-50 mb-5">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+            <div class="d-flex flex-wrap align-content-around bg-light h-50 mb-5">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+            <div class="d-flex flex-wrap align-content-stretch bg-light h-50 mb-5">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h1>Align items :  단일행의 수직정렬
+            align-items-start,end,center,baseline,stretch
+            </h1>
+            <div class="d-flex flex-wrap align-content-start bg-light h-50 mb-5">
+                <div class="p-2 bg-info">item1</div>
+                <div class="p-2 bg-warning">item2</div>
+                <div class="p-2 bg-primary">item3</div>
+            </div> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h1>align self</h1>
+            <p>클래스를 사용하여 지정된 플렉스 항목의 수직 정렬을 제어</p>
+            <pre>
+            유효한 클래스 
+            - .align-self-start, 
+            - .align-self-end, 
+            - .align-self-center, 
+            - .align-self-baseline및 
+            - .align-self-stretch
+            </pre>
+            <div class="d-flex bg-light" style="height:150px">
+                <div class="p-2 border">flex item1</div>
+                <div class="p-2 border align-self-start">flex item2</div>
+                <div class="p-2 border">flex item3</div>
+            </div>
+            <div class="d-flex bg-light" style="height:150px">
+                <div class="p-2 border">flex item1</div>
+                <div class="p-2 border align-self-end">flex item2</div>
+                <div class="p-2 border">flex item3</div>
+            </div>
+            <div class="d-flex bg-light" style="height:150px">
+                <div class="p-2 border">flex item1</div>
+                <div class="p-2 border align-self-center">flex item2</div>
+                <div class="p-2 border">flex item3</div>
+            </div>
+            <div class="d-flex bg-light" style="height:150px">
+                <div class="p-2 border">flex item1</div>
+                <div class="p-2 border align-self-baseline">flex item2</div>
+                <div class="p-2 border">flex item3</div>
+            </div>
+            <div class="d-flex bg-light" style="height:150px">
+                <div class="p-2 border">flex item1</div>
+                <div class="p-2 border align-self-stretch">flex item2</div>
+                <div class="p-2 border">flex item3</div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

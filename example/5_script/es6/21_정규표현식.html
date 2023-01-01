@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp</title>
+</head>
+<body>
+<pre>
+검색및 바꾸기 기능을 수행하는데 사용합니다
+1) 수식어 (Modifiers) : 수정자라고도 하며 대소문자를 구분하지 않고 
+전역 검색을 수행하는데 사용됩니다
+
+g : 전역일치(한정자) 모든 일치 항목을 찾아줌
+<p id="d1"></p>
+
+<script>
+let text = "Is this all there is?";
+let pattern = /is/g;
+let result = text.match(pattern);
+
+document.getElementById("demo").innerHTML = result;
+</script>
+
+i : 대소문자를 구분하지 않고 검색합니다
+m : 이수정자는 여러줄에 대한 일치를 검색합니다
+- 시작 ^ 종료 $의 동작에만 영향을 미칩니다
+
+<p id="d2">
+</p>
+
+<script>
+let text2 = `Is this
+all there
+is`
+let pattern2 = /^Is/m;
+let result2 = text2.match(pattern2);
+document.getElementById("d2").innerHTML = result2;
+</script>
+
+2)브라켓 : 대괄호는 문자범위를 찾는데 사용합니다
+[abc] : 문자 a,b 또는 c
+<p id="d3"></p>
+<script>
+let t3 = "Is this all there is?";
+let pn = /[a-h]/g;
+let rt = t3.match(pn);
+
+document.getElementById("d3").innerHTML = rt;
+</script>
+
+<p id="d4"></p>
+<script>
+let tt = "I SCREAM FOR ICE CREAM! DDDD abcde"
+let pt = /[A-E]/g;
+let rt2 = tt.match(pt);
+
+document.getElementById("d4").innerHTML = rt2;
+</script>
+
+
+[^abc] : 문자a,b 또는 c가 아님
+- 지정된 문자를 제외한 공백까지 검색
+<p id="d7"></p>
+
+<script>
+let ttt = "Is this all there is?"
+let patt = /[^h]/g;
+let resu = ttt.match(patt);
+
+document.getElementById("d7").innerHTML = resu;
+</script>
+
+
+[0-9] : 0-9까지의 숫자또는 숫자 범위
+[^0-9] : 숫자가 아닌 문자
+<p id="d5"></p>
+<script>
+let nb = "123456789";
+let ptn = /[^1-4]/g;//1~4까지의 숫자가 아닌 다른 숫자가 나오세요
+let rt3 = nb.match(ptn);
+
+document.getElementById("d5").innerHTML = rt3;
+</script>
+
+
+(x|y) : (red|green) : 모든 문자가 될수 있으며
+지정된 대안을 찾는데 사용됩니다
+<p id="d6"></p>
+<script>
+let tf = "re, green, red, green, gren, gr, blue, yellow";
+let pat = /(red|green)/g;
+let res = tf.match(pat);
+
+document.getElementById("d6").innerHTML = res;
+</script>
+
+메타문자
+수량자
+개체속성
+개체 메서드
+</pre>
+
+</body>
+</html>

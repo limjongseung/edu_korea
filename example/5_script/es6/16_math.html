@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+    <h1>math</h1>
+    <p>생성자가 아니여서 생성하지 않고 객체를 사용해서 호출할수 있습니다</p>
+<pre>
+30)pow(): x의 값을 y의 거듭제곱(Xy)으로 리턴
+<p id="d1"></p>
+<script>
+let a = Math.pow(0,1);
+let b = Math.pow(1,1);
+let c = Math.pow(1,10);
+let d = Math.pow(3,3);
+let e = Math.pow(-3,3);
+let f = Math.pow(2,4);
+
+document.getElementById("d1").innerHTML =
+a+"<br>"+b+"<br>"+c+"<br>"+d+"<br>"+e+"<br>"+f;
+</script>
+
+31)random(): 0에서 최대 1(제외)까지 임의의 숫자를 리턴
+<p id="d2"></p>
+<script>
+let g = Math.random() * 10;
+document.getElementById("d2").innerHTML = g;
+</script>
+
+32)round(): 소수점을 기준으로 .5이하이면 내리고 이상이면 올림
+<p id="d3"></p>
+<script>
+let h = Math.round(2.60);
+let i = Math.round(2.50); 
+let o = Math.round(2.49); 
+let p = Math.round(-2.60); 
+let q = Math.round(-2.50);
+let r = Math.round(-2.49);
+
+document.getElementById("d3").innerHTML =
+h + "<br>" + i + "<br>" + o + "<br>" + p + "<br>" + q + "<br>" + r;
+</script>
+33)sign(): 숫자가 양수이면 1을 리턴 음수이면 -1 숫자가 0이면 0을 리턴
+<p id="d4"></p>
+<script>
+let s = Math.sign(3);
+let t = Math.sign(-1);
+let u = Math.sign(0);
+document.getElementById("d4").innerHTML =
+s + "<br>" + t + "<br>" + u;
+</script>
+
+34)sin(): 숫자의 사인을 리턴 
+-1과 1사이의 값을 리턴
+<p id="d5"></p>
+<script>
+let z = Math.sin(3.14);
+document.getElementById("d5").innerHTML = z.toFixed(2);
+</script>
+
+35)sinh(): 숫자의 하이퍼볼릭 사인을 리턴
+36)sqrt(): 숫자의 제곱근을 리턴
+37)SQRT1_2 : 1/2의 제곱근을 반환합니다.약 0.707리턴
+38)SQRT2 : 2의 제곱근을 리턴 약1.414를 리턴
+39)tan() : 숫자의 탄젠트를 리턴
+40)tanh() : 숫자의 하이퍼볼릭 탄젠트를 리턴
+41)trunc() : 숫자의 정수부분을 리턴 (소수점이하 자리수를 제거 숫자를 반올림하지 않음)
+<p id="d6"></p>
+<script>
+document.getElementById("d6").innerHTML = Math.trunc(8.76);   
+</script>
+</pre>  
+</body>
+</html>

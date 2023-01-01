@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문-switch</title>
+</head>
+<body>
+<script>
+var nin = prompt('숫자를 1 or 2 or 3중에 입력하세요!');
+switch (nin) {
+    case '1':
+    var nin1 = 'first';
+    break;
+    case '2':
+    var nin1 = 'second';
+    break;
+    case '3':
+    var nin1 = 'third';
+    break;
+    default:
+    var nin1 = '123중에 입력하지 않으셨네요';
+    }
+</script>
+<script>
+document.write('<p>' + nin1 + '</p>');    
+</script>
+</body>
+</html>

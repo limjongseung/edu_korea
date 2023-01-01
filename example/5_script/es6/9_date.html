@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date</title>
+</head>
+<body>
+<h1>date</h1>
+<pre>
+- date객체는 날짜 및 시간과 함께 작동됩니다
+- new Date(), new Date(milliseconds), new Date(dateString),
+  new Date(year,month,day,hours,minutes,seconds,milliseconds);
+<p id="demo"></p>
+<script>
+const d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+
+- 자바스크립트는 1970년 1월 1일부터 날짜를 밀리초단위로 저장합니다
+1970년 1월1일부터 100000000000밀리초는 대략 1973년 3월3일 입니다
+<p id="dd"></p>
+<script>
+const dd = new Date(100000000000);
+document.getElementById("dd").innerHTML = dd;
+</script>
+
+- 날짜 강제로 넣기(문자열)
+<p id="cc"></p>
+<script>
+const ds = new Date("2018-03-26");
+document.getElementById("cc").innerHTML = ds;
+</script>
+
+- 날짜 강제로 디테일하게 넣기(넘버)
+<p id="ccc"></p>
+<script>
+const dsd = new Date(2018, 11, 23, 10, 33, 30, 0);
+document.getElementById("ccc").innerHTML = dsd;
+</script>
+
+날짜메서드
+- 1) constructor : 날짜 생성자를 가져옴 function Date() { [native code] }
+- 2) getDate() : 해당월의 날짜를 가져옴 (날짜의 일자를 1~31을 리턴)
+<p id="today"></p>
+
+<script>
+const q = new Date();
+let day = q.getDate();
+document.getElementById("today").innerHTML = day;
+</script>
+
+- 3) getDay() : 날짜의 요일을 리턴(인덱스번호로)
+     0 ~ 6(일요일)
+<p id="tg"></p>
+<script>
+const w = new Date();
+let gd = w.getDay();
+document.getElementById("tg").innerHTML = gd;
+</script>
+- 4) getFullYear() : 날짜의 전체년도 (4자리)를 리턴
+<p id="tf"></p>
+<script>
+const e = new Date();
+let gf = e.getFullYear();
+document.getElementById("tf").innerHTML = gf;
+</script>
+
+- 5) getHours() : 날짜의 시간을 리턴(0~23)
+<p id="th"></p>
+<script>
+const r = new Date();
+let gh = r.getHours();
+document.getElementById("th").innerHTML = gh;
+</script>
+
+- 6) getMilliseconds() : 특정날짜의 밀리초(0~999)를 리턴
+<p id="tm"></p>
+<script>
+const t = new Date();
+let gm = t.getMilliseconds();
+document.getElementById("tm").innerHTML = gm;
+</script>
+
+- 7) getMinutes() : 날짜의 분(0~59)를 리턴합니다
+<p id="tgm"></p>
+<script>
+const y = new Date();
+let gmt = y.getMinutes();
+document.getElementById("tgm").innerHTML = gmt;
+</script>
+- 8) getMonth() : 날짜의 월(0~11)을 리턴합니다
+1월 = 0, 2월 = 1'''''
+<p id="tgmm"></p>
+<script>
+const u = new Date();
+let gmtm = u.getMonth();
+document.getElementById("tgmm").innerHTML = gmtm;
+</script>
+- 9) getSeconds() : 날짜의 초를 리턴합니다(0~59)
+<p id="tgs"></p>
+<script>
+const i = new Date();
+let gms = i.getSeconds();
+document.getElementById("tgs").innerHTML = gms;
+</script>
+
+- 10) getTime() : 1970년 1월1일 00:00:00이후의 밀리초수를 리턴
+<p id="tgt"></p>
+<script>
+const o = new Date();
+let gmst = o.getTime();
+document.getElementById("tgt").innerHTML = gmst;
+</script>
+- getTimezoneOffset():UTC(세계협정시)시간과 현지시간 차이를 리턴합니다
+  UTC+9
+- GMT(그리니치 표준시)와 동일
+<p id="tu"></p>
+<script>
+const p = new Date();
+let gutc = p.getTimezoneOffset();
+document.getElementById("tu").innerHTML = gutc;
+</script>
+- 11) getUTCDate() : 날짜 객체의 일(1~31)을 리턴
+- 12) getUTCDay() : 날짜의 요일(0~6)을 리턴
+- 13) getUTCFullYear() : 날짜의 연도를 리턴
+- 14) getUTCHours(): 날짜의 시간(0~23)을 리턴
+- 15) getUTCMiliseconds(): 날짜의 밀리초(0~999)
+- 16) getUTCMinutes(): 날짜의 분(0~59)을 리턴
+- 17) getUTCMonth() : 날짜의 월(0~11)을 리턴
+- 18) getUTCSeconds() : 날짜의 초(0~59)를 리턴
+- 19) getYear() : getFullyear로 대체
+- 20) now() : 1970년 1월 1일 이후의 밀리초 수를 리턴합니다
+구문은 = Date.now();
+<div id="ggg"></div>
+<script>
+let after = Date.now();
+document.getElementById("ggg").innerHTML = after;
+</script>
+
+- 21) parse() : 1970년 1월1일 이후의 시차를 리턴
+<div id="par"></div>
+<script>
+let ar = Date.parse("March 21, 2012");
+document.getElementById("par").innerHTML = ar;
+</script>
+
+-22) prototype 
+-23) setDate() : 지금날짜에서 이전날짜로 설정할때 사용
+<div id="hold"></div>
+<script>
+let old = new Date();
+old.setDate(15);
+document.getElementById("hold").innerHTML = old;
+</script>
+
+- setFullYear() : 날짜의 연도를 설정합니다
+- setHours() : 날짜의 시간을 설정합니다
+<div id="view"></div>
+<script>
+const te = new Date();
+te.setHours(15);
+document.getElementById("view").innerHTML = te; 
+</script>
+- setMiliseconds():
+- setMinutes() :
+- setMonth():
+- setSeconds():
+- setTime():
+- setUTCDate():
+- setUTCFullYear():
+- setUTCHours():
+- setUTCMilliseconds():
+- setUTCMinutes():
+- setUTCMonth():
+- setUTCSeconds():
+- setYear():
+- toDateString():
+- toGMTString():
+- toJSON():
+- toLocaleDateString():
+- toLocaleTimeString():
+- toLocaleString():
+- toString():
+- toTimeString():
+- toUTCString():
+- UTC():
+- valueOf():
+</pre>
+    
+</body>
+</html>

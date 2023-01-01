@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <mark id="d13">Visit Microsoft!</mark><br>
+    <mark id="d14">Mr Blue has a blue house and a blue car.</mark>
+    <script>
+    let find = document.getElementById("d13").innerHTML;
+    document.getElementById("d13").innerHTML = find.replace("Microsoft", "apple");
+    //전역을 검색해서 교체
+    </script>
+    <script>
+    let str = document.getElementById("d14").innerHTML;
+    let res = str.replace(/blue/gi, "red");
+    document.getElementById("d14").innerHTML = res;
+    </script>
+</body>
+</html>

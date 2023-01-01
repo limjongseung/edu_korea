@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/customizing.css">
+    <title>js 2016 ~ 2021</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+ <h1>Arrow Function</h1>
+ <p>더 짧은 함수 구문을 작성할수 있습니다</p>
+ <p>화살표함수 사용전</p>
+ <mark id="d1"></mark>
+ <script>
+let hello ="";
+hello = function(){
+    return "hello world!";
+}
+document.getElementById("d1").innerHTML = hello();
+ </script>
+ <p>화살표함수</p>
+
+ <mark id="d2"></mark>
+    <script>
+    let gr = "";
+    gr = () => {
+        return "hello world!";
+    }
+    document.getElementById("d2").innerHTML = gr();
+    </script>
+
+    <p>좀더 짧게 표현할수 있습니다 : 화살표 함수는 기본적으로 반환값을 보여줍니다</p>
+    <mark id="d3"></mark>
+    <script>
+    let shot = "";
+    shot = () => "hello World!";
+    document.getElementById("d3").innerHTML = shot();
+    </script>
+
+    <p>매개변수가 있는 화살표 함수 : 매개변수가 있는 경우 괄호안에 매개변수를 전달합니다</p>
+    <mark id="d4"></mark>
+    <script>
+    let para = "";
+    para = (val) => "Hello " + val;
+    document.getElementById("d4").innerHTML = para("Universe!");
+    </script>
+
+    <p>화살표 함수 연산</p>
+    <mark id="d5"></mark>
+    <script>
+    let myF = (a, b) => a * b;
+    document.getElementById("d5").innerHTML = myF(4, 5);
+    </script>
+
+    <p>this : 선택된 객체가 가지고 있는 값을 선택할때 이객체를 참조</p>
+    <mark id="d6"></mark>
+    <script>
+    const peo = {
+        firstName : "Young-Il",
+        lastName : "Hwang",
+        id : 0509,
+        fullName : function(){
+            return this.firstName + " " + this.lastName;
+        }
+    }
+    document.getElementById("d6").innerHTML = peo.fullName();
+    </script>
+
+    <p>화살표함수에서 this는 기능의 소유자를 나타냅니다</p>
+    <button id="btn">Click!</button>
+    <br>
+    <mark id="d7"></mark>
+    <script>
+    let owner = "";
+    owner = () => {
+        document.getElementById("d7").innerHTML += this;
+    }
+    //윈도우가 오브젝트를 부르는 함수
+    window.addEventListener("load", owner);//클릭하면 함수를 실행하라 마우스를 올리면 ~
+    document.getElementById("btn").addEventListener("click", owner);
+    </script>
+
+    <h1>Class</h1>
+    <p>class는 객체가 아니고 객체를 만들기 위한 템플릿입니다</p>
+    <p>클래스가 있으면 클래스를 사용하여 객체를 만들수 있습니다</p>
+    <mark id="d8"></mark>
+    <script>
+    class Car{
+        constructor(name, year){
+            this.name = name;
+            this.year = year;
+        }
+    }
+    const myCar = new Car("BMW", 2022);
+    document.getElementById("d8").innerHTML =
+    myCar.name + "" + myCar.year;
+    </script>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

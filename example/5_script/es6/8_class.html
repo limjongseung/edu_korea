@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+<h1>class</h1>
+<pre>
+- ES6지원
+- 익스플로러라는 브라우저에서 예전에는 사용불가능
+- class를 사용하는 가장큰이유는 : 재사용성
+작은사이트를 만들때는 function하나로 개발이 용이했다면
+좀더 복잡한 사이트를 만들때 class가 필요함
+- 함수유형이지만 키워드를 사용해서 속성은 constructor메소드 내부에 할당됩니다
+
+ex)car클래스를 만든 다음 car클래스를 기반으로 mycar라는 객체를 만듭니다
+
+<p id="car"></p>
+<script>
+class Car{
+    constructor(brand){//클래스내에서 생성된 객체를 생성하고 초기화하는 방법
+        this.carName = brand;
+    }
+}
+myCar = new Car("BMW");
+document.getElementById("car").innerHTML = "My car is a "+myCar.carName;
+</script>
+
+- constructor() : 클래스 네에서 생성된 객체를 만들고 초기화하기 위한 특수메서드입니다
+class는 하나이상의 constructor()매서드를 가질수 없습니다 syntaxError가\
+됩니다
+
+- extends :  다른클래스(부모)의 자식클래스를 만드는데 사용됩니다
+<div id="inherit"></div>
+<script>
+class Bus{
+    constructor(brand){
+        this.busname = brand;
+    }
+    present(){
+        return 'I have a ' + this.busname;
+    }
+}
+class Model extends Bus{
+    constructor(brand, mod){
+        super(brand);//부모의 클래스 생성자를 호출하여 부모의 속성 및 메서드를 엑세스
+        this.model = mod;
+    }
+    show(){
+        return this.present()+', it is a '+this.model;
+    }
+}
+mybus = new Model("bmw", "X6");
+document.getElementById("inherit").innerHTML = mybus.show();
+</script>
+
+- static : 클래스에 대한 정적매서드를 정의합니다
+클래스의 인스턴스/객체를 생성하지 않고 클래스에서 직접호출됩니다
+<p id="fr"></p>
+
+<script>
+    class Fru{
+        constructor(brand){
+            this.fruitsname = brand;
+        }
+        static hello(){
+            return "Hello!";
+        }
+    }
+    myFruits = new Fru("Apple");
+    document.getElementById("fr").innerHTML = Fru.hello();
+</script>
+
+
+- super : 부모의 클래스생성자를 호출하여 부모의 속성및 메서드에 엑세스 하는데 
+사용됩니다. 
+</body>
+</html>

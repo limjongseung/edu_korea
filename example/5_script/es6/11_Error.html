@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오류 객체</title>
+</head>
+<body>
+<h1>Error Object</h1>
+<pre>
+error 객체는 오류가 발생할때 오류 정보를 제공합니다.
+- Error 명
+EvalError : 평가오류 (더이상 사용하지 않음)
+RangeError : "범위를 벗어난 숫자가 발생했습니다"
+ReferenceError : 잘못된 참조가 발생했습니다
+SyntaxError : 구문 오류가 발생했습니다
+TypeError : 유형 오류
+URIError :  encodeURI()에서 오류가 발생했습니다
+
+- Error Object Properties
+name : 에러명
+message : 오류메세지 
+
+1)참조에러에 경우
+<p id="demo" style="color:red;"></p>
+
+<script>
+try{
+adddlert("Welcome");
+}catch(err){
+document.getElementById("demo").innerHTML =err.name + "<br>"+
+err.message;
+}
+</script>
+
+3) RangeError : "범위를 벗어난 숫자가 발생했습니다"
+숫자의 우효 자릴수를 500으로 설정할수 없습니다
+
+
+<script>
+let num = 1.00000;
+try{
+    num.toPrecision(500);
+}catch(err){
+    document.getElementById("d2").innerHTML = err.name;
+}
+</script>
+
+4)ReferenceError : 잘못된 참조가 발생했습니다
+<p id="d3"></p>
+<script>
+let x = 5;
+try{
+    x = y + 1;
+}catch(err){
+document.getElementById("d3").innerHTML = err.name + '<br>' + err.message;
+}
+</script>
+
+5)SyntaxError : 구문 오류가 발생했습니다
+<p id="d4"></p>
+<script>
+try{
+    eval("'hello");
+}catch(err){
+document.getElementById("d4").innerHTML = err.name + '<br>' + err.message;
+}
+</script>
+
+6)TypeError : 유형 오류
+<p id="d5"></p>
+<script>
+let small = 1;
+try{
+small.toUpperCase();
+}catch(err){
+document.getElementById("d5").innerHTML = err.name + '<br>' + err.message;
+}
+</script>
+
+7)URIError :  encodeURI()에서 오류가 발생했습니다
+<p id="d6"></p>
+<script>
+try{
+decodeURI("%%%");
+}catch(err){
+document.getElementById("d6").innerHTML = err.name + '<br>' + err.message;
+}
+</script>
+</pre>
+
+
+</body>
+</html>

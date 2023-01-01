@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+    <h1>math</h1>
+    <p>생성자가 아니여서 생성하지 않고 객체를 사용해서 호출할수 있습니다</p>
+<pre>
+8)atanh() : 숫자의 하이퍼볼릭 아크탄젠트를 리턴
+- -1과 1사이의 숫자
+<p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML = Math.atanh(0.5);
+</script>
+
+9)cbrt() : 숫자의 세제곱근을 리턴
+<p id="d2"></p>
+<script>
+document.getElementById("d2").innerHTML = Math.cbrt(125);
+</script>
+
+10)ceil() : 숫자를 반올림하여 가장 가까운 정수로 반올림합니다
+<p id="d3"></p>
+<script>
+let a = Math.ceil(0.60);//1
+let b = Math.ceil(0.40);//1
+let c = Math.ceil(5);//5
+let d = Math.ceil(5.1);//6
+let e = Math.ceil(-5.1);//-5
+let f = Math.ceil(-5.9);//-5
+document.getElementById("d3").innerHTML = 
+a+"<br>"+b+"<br>"+c+"<br>"+d+"<br>"+e+"<br>"+f;
+</script>
+
+11)clz32() : 32비트 이진수에서 선행 0의 수를 리턴
+- countleadingzeroes32 숫자가 0이면 32를 리턴
+<p id="d4"></p>
+    <script>
+        let aa = Math.clz32(0);//32
+        let bb = Math.clz32(1);//31
+        let cc = Math.clz32(2);//30
+        let dd = Math.clz32(4);//29
+        document.getElementById("d5").innerHTML = 
+        aa+"<br>"+bb+"<br>"+cc+"<br>"+dd;
+</script>
+12)cos() : 숫자의 코싸인을 리턴 ,-1과 1사이의 숫자를 리턴,라디안단위의 숫자를 리턴
+<p id="d5"></p>
+
+<script>
+    let g = Math.cos(0).toFixed(2)//0도의 코싸인 1.0
+    let h = Math.cos(Math.PI/3).toFixed(2) //60도
+    let i= Math.cos(Math.PI/2).toFixed(2) //90도의 코싸인 0.5
+    let k = Math.cos(Math.PI).toFixed(2)//180도의 코싸인 0
+    let l = Math.cos(Math.PI*2).toFixed(2)// 360도의 코싸인 1.0
+    document.getElementById("d5").innerHTML = 
+    g+"<br>"+h+"<br>"+i+"<br>"+k+"<br>"+l;
+</script>
+0 => 0 => 0
+1 => PI/180 => 0.175
+360 => PI*2 => 6.28
+
+13)cosh() : 숫자의 하이퍼볼릭 코싸인을 리턴
+<button onclick="myF()">try it</button>
+<p id="d6"></p>
+<script>
+function myF(){
+document.getElementById("d6").innerHTML=Math.cosh(3);
+}
+</script>
+14)E : 오일러수를 리턴 
+- 약 2,718을 리턴
+<p id="d7"></p>
+<script>
+document.getElementById("d7").innerHTML=Math.E;
+</script>
+15)exp() : E x 의 값을 반환합니다 
+여기서 E는 오일러 수 (약 2.7183)이고 x는 전달된 수입니다.
+
+16)expm1() : E x 빼기 1의 값을 리턴
+여기서 E는 오일러수 (약 2.7183)이고 x는 전달된 수입니다.
+
+17)floor() : 숫자를 가장 가까운 정수로 내림
+<p id="d8"></p>
+
+<script>
+    let gg = Math.floor(0.6)//0
+    let hh = Math.floor(0.4)//0
+    let ii= Math.floor(5.3)//5
+    let kk = Math.floor(5.9)//5
+    let ll = Math.floor(-5.9)//-6
+    document.getElementById("d8").innerHTML = 
+    gg+"<br>"+hh+"<br>"+ii+"<br>"+kk+"<br>"+ll;
+</script>
+
+18)fround() : 숫자의 가장 가까운 32비트 단정밀도 부동 소수점을 리턴
+-단정밀도 : 32비트 사용
+-배정밀도 : 64비트 사용
+
+<p id="d9"></p>
+
+<script>
+    let m= Math.fround(2.6)
+    let n = Math.fround(2.5)
+    let o= Math.fround(2.49)
+    let p = Math.floor(-2.6)
+    let q = Math.floor(-2.5)
+    document.getElementById("d9").innerHTML = 
+    m+"<br>"+n+"<br>"+o+"<br>"+p+"<br>"+q;
+</script>
+19)LN2 : 자연로그를 리턴 약0.693을 리턴
+20)LN10 : 10의 자연로그를 리턴 약2.302입니다
+21)log(): 자연로그(밑E)를 리턴
+22)10g10(): 숫자의 밑이 10인 로그를 리턴
+23)log1p(): 1+숫자의 자연로그(밑E)를 리턴
+24)log2(): 숫자의 밑이 2인 로그를 리턴
+25)LOG2E : E의 밑이 2인 로그를 리턴
+- 약1.142를 리턴
+26)LOG10E : E의 밑이 10인로그를 리턴
+27)max(): 가장 높은 값을 가진 숫자를 리턴
+28)min(): 가장 낮은 값을 가진 숫자를 리턴
+<p id="d10"></p>
+
+<script>
+    let mm= Math.max(5, 10);
+    let nn = Math.max(0,150,30);
+    let oo= Math.max(1.5, 2.5);
+    let pp = Math.min(-2.6, 2)
+    let qq = Math.min(-2.5, 3)
+    document.getElementById("d10").innerHTML = 
+    mm+"<br>"+nn+"<br>"+oo+"<br>"+pp+"<br>"+qq;
+</script>
+29)PI : 3.14를 리턴
+<p id="d11"></p>
+<script>
+document.getElementById("d11").innerHTML = Math.PI;   
+</script>
+
+30)pow(): x의 값을 y의 거듭제곱(Xy)으로 리턴
+
+
+31)random():
+32)round():
+33)sign():
+34)sin():
+35)sinh():
+36)sqrt():
+37)SQRT1_2
+38)SQRT2
+39)tan()
+40)tanh()
+41)trunc()
+
+</pre>  
+</body>
+</html>

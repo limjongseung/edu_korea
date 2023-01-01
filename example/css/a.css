@@ -1,0 +1,56 @@
+a{color:white; text-decoration:none;}
+nav{
+background-color:#333;
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:100vw;
+height:80px;
+position:fixed;/*포지션 고정*/
+padding:0% 5%;
+}
+.nav{
+display:flex;
+color:white;
+width:60vw;
+}
+.nav > li {
+width:25vw;
+}
+*{
+padding:0; margin:0; 
+}
+.logo{
+color:white;
+}
+ul,ol,li{
+list-style:none;
+}
+section{
+width:100vw;
+height:100vh;
+font-size:72px;
+display:flex;
+justify-content: center;
+align-items:center;
+}
+.red{background:red;}
+.orange{background:orange;}
+.yellow{background:yellow;}
+.blue{background:blue;}
+.text-white{color:white;}
+.btn-wrap{
+width:100vw;
+height:10vh;
+position:fixed;
+display:flex;
+justify-content: center;
+align-items:center;
+bottom:10px;
+}
+.plus{
+width:100%;
+height:50%;
+background:black;
+cursor:pointer;
+}

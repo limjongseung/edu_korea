@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">-->
+    <!--<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script><!--최신버전 유지-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>input</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>:empty : 내용이 없는 빈 요소를 선택하는 선택자</h1>
+            <p>$(':empty'),$('div:empty')</p>
+            <h2 class="mt-5">표에서 내용이 없는 셀에 N/A문자열을 추가합니다</h2>
+            <table class="table">
+                <tr>
+                    <thead>
+                        <th>Lorem</th>
+                        <th></th>
+                        <th>Ipsum</th>
+                    </thead>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Dolor</td>
+                    <td></td>
+                </tr>
+                
+            </table>
+            <script>
+                $(document).ready(function(){
+                    $('th:empty').append('N/A');
+                    $('td:empty').append('N/A');
+                });
+            </script>
+            <h1>:even : 짝수 인덱스 요소를 선택합니다</h1>
+            <p>주의할점은 index 0부터 시작합니다</p>
+            <ol>
+                <li>Lorem</li><!--선택 index 0-->
+                <li>Ipsum</li>
+                <li>Dolor</li><!--선택 index 2-->
+                <li>sit</li>
+            </ol>
+            <script>
+            $(document).ready(function(){
+                $('li:even').css('color','red');
+            })
+            </script>
+            <h1>:has() : 특정요소를 포함하는 요소를 선택할때 사용하는 선택자</h1>
+            <pre>
+            span요소를 가지고 있는 p요소를 선택합니다
+            $('p:has(span)')
+            예시 : 하위요소에 a가 있는 li요소를 선택하여
+            빨간색 테두리를 만듭니다
+            </pre>
+            <ul>
+                <li>lorem</li>
+                <li><a href="">ipsum</a></li>
+                <li>lorem</li>
+                <li><a href="">ipsum</a></li>
+            </ul>
+            <script>
+                $(document).ready(function(){
+                    $('li:has(a)').css('border', '1px solid red');
+                });
+            </script>
+            <h1>:nth-child()</h1>
+            <h1>:odd</h1>
+            <h1>:selected</h1>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

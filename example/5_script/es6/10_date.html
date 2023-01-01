@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date</title>
+</head>
+<body>
+<h1>date</h1>
+<pre>
+- setMiliseconds(): 날짜의 밀리초를 설정합니다
+- setMinutes() : 날짜의 분을 설정합니다
+- setMonth(): 날짜의 월을 설정(0부터 시작)
+- setSeconds(): 날짜의 초를 설정
+- setTime():1970년 1월1일 자정부터 지정된 밀리초수를 더하거나 뺴서 날짜와 시간을    설정합니다
+- setUTCDate(): 메서드는 UTC에 따라 Date 객체의 날짜를 설정합니다.
+- setUTCFullYear(): UTC에 따라 날짜 개체의 연도를 설정합니다.
+- setUTCHours():UTC에 따라 날짜 개체의 시간을 설정합니다.
+- setUTCMilliseconds():UTC에 따라 날짜 객체의 밀리초(0에서 999까지)를 설정합니다.
+- setUTCMinutes():UTC에 따라 날짜 객체의 분을 설정합니다.
+- setUTCMonth():UTC에 따라 날짜 객체의 월(0에서 11까지)을 설정합니다.
+- setUTCSeconds():UTC에 따라 날짜 객체의 초를 설정합니다.
+- setYear():
+- toDateString():메서드는 날짜 객체의 날짜
+<p id="demo">
+
+</p>
+<script>
+const q = new Date();
+let text = q.toDateString();
+document.getElementById("demo").innerHTML = text;
+</script>
+- toGMTString():사용안함 => toUTCString : UTC에 따라 날짜 개체를 가져옴
+- toISOString() : ISO표준을 사용하여 날짜 객체를 문자열로 리턴
+YYYY-MM-DDTHH:mm:ss.sssZ
+<div id="iso"></div>
+<script>
+const w = new Date();
+let text2 = w.toISOString();
+document.getElementById("iso").innerHTML = text2;
+</script>
+
+- toJSON():메서드는 날짜 개체를 JSON 날짜 형식의 문자열로 반환
+JSON 날짜는 ISO-8601 표준과 동일한 형식(YYYY-MM-DDTHH:mm:ss.sssZ)을 가집니다.
+
+- toLocaleDateString(): 로케일 규칙을 사용하여 날짜 객체의 날짜를 문자열로 리턴
+- toLocaleTimeString(): 로케일 규칙을 사용하여 날짜 객체의 시간 부분을 문자열로 반환합니다.
+<div id="ref"></div>
+<script>
+const e = new Date();
+let text3 = e.toLocaleTimeString();
+document.getElementById("ref").innerHTML = text3;
+</script>
+- toLocaleString():메서드는 로케일 설정을 사용하여 Date 객체를 문자열로 반환합니다.
+- toString():날짜 개체를 문자열로 반환합니다.
+- toTimeString():날짜 객체의 시간 부분을 문자열로 반환합니다
+<div id="demo3"></div>
+<script>
+const r = new Date();
+let text4 = r.toTimeString();
+document.getElementById("demo3").innerHTML = text4;
+</script>
+- toUTCString(): UTC에 따라 날짜 객체를 문자열로 반환합니다.
+- UTC(): UTC에 따라 지정된 날짜와 1970년 1월 1일 자정 사이의 밀리초 수를 반환합니다.
+- valueOf():1970년 1월 1일 자정(UTC) 이후의 밀리초 수로 반환됩니다.
+</pre>
+    
+</body>
+</html>

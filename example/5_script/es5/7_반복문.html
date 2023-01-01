@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 반복자(iter)</title>
+</head>
+<body>
+    <h1>반복문</h1>
+    <p>자바스크립트 반복문에는 while, do-while, for세가지가 있습니다</p>
+    <pre>
+    var i = 0;
+    while (i < 10){
+        i++;
+    }
+    i의 값이 0부터 9일 때까지 실행되고 
+    i의 값이 10이면 실행되지 않고 다음으로 넘어갑니다.
+    i의 값을 증가시키는 i++을 꼭 넣어야 한다는 것에 주의해야 합니다.
+    만약 i++이 없으면 i의 값이 계속 0이므로 무한 반복을 하게 됩니다. 
+    do - while과 for도 마찬가지입니다.
+    </pre>
+    <script>
+        var i = 0;//start 지정
+        while (i < 10){//범위
+            document.write(i +' ');
+            i++;//무한루프에 빠질수 있으므로 반듯이 표기해야함
+        }
+    </script>
+
+<h1>do-while</h1>
+<pre>
+var q = 0;
+do{
+q++;
+}while(q < 10)
+</pre>
+<script>
+    var q = 0;
+    do{
+        document.write(q+' ');
+        q++;
+    }while(q < 10)   
+</script>
+<h1>for</h1>
+<pre>
+for ( var z=0; z < 10; z++){
+    document.write(i+'');
+}
+</pre>
+<script>
+    for ( var z=0; z < 10; z++){
+        document.write(z+' ');
+    }   
+</script>
+
+    
+</body>
+</html>

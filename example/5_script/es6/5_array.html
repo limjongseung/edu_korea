@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<pre>
+16)lastIndexOf() : 지정된 값의 마지막 인덱스(위치)를 리턴
+값을 찾을수 없는 경우 -1를 리턴
+
+17)length : 배열의 길이를 리턴 : 배열에서 문자열이 4개 있으면 4로 리턴
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let length =  fruits.length;
+
+18)map() : 베열요소에 함수를 호출해서 새배열을 리턴
+<div id="sprt"></div>
+
+<script>
+const sprTT = [4,9,16,25];
+document.getElementById("sprt").innerHTML = sprTT.map(Math.sqrt);
+</script>
+
+
+19)pop() : 마지막 요소(element, nod)를 제거
+<div id="remove"></div>
+
+<script>
+const RM = ["난","누","구"]    
+RM.pop();
+document.getElementById("remove").innerHTML = RM;
+</script>
+
+20)prototype : 배열에 새속성과 매서드를 추가
+<div id="addd"></div>
+
+<script>
+//add new method
+Array.prototype.myU = function(){
+    for(let i=0; i < this.length; i++){
+        this[i] = this[i].toUpperCase();
+    }
+}
+
+const upp = ["a","b","c"];
+upp.myU();
+document.getElementById("addd").innerHTML = upp;
+</script>
+
+21)push(): 배열에 끝에 새항목을 추가합니다
+<div id="last"></div>
+
+<script>
+const Last = ["firstchild","nthchild"]
+Last.push("가상의 선택자 lastchild");
+document.getElementById("last").innerHTML = Last;
+</script>
+
+22)reduce(): 배열요소에 대한 감속기능(함수의 누적결과라는 단일값을 리턴)
+<div id="ddd"></div>
+
+<script>
+const numsfloat = [15.5, 2.3, 1.1, 4.7];
+document.getElementById("ddd").innerHTML = numsfloat.reduce(getSum);
+
+function getSum(total, num){
+    return total + Math.round(num);
+}
+</script>
+
+
+23)reduceRight(): 배열요소에 대한 감속기함수 방법은 오른쪽에서 왼쪽으로 작동
+
+
+24)reverse(): 배열의 요소순서를 반대로 바꿉니다
+25)shift(): 배열의 첫번째 항목을 제거합니다
+26)slice() : 배열에서 지정된 범위만큼 추출해서 새배열로 만들어 줍니다
+27)some() : 배열요소가 테스트를 통과하는지 확인하고 (콜백함수로 제공됩니다)
+28)sort() : 배열의 요소를 정렬 원래배열을 덮어씁니다
+29)splice() : 배열요소를 추가 및 제거합니다
+30)toString() : 쉼표로 구분된 배열값이 있는 문자열로 리턴
+31)unshift() : 배열의 시작부분에 새요소를 추가합니다
+32)valueOf() : 배열자체를 리턴 (똑같이 나온다고 보면 됩니다)
+</pre>    
+</body>
+</html>

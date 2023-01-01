@@ -1,19 +1,10 @@
-.rect{
-    /* padding: 20px; */
-    background:green;
-}
-.red{
-    background: red;
-    width: 80px;
-}
-div.box{
-    height: 50px;
-    border: 1px solid #bcbcbc;
-}
-.w-80{
-    width: 80%;
-}
-.box{
-    overflow: auto;
-    height: 500px !important;
-}
+html, html * { font-size:16px; } 
+.rect {padding:20px;background-color: #eee; } 
+.red {width:80px; height:80px; display:none; background:red; } 
+.green {width:80px; height:80px; display:none; background:green; } 
+.blue {width:80px; height:80px; display:none; background:blue; } 
+div.box { height:50px; border:1px solid #bcbcbc; background:#dadada; } 
+.bg { background:#eee; } 
+.bd { border:1px solid #666; } 
+.w-80 {width:80%; margin:auto; padding:20px; text-align:center; } 
+.box {overflow: auto; } 

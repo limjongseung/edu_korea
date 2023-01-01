@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+<h1>조건문 / if,elseif,else</h1>
+<p>특정 조건 만족 시 어떤 작업을 수행하고 싶을 때 
+    사용하는 것이 if, else if, else입니다.</p>
+<pre>
+-1) condition1을 만족하면 statement1을 실행합니다.
+if(condition1){
+    statement1
+}
+
+-2) condition1을 만족하면 statement1을 실행하고, 
+만족하지 않으면 statement2를 실행합니다.
+if else if
+if (condition1){
+    statement1
+} else if (condition2){
+    statement2
+}
+
+3)condition1을 만족하면 statement1을 실행하고, 
+condition2을 만족하면 statement2을 실행하고,
+둘 다 만족하지 않으면 statement3을 실행합니다.
+if (condition1){
+    statement1
+} else if (condition2){
+    statement2
+} else {
+    statement3
+}
+</pre>   
+
+<script>
+var hyNum = prompt('Enter Number');
+if (hyNum < 10) {
+document.write('<p>10보다 작은수를 입력 하셨네요~</p>');
+} else if ( hyNum==10) {
+document.write('<p>10을 입력 하셨네요~</p>');
+} else {
+document.write('<p>10보다 큰수를 입력하셨네요~</p>');   
+}
+</script>
+
+<h1>switch</h1>
+<p>가장 기본적인 조건문은 if입니다 하지만 조건식에서 비교할값이 많다면 코드가 길어지고 가독성이 떨어진다는 단점이 있습니다 이럴땐 switch를 사용하는편이 좋습니다</p>
+
+<pre>
+문법
+switch ( condition){
+    case value1:
+    statement1;
+    break;
+    case value2:
+    statement2;
+    break;
+    ....
+    default:
+    statement3;
+}
+condition의 값이 value1이면 statement1을, value2면 statement2를,
+ 그 어느 것도 아니라면 default가 적용되어 statement3을 실행하라는 뜻입니다.
+
+순차적으로 값을 비교하며, 조건이 맞을 때 break가 있다면 그 이후의 비교는 하지 않습니다. 즉, switch 구문을 바로 끝냅니다. 만약 break가 없다면 조건이 맞아도 그 다음 비교를 계속합니다.
+</pre>
+</body>
+</html>

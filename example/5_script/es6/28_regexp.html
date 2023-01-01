@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/customizing.css">
+    <title>regexp-2</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h1 class="mt-5">RegExp : 개체속성</h1>
+            <h2>constructor : 생성자 함수</h2>           
+            <p>객체의 프로토타입을 생성한 함수를 리턴</p>
+            <p>function RegExp(){[native code]}</p> 
+            <mark id="d1"></mark>   
+            <script>
+            let native = /native/g;
+            let text = native.constructor;
+
+            document.getElementById("d1").innerHTML = text;
+            </script>   
+
+            <h2>global</h2>
+            <p>g 수정자(한정자)가 설정되어 있는지 확인 true/false</p>
+            <mark id="d2"></mark>
+            <script>
+            let pattern = /WWW/g;
+            let p_result = pattern.global;
+            document.getElementById("d2").innerHTML = p_result;   
+            </script>
+
+            <h2>ignoreCase</h2>
+            <p>i 한정자가 설정되어 있는지 확인</p>
+            <mark id="d3"></mark>
+            <script>
+            let text_2 = "Visit APPLE";
+            let pat = /APPLE/i;
+            let p_resu = pat.ignoreCase;
+            document.getElementById("d3").innerHTML = p_resu;   
+            </script>
+            <h2>lastindex</h2>
+            <p>일치하는 인덱스 지정(마지막)</p>
+            <mark id="d4"></mark>
+<script>
+let txtt = "the rain in spain stays mainly in the plain";
+let find = /ain/g;
+
+let ret = "";
+while (find.test(txtt)==true){
+    ret += "찾은 포지션 넘버는 "+find.lastIndex + "<br>";
+}
+document.getElementById("d4").innerHTML = ret;
+</script>
+
+            <h2>multiline</h2>
+            <p>m한정자가 설정되어 있는지 확인</p>
+            <h2>source</h2>
+            <p>RegExp패턴의 텍스트를 리턴</p>
+            <mark id="d5"></mark>
+            <script>
+            let multi = "Visit korea";
+            let mp = /korea/gi;
+            let mp_result = mp.multiline;
+
+            document.getElementById("d5").innerHTML = mp_result;
+            </script>
+            <h2>source</h2>
+            <p>RegExp패턴의 텍스트를 리턴합니다</p>
+            <mark id="d6"></mark>
+            <script>
+            let ss = "Visit korea";
+            let ss_p = /korea/gi;
+            let ss_result = ss_p.source;
+
+            document.getElementById("d6").innerHTML = ss_result;
+            </script>
+        </div>
+        <div class="col-6">
+            <h1 class="mt-5">RegExp : 개체메서드</h1>
+            <h2>compile() : 버전1.5에서 사용 not use</h2>
+            <h2>exec()</h2>
+            <p>문자열에서 일치하는지 테스트합니다 첫번째 일치 항목을 리턴</p>
+            <mark id="d7"></mark>
+            <script>
+            let txt5 = "the best things in life are free" ;
+            let ret5 = /e/.exec(txt5);
+            document.getElementById("d7").innerHTML = ret5;
+            </script>
+            <h2>test</h2>
+            <p>문자열에서 일치하는지 테스트합니다 true,false리턴</p>
+            <mark id="d8"></mark> 
+            <script>
+            let txt6 = "the best things in life are free" ;
+            let ret6 = /e/;
+            let ret_result = ret6.test(txt6);
+            document.getElementById("d8").innerHTML = ret_result;
+            </script>
+
+            <h2>toString()</h2>
+            <p>정규표현식에서 문자열 값을 리턴</p>
+            <mark id="d9"></mark>
+            <script>
+            let ptt = /hello World/g;
+            let txt7 = ptt.toString();
+            document.getElementById("d9").innerHTML = txt7;
+            </script>
+        </div>
+    </div>
+</div>
+</body>
+</html>

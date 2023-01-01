@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statement</title>
+</head>
+<body>
+<H1>statement</H1>   
+<p>웹브라우저에 의해 실행되는 명령입니다</p> 
+<p id="d1"></p>
+<script>
+document.getElementById("d1").innerHTML = "Hello world."
+</script>
+<pre>
+- statement Identifiers (문 식별자)
+1)break : 스위치또는 loop에서 제동을 겁니다
+- 스위치 또는 루프에서 빠져나갑니다
+- 루프내에서 루프를 중단하고 루프가 있는 경우 다음에 코드를 계속 실행합니다
+<p id="d1"></p>
+<script>
+let stop = "";
+for (let i=0; i < 5; i++){
+    if (i == 3) break; //3이전 까지만 실행
+    stop +=i + "<br>";
+}
+document.getElementById("d1").innerHTML = stop;
+</script>
+while을 사용할경우
+<p id="d2"></p>
+<script>
+let st="";
+let q = 0;
+while (q < 5){
+    st += q + "<br>"
+    q++
+    if(q === 3) break;
+}
+document.getElementById("d2").innerHTML = st;
+</script>
+
+2)class : 자바스크립트 클래스를 시작합니다
+<p id="d3"></p>
+<script>
+class Car{
+    constructor(brand){
+        this.carName = brand;
+    }
+}
+
+myCar = new Car("BMW");
+document.getElementById("d3").innerHTML ="My car is a "+
+myCar.carName;
+</script>
+
+3)const : 상수 값으로 변수 선언
+-  변수정보를 저장하는 컨테이너
+<p id="d4"></p>
+<script>
+const cars = ["Saab", "Volvo", "BMW"];
+cars[0] = "Toyota";
+cars.push("Audi");
+document.getElementById("d4").innerHTML = cars;
+</script>
+상수객체
+<p id="d5"></p>
+<script>
+const car={type:"Fiat", model:"500", color:"white"};
+car.color="red";
+car.owner="Johnson";
+document.getElementById("d5").innerHTML =
+"Car owner is "+ car.owner;
+</script>
+
+4)continue : 지정된 조건이 발생하면 (루프에서)하나의 반복을 중단하고 루프에서 다음반복을 계속합니다
+예를 들어 4를 지정하면 4를 건너뛰고 다음조건까지만 나옴
+continue(점프오버)와 break(점프아웃)문에 차이점
+
+<p id="d6"></p>
+<script>
+let cont = "";
+for (let w = 0; w < 5; w++){
+    if (w === 3) continue;
+    cont += w + "<br>";
+}
+document.getElementById("d6").innerHTML = cont;
+</script>
+
+5)debugger : 자바스크립트 실행을 중지하고 디버깅기능을 호출합니다 f12를 눌러서 확인할수 있음
+(사용 가능한 경우에)
+<p id="d7"></p>
+<script>
+let x = 15 * 5;
+debugger;
+document.getElementById("d7").innerHTML = x;
+</script>
+6)do...while : 스테이트블록을 실행하고 참인 동안에 블록을 반복
+<p id="d8"></p>
+<script>
+let nums = "";
+let e = 0;
+do{
+    nums += e + "<br>";
+    e++;
+}
+while (e < 5);
+document.getElementById("d8").innerHTML = nums;
+</script>
+7)for : 코드블록을 여러번 반복합니다
+<p id="d9"></p>
+<script>
+const carss = ["b", "v", "s", "f"];
+let tt = "";
+for (let r = 0; r < carss.length; r++){
+    tt += carss[r] + "<br>";
+}
+document.getElementById("d9").innerHTML = tt;
+</script>
+8)for...in : 객체의 속성을 통해서 루프
+<p id="d10"></p>
+<script>
+const hwang = {fname:"young-il", lname:"hwang", age:46};
+let stt = "";
+for (let t in hwang){
+    stt += hwang[t] + " ";
+}
+document.getElementById("d10").innerHTML = stt;
+</script>
+9)for...of : 반복가능한 객체의 값을 반복합니다
+<p id="d11"></p>
+<script>
+let txt1 = "javascript";
+let txt2 = "";
+
+for(let y of txt1){
+    txt2 += y + " ";
+}
+document.getElementById("d11").innerHTML = txt1 + "<br>" + txt2;
+</script>
+
+10)function :  함수선언
+
+<button onclick="godaum()"></button>
+<script>
+function godaum(){
+    location.href="http://www.daum.net"
+}
+</script>
+<p id="d12"></p>
+<script>
+function helloworld(){
+    document.getElementById("d12").innerHTML = "Hello World!";
+}
+helloworld();
+</script>
+11)if...else...elseif : 조건에 따라 실행할 블록을 표시
+지정된 조건이 참이면 실행되는 코드블럭 
+조건이 거짓이면 다른 코드블럭을 실행할수도 있습니다
+1) 시간이 20시 미만이면 굿데이를 출력
+
+
+12)let : 변수선언
+13)return : 함수 실행을 중지하고 해당함수에서 값을 반환합니다
+14)switch : 다른 경우에 따라 실행될 블록을 표시
+15)throw : 오류 발생
+16)try catch finally : try블록에서 오류 발생시 실행할 블록을 표시하고 오류처리를 구현합니다
+17)var : 변수선언
+18)while : 조건이 참인 동안 실행할 명령문 블록을 표시합니다
+</pre>
+</body>
+</html>

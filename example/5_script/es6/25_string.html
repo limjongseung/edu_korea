@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+<h1>문자열</h1>
+<pre>
+자바스크립트 문자열은 ""와 같은 일련의 문자를 저장합니다
+문자열 인덱스는 0부터 시작합니다
+<p id="d1"></p>
+<script>
+let Name1 = "Volvo XC60";
+let Name2 = 'Volvo XC60';
+
+document.getElementById("d1").innerHTML = Name1 + " " + Name2;
+</script>
+- 문자열 메서드
+1)charAt():문자열에 지정된 인덱스(위치)에 있는 문자를 리턴
+-1을 붙이면 마지막 문자가 리턴
+<p id="d1"></p>
+<script>
+let txt = "hello world";
+let letter = txt.charAt(0);
+document.getElementById("d1").innerHTML = letter;
+</script>
+- 마지막 문자를 가져올 경우 -
+<P id="D2"></P>
+<script>
+let txt2 = "hello";
+let lg = txt.charAt(txt2.length-1);
+
+document.getElementById("D2").innerHTML = lg;
+</script>
+2)charCodeAt(): 지정된 문자의 unicode를 리턴
+-마지막 문자의 워드를 리턴할때는  -1을 사용하세요
+- 비슷한 경우 => codePointAt()
+<p id="d3"></p>
+<script>
+let txt4 = "world";
+let code = txt4.charCodeAt(1);
+
+document.getElementById("d3").innerHTML = code;
+</script>
+
+3)concat(): 두개 이상의 문자열 결합합니다.
+- 기존 문자열을 변경하지 않습니다.
+- 새문자열을 리턴합니다
+<p id="d4"></p>
+<script>
+let txt5 = "sea";
+let txt6 = "food";
+let rt = txt5.concat(txt6);
+document.getElementById("d4").innerHTML = rt;
+</script>
+4)endsWith():지정한 문자로 끝나면 true 아니면 false
+- 대소문자를 구분합니다
+<p id="d5"></p>
+<script>
+let t = "hello world";
+let r = t.endsWith("world");
+document.getElementById("d5").innerHTML = r;
+</script>
+5)fromCharCode(): 유니코드값을 문자열로 리턴
+<p id="d6"></p>
+<script>
+let tt = String.fromCharCode(65);
+document.getElementById("d6").innerHTML = tt;
+</script>
+6)includes(): 지정된 문자열이 포함되어 있는지
+있으면 true 아니면 false;
+<p id="d7"></p>
+<script>
+let tttt = "hello world welcome";
+let ress = tttt.includes("world");
+
+document.getElementById("d7").innerHTML = ress;
+</script>
+
+7)indexOf(): 문자열에서 값이 처음 나타나는 위치를 리턴
+값을 찾을수 없는 경우 -1를 리턴
+대소문자를 구분합니다
+<p id="d8"></p>
+<p id="d9"></p>
+<p id="d10"></p>
+<script>
+ let text = "Hello world, welcome to the ubiverse" ;
+ let result = text.indexOf("welcome");
+ 
+ document.getElementById("d8").innerHTML = result;
+
+ let text2 = "Hello world, welcome to the ubiverse" ;
+ let result2 = text2.indexOf("Welcome");
+ 
+ document.getElementById("d9").innerHTML = result2;
+
+ //위치 5부터 시작해서 e의 첫번째 항목을 찾습니다
+ let text3 = "Hello world, welcome to the ubiverse" ;
+ let result3 = text3.indexOf("e", 5);
+ 
+ document.getElementById("d10").innerHTML = result3;
+</script>
+
+
+</pre>   
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp</title>
+</head>
+<body>
+<pre>
+메타문자
+1). : that's hot! /h.t/
+지정된 문자에 시작과 끝으로 끝나는 워딩이 검색
+<p id="d1"></p>
+<script>
+let q = "that's hot!";
+let pat = /h.t/g;
+let res = q.match(pat);
+
+document.getElementById("d1").innerHTML = res;
+</script>
+2)\w : 단어문자에 대한 전역검색
+- 밑줄을 포함하는 문자 az,AZ,0-9입니다
+- 특수문자 제외
+<p id="d2"></p>
+
+<script>
+ let text = "Give 100%!";
+ let pattern = /\w/g;
+ let result = text.match(pattern);
+ 
+ document.getElementById("d2").innerHTML = result;
+</script>
+
+3)\W : 비단어문자에 대한 전역검색
+<p id="d3"></p>
+
+<script>
+ let text2 = "Give 100%!";
+ let pattern2 = /\W/g;
+ let result2 = text2.match(pattern2);
+ 
+ document.getElementById("d3").innerHTML = result2;
+</script>
+4)\d : 0에서 9까지의 숫자에 대한 전역검색
+5)\D : 숫자가 아닌 문자에 대한 전역검색
+<p id="d4"></p>
+
+<script>
+ let t2 = "Give 100%!";
+ let p2 = /\D/g;
+ let r2 = text2.match(p2);
+ 
+ document.getElementById("d4").innerHTML = r2;
+</script>
+6)\s : 공백문자에 대한 전역검색
+7)\S : 공백이 아닌 문자에 대한 전역검색
+8)\b : 지정한 문자에 대한 인덱싱번호 리턴
+<p id="d5"></p>
+
+<script>
+ let t3 = "HELLO, LOOK AT YOU";
+ let p3 = /\bLO/g;
+ let r3 = t3.search(p3);
+ 
+ document.getElementById("d5").innerHTML ="인덱싱 번호는 몇번입니까? "+ r3;
+</script>
+9)\B : 지정한 문자가 아닌 첫번째 항목에 인덱싱번호를 리턴
+
+수량자 : 갯수를 파악
+1) + : 지정된 문자에 전체 갯수를 파악
+<p id="d6"></p>
+<script>
+let tx = "hellooo wordl! hello shoooools";
+let ptt = /o+/g;
+let ret = tx.match(ptt);
+
+document.getElementById("d6").innerHTML = ret;
+</script>
+2) * : 지정된 문자에 뒤따르는 문자에 대한 검색
+
+<p id="d7"></p>
+<script>
+let tet = "hellooo wordl! hello shoooools"
+let pan = /lo*/g;
+let ress = tet.match(pan);
+
+document.getElementById("d7").innerHTML = ress;
+</script>
+
+3) ? : 1다음에 0또는 하나의 0문자가 오는 전역검색을 수행
+<p id="d8"></p>
+<script>
+let txt = "1, 100 0 or 1000?";
+let patt = /10?/g;
+let rest = txt.match(patt);
+
+document.getElementById("d8").innerHTML = rest;
+</script>
+
+개체속성
+개체 메서드
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/*
+Sass중첩 규칙
+1)html과 같은 방식으로 css선택자를 중첩할수 있습니다
+*/
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+nav li {
+  padding: 5px 10px;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+}

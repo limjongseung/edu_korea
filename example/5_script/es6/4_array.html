@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<pre>
+8)find() : 테스트를 통과한 첫번째(먼저순서의 인덱스) 요소의 값을 리턴
+<abbr title="" id="demo"></abbr>
+<script>
+const nb = [3,10,18,20];
+document.getElementById("demo").innerHTML = nb.find(cNUM);
+
+function cNUM(nb){
+    return nb > 16;
+}
+
+
+</script>
+9) findIndex() : 테스트를 통과한 첫번째 요소의 인덱스(위치)를 리턴
+<div id="ff"></div>
+
+<script>
+const as = [3, 10, 18, 20];
+document.getElementById("ff").innerHTML = as.findIndex(CA);
+
+function CA(a){
+    return a > 18;
+}
+</script>
+
+10)forEach() : 인덱스번호가 나오면서 리스트로 출력이됨
+0: apple
+1: orange
+2: cherry
+
+11)from() : 길이속성이 있는  객체에서 배열을 리턴
+- 공백까지 인식
+<kbd id="kdb"></kbd>
+
+<script>
+let text ="길이속성이 있는  객체에서 배열을 리턴"
+const myArr = Array.from(text);
+document.getElementById("kdb").innerHTML = myArr;
+</script>
+
+12)indexOf() : 검색한 해당키워드에 첫번째 인덱스를 리턴
+<dl id="first"></dl>
+<script>
+const fs = ["apple","apple","apple","apple"];
+let index = fs.indexOf("apple");
+
+document.getElementById("first").innerHTML = index;
+</script>
+
+13)isArray() : 객체가 배열이면 T, 아니면 F
+Array.isArray(obj)
+
+14)join() : 기존애 배열을 변경하지 않고 워딩사이에 무언가 추가할때 사용
+["Banana", "Orange", "Apple", "Mango"]; => Banana,Orange,Apple,Mango
+
+<nav id="fff"></nav>
+
+<script>
+const cars = ["bmw", "h", "k", "b"];
+let tt = cars.join();
+
+document.getElementById("fff").innerHTML = tt;
+</script>
+
+15)keys() : 배열을 인덱스키(숫자)로 리턴 키가 있는 Array Iterator 객체
+<div id="ky"></div>
+<script>
+    const Nums = ["bmw", "h", "k", "b"];
+    const keys = Nums.keys();
+
+    let typo = "";
+    for(let q of keys){
+        typo+= q + "<br>"
+    }
+    
+    document.getElementById("ky").innerHTML = typo;
+    </script>
+</pre>    
+</body>
+</html>
