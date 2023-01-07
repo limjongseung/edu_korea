@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">-->
+           
+            <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+          
+    <!--최신버전 유지-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>event</title>
+  </head>
+
+  <body>
+    
+    <div class="container">
+      <div>
+        <div>
+          <pre>
+            <div class="row">
+              <div class="col-12">
+                <pre style="height: 10000px;">
+                  사이트의 메뉴는 보통 맨위에 있습니다.
+                  내용이 긴 문서를 읽은 후 다시 메뉴를 가려고 하면 스크롤을 해야 하는 불편함이 있습니다.
+                  탑버튼을 만들면 손쉽게 이동할수 있습니다.
+                  어느정도 스크롤바를 내렸을때 top 버튼이 보여지게 하겠습니다.
+                </pre>
+                <div class="one"></div>
+                <a href="#" class="top bg-dark text-white p-2">top</a>
+                <style>
+                  html{
+                    scroll-behavior: smooth;
+                  }
+                  .top{
+                    position: fixed;/* 포지션이 변동되지 않게 고정*/
+                    bottom: 20px;
+                    right: 20px;
+                  }
+                </style>
+                <script>
+                  $(function(){
+                    $(window).scroll(function(){
+                      if($(this).scrollTop() > 200){
+                        //console.log(this.scrollTop());
+                        $(".top").fade();
+                      } else{
+                        $(".top").fadeOut(); 
+                      }
+                    });
+                  })
+                </script>
+                <!-- <div class="" style="height: 10000000px;"></div> -->
+              </div>
+            </div>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">-->
+           
+            <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+          
+    <!--최신버전 유지-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>자식요소의 개수를 기준으로 부모선택하기</title>
+  </head>
+
+  <body>
+    <div class="title display-1">
+        <h1 class="title_site">SITE TITLE</h1>
+
+    </div>
+    <div class="row">
+        <div class=" content">
+        <header>
+            <ol>
+                <li>one</li>
+                <li>two</li>
+                <li>threee</li>
+            </ol>
+            <ol>
+                <li>one</li>
+                <li>two</li>
+                <li>threee</li>
+            </ol>
+            <ol>
+                <li>one</li>
+                <li>two</li>
+                <li>threee</li>
+            </ol>
+        </header>
+            <h1 class="mt-5">
+                특정요소를 자식요소로 갖는 요소를 선택하거나(has) 
+                자식요소로 갖지 않는 요소를 선택할때(not)
+            </h1>
+            <p>Lorem <span>ipsum</span> dolor sit.</p>
+            <p>Lorem ipsum dolor sit.</p>
+            <script>
+                $(function(){
+                    $("p:has(span)").css("color","lightblue");
+                    $("p:not(:has(span))").css("color","green");
+                })
+            </script>
+        </div>
+        <style>
+
+            header{display: flex;justify-content: space-around;}
+            ol{display: flex;justify-content: space-between;width: 100%;}
+
+            .title_site{
+                text-align: center;
+                font-size: 3rem;
+            }
+            .threee{
+                color: red;
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+    </div>
+    <script>
+        $(function(){
+            $("ol").each(function(){
+                if($("li",this).length > 2){
+                    $(this).addClass("three")
+                }
+            });
+        });
+    </script>
+  </body>
+</html>
+

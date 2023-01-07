@@ -178,22 +178,27 @@
                     });
                 })
                 </script>
-                32)scrollDown
-                32)parent
-                32)prepend
-                32)prop
-                32)remove
-                32)removeAttr
-                32)removeClass
-                32)replaceWith
-                32)resize
-                32)scrollTop
-                32)slice
-                32)scrollDown
+
+                <h2>폼을 전송하기전에 특정작업</h2>
+                <form action="post" id="hf">
+                    <select name="fr" id="jf">
+                        <option value="">선택하세요</option>
+                        <option value="apple">사과</option>
+                        <option value="banana">바나나</option>
+                        <option value="banana">바나나</option>
+                    </select>
+                    <input type="submit">
+                </form>
+                <button></button>
+                <script>
+                    $(function(){
+                        $("#hf").submit(function(){
+                            alert("you  select "+ $("#jf").val()+ "!");
+                        });
+                    });
+                </script>
             </pre>
         </div>
-
-
       </div>
     </div>
   </body>
