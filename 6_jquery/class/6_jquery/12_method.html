@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">-->
+    <!--<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>method</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+<pre>
+
+
+
+<h2>속도비교</h2>
+<button class="btn btn-secondary">click!</button>
+<div class="rect" id="a"></div>
+<div class="rect" id="b"></div>
+<style>
+.rect{margin:10px 0;width:10%; height:100px; background-color:#e3f2fd;}
+#a{background:#bbdefb;}
+#b{background:#ffcdd2;}
+</style>
+
+
+
+6) .append() : 선택한 요소의 내용의 끝에 콘텐츠를 추가합니다
+<ul>
+  <li>lorem</li>
+  <li>ipsum</li>
+</ul>
+<script>
+  $(document).ready(function(){
+$('ul').append('<li>dolor</li>');
+  });
+</script>
+예시 strong을 오른쪽으로 붙여줍니다
+<section>abc</section>
+<strong>XYZ</strong>
+<script>
+  $(document).ready(function(){
+$('section').append($('strong'));
+  });
+</script>
+7) .appendTo() : 선택한 엘리먼트를 다른 엘리먼트에 넣어줍니다
+예시 $('p').appendTO('blockquote');
+<header>logo login</header>
+<span class="menu">menu</span>
+<script>
+$(document).ready(function(){
+  $('span.menu').appendTo('header');
+});
+</script>
+8) .attr() : 엘리먼트의 속성값을 가져오거나 속성을 추가합니다
+1)요소의 속성값 가져오기 
+.attr(attributeName)
+2)속성 추가하기
+.attr(attributeName, value)
+<input type="text" class="one">
+<script>
+$(document).ready(function(){
+$('.one').attr('placeholder','Input your address');
+});
+</script>
+3)속성을 제거하고 싶으면 .removeAttr()을 사용합니다
+
+9) .before() : 선택한 요소 앞에 새요소를 추가하거나
+다른곳에 있는 요소를 이동시킬수 있습니다
+10) .children() : 어떤요소의 자식요소를 선택합니다
+<dl>
+  <dt>타이틀</dt>
+  <dd class="ip">냉무</dd>
+  <dd>냉무</dd>
+</dl>
+<script>
+  $(document).ready(function(){
+$('dl').children('.ip').css('color','blue');
+  });
+</script>
+
+</pre>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

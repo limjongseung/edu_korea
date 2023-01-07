@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">-->
+    <!--<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="css/cus.css">
+    <title>method</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+
+29)load() : 다른 문서 등에서 내용을 가져와 현재 문서에 나타냅니다
+<div class="" id="xy"></div>
+<script>
+$(function(){
+$('#xy').load('load.html #ab');
+});
+</script>
+30)not() : 선택한 요소중에 특정 선택자를 제외한 요소를 선탹합니다
+not (selector) 예시
+$('p').not('p.abc').css('color','green')
+p요소중 abc클래스를 값으로 가지지않는 것을 선택
+
+<button class="btn btn-light">Click</button>
+<ol>
+    <li>lorem</li>
+    <li class="ip">ipsum</li>
+    <li>dolor</li>
+</ol>
+<script>
+$(function(){
+    $('button').click(function(){
+        $('li').not('li.ip').css('color','red');
+    });
+});
+</script>
+
+31)offset : 선택한 요소의 좌표를 가져오거나 특정좌표로 
+이동합니다
+31-1)let h =$('h1').offset();
+31-2)요소를 특정위치로 이동
+$('h1').offset({left:100, top:50});
+<h1 class="display-1">wh</h1>
+<h2 class="mt-5">hhh</h2>
+<script>
+$(function(){
+let h1 = $('h1.display-1').offset();
+let h2 = $('h2.mt-5').offset();
+$('h2.mt-5').after(
+'<p>'+h1.left + h1.top + '</p>' +
+'<p>'+h2.left + h2.top + '</p>'
+);
+});
+</script>
+<article>
+lorem    
+</article>
+<aside>
+ipsum
+</aside>
+<script>
+$(function(){
+$('article').offset({left:300, top:400});
+});
+</script>
+
+32)parent : 어떤요소의 부모요소를 선택합니다
+예시)
+ef를 클래스 값으로 갖는 p 요소의 부모요소가 cd를 
+클래스 값으로 갖는  div일때 내용을 빨간색으로 만듭니다
+<div class="ab">
+    <p>hello</p>
+    <div class="cd">
+        <p class="ef">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, esse.
+        </p>
+    </div>
+</div>
+<script>
+$(function(){
+$('p.ef').parent('div.cd').css('color','violet');
+});    
+</script>
+33)prepend : 선택한 요소의 내용에 앞에 콘텐츠를 추가합니다
+prepend(content[,content])
+<ul>
+    <li>two</li>
+    <li>three</li>
+</ul>
+<script>
+$(function(){
+    $('ul').prepend('<li>one</li>');
+});
+</script>
+34)prop : 지정한 선택자를 가진 첫번째 요소의 속성값을
+가져오거나 속성값을 추가합니다
+주의사항은 html입장에서의 속성이 아닌
+자바스크립트 입장에서의 속성값입니다
+문법
+.prop (propertyName) : 속성의 값을 가져온다
+.prop (propertyName, value) : 속성 value를 추가
+<p>
+    <a href="#">link</a>
+</p>
+<script>
+document.write($('a').attr('href'));
+document.write('<br>');
+document.write($('a').prop('href'));
+</script>
+2) 속성추가하기
+<form action="">
+    <p>
+        <input type="checkbox" name="all" class="check-all">
+        <label for="">check All</label>
+    </p>
+    <p>
+        <input type="checkbox" name="cb1" id="" class="ab">
+        <label for="">checkbox 1</label>
+    </p>
+    <p>
+        <input type="checkbox" name="cb2" id="" class="ab">
+        <label for="">checkbox 2</label>
+    </p>
+</form>
+<script>
+$(function(){
+    $('.check-all').click(function(){
+        $('.ab').prop('checked',this.checked);
+    });
+});
+</script>
+35).remove : 완전히 제거
+.remove([selector])
+<button class="btn btn-success">제거</button>
+<h5 class="rm">remove</h5>
+<script>
+$(function(){
+    $("button").click(function(){
+        $('h5').remove('.rm');
+    })
+})//엘리먼트의 컨텐츠만 지울때는 empty
+</script>
+
+
+36)removeAttr : 선택한 요소의 특정 속성을 제거
+37)removeClass
+38)replaceWith
+39)resize
+40)scrollTop
+
+
+            41)slice
+            42)slideDown
+            43)slideToggle
+            44)slideUp()
+            45)submit()
+            46)text()
+            47)toggle()
+            48)toggleClass()
+            49)width()
+            50)unwrap()
+            51)val()
+            52)wrap()
+            53)wrapAll()
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

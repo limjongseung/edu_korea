@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    52)wrap() : 선택한 요소를 원하는 태그로 감싸줍니다
+<h1>Lorem, ipsum dolor.</h1>
+<p>hello world</p>
+<p class="a">goodbye world</p>
+<script>
+$(function(){
+    $('p.a').wrap($('<blockquote></blockquote>'));
+});
+</script>
+    
+</body>
+</html>

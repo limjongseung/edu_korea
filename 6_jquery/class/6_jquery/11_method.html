@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">-->
+    <!--<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script><!--최신버전 유지-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>method</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+<pre>
+4) .after() : 선택한요소뒤에 새요소를 추가하거나 다른곳에 요소를 
+이동시킬수 있습니다
+.after(content[,content])
+예시 
+$('h1').after('<p>hello</p>');
+<h1>Lorem ipsum dolor sit amet.</h1>
+<script>
+$(document).ready(function(){
+    $('h1').after('<p>hello world</p>');
+});
+</script>
+다른곳에 요소를 이동
+<p>good bye</p>
+<h1>Lorem ipsum dolor sit amet.</h1>
+<script>
+    $(document).ready(function(){
+        $('h1').after($('p'));
+    });
+    </script>
+
+5) .animate() : 애니메이션 효과를 만듭니다
+문법
+.animate(properties[,duration][,easing][,complete])
+duration : 에니메이션 효과를 완료할때까지 걸리는 시간입니다
+영상에서는 300 =>3초 웹에서는 3000 프레임을 가지고 있음
+기본값은 400, fast = 200, slow = 600
+
+easing : 애니메이션에 효과 방식을 정합니다
+swing과 linear가 가능하며 
+
+property
+backgroundPositionX
+backgroundPositionY
+borderBottomWidth
+borderLeftWidth
+borderRightWidth
+borderSpacing
+borderTopWidth
+borderWidth
+bottom
+fontSize
+height
+left
+letterSpacing
+lineHeight
+margin
+marginBottom
+marginLeft
+marginRight
+marginTop
+maxHeight
+maxWidth
+minHeight
+minWidth
+opacity
+outlineWidth
+padding
+paddingBottom
+paddingLeft
+paddingRight
+paddingTop
+right
+textIndent
+top
+width
+wordSpacing
+<h2>일반적인 애니메이션</h2>
+<style>
+#rect{
+width:10%;
+height:100px;
+background-color:#bbdefb;
+}
+</style>
+
+<button class="btn btn-danger">click!</button>
+<div id="rect" class="mt-5"></div>
+<script src="https//code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            $('#rect').animate({
+                width:'100%'
+            });
+        });
+    });
+    </script>
+<h2>속도비교</h2>
+
+
+6) .append()
+7) .appendTo()
+8) .attr()
+9) .before()
+10) .children()
+</pre>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

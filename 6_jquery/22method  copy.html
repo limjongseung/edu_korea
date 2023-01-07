@@ -17,27 +17,43 @@
     <link rel="stylesheet" href="custom.css">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <title>자식요소의 개수를 기준으로 부모선택하기</title>
+    <title></title>
   </head>
 
   <body>
+
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 bg-success">
-                <h1 class="display-1">one</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 bg-success">
-                <h1 class="display-1">two</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 bg-success">
-                <h1 class="display-1">three</h1>
+            <div class="col-12">
+                <select name="" id="s1" onchange="optionChage()">
+                    <option value=""></option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                </select>
+                <select name="" id="s2"></select>
             </div>
         </div>
     </div>
+    <script>
+        function optionChage(){
+            let a = ['A-1','A-2','A-3'];
+            let b = ['B-1','B-2','B-3'];
+            let v = $("#s1").val();
+            let o;
+            if(v == "a"){
+                o  = a;
+            } else if (v=="b"){
+                o = b} else{
+                    o = [];
+                }
+                $("#s2").empty();
+                $("#s2").append("<opiton></option>");
+                    for(let i = 0; i< o.length; i++){
+                        $("#s2").append("<option>"+o[i]+"</option>");
+                    }
+        }
+    </script>
+
   </body>
 </html>
 

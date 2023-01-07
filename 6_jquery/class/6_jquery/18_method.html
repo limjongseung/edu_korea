@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">-->
+    <!--<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="css/cus.css">
+    <title>method</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+<h2>유효성 검사</h2>
+<form action="" id="vali">
+    <select name="fruit" id="h-fruit">
+        <option value="">
+        선택하세요    
+        </option>
+        <option value="apple">
+        apple
+        </option> 
+        <option value="banana">
+        banana
+        </option>    
+    </select>
+    <input type="submit" value="submit">
+</form>
+<script>
+$(function(){
+    $('#vali').submit(function(event){
+        if($('#h-fruit').val() == ''){
+        alert('내용을 선택하세요!');
+        event.preventDefault();    
+        }
+    });
+});
+</script>
+46)text() : 선택한 요소안의 내용을 가져오거나
+다른내용으로 바꿉니다.html()과 비슷하지만
+태그의 처리가 다릅니다
+선택한 요소안의 내용을 가져오고 태그는 가져오지 않습니다 아래예시에서는 div요소안의 내용을 가져와서
+그 내용을 출력합니다 div요소가 여러개 있으면
+모든 내용을 가져옵니다 html태그는 제외합니다
+<div class="">
+    <h1>Lorem, ipsum dolor.</h1>
+</div>
+<div class="">
+    <h1>Lorem, ipsum dolor.</h1>
+</div>
+<script>
+$(function(){
+let htext = $('div').text();
+alert(htext);
+});
+</script>
+<h2>div요소안의 내용을 지우고 새로운 내용을 넣습니다 삽입하는 내용에 있는 html태그는 태그가 아니라 텍스트로 인식</h2>
+<aside>
+    <h2>Lorem, ipsum dolor.</h2>
+</aside>
+<aside>
+    <h2>Lorem, ipsum dolor.</h2>
+</aside>
+<script>
+$(function(){
+    $('aside').text('<p>태그까지 글자로 인식</p>');
+});
+</script>
+
+47)toggle() : 작용 반작용 법칙
+선택한 요소가 보이면 보이지 않게 
+보이지 않으면 보이게
+<p class="a">click to toggle</p>
+<p class="b">Lorem, ipsum dolor.</p>
+<script>
+$(function(){
+    $('p.a').click(function(){
+        $('p.b').toggle('slow');
+    });
+});
+</script>
+
+48)toggleClass() : 선택한 요소에 클래스 값을 
+넣었다가 뺏다 할수 있습니다
+<style>
+.ab{background:#330000;color:white;}
+</style>
+<button>click</button>
+<h1 class="bg">Lorem, ipsum dolor.</h1>
+<script>
+$(function(){
+    $('button').click(function(){
+        $('h1.bg').toggleClass('ab');
+    });
+});
+</script>
+
+49)width() : 선택한 요소의 가로크기를 반환하거나
+가로크기를 변경합니다.
+<div class="div-a border">
+<p>A-600px</p>
+</div>
+<p class="width-div-a"></p>
+<div class="div-b border">
+<p>B-50%</p>
+</div>
+<p class="width-div-b"></p>
+<script>
+$(function(){
+let widthDIVA = $('.div-a').width();
+$('.width-div-a').append(widthDIVA);
+let widthDIVB = $('.div-b').width();
+$('.width-div-b').append(widthDIVB);
+});
+</script>
+<style>
+.div-a{
+width:600px;
+}
+.div-b{
+width:50%;
+}
+.div-c{
+width:100%;
+height:100px;
+background:violet;
+}
+</style>
+<h2>버튼을 클릭하면 요소의 가로크기변경</h2>
+<button class="bt">change</button>
+<div class="border div-c"></div>
+<script>
+$(function(){
+$('.bt').click(function(){
+$('.div-c').width('100px');
+});
+});
+</script>
+50)unwrap() : 선택한 요소의 상위태그를 제거
+예시에서는 h1요소의 상위태그 섹션을 제거합니다
+<section class="bg-dark">
+<h1>hhhhhhh</h1>
+</section>
+<script>
+$(function(){
+$('h1').unwrap();
+});
+</script>
+선택한 요소에서 상위태그를 만들때는 wrap을 씁니다
+
+51)val() : 양식값을 가져오거나 값을 설정하는 매서드 입니다
+<div class="d-flex">
+    <input type="text" id="hinput" class="form-control">
+    <button class="btn btn-warning">click</button>
+</div>
+<script>
+$(function(){
+    $(".btn-warning").click(function(){
+        let type = $('input#hinput').val();
+        alert(type);
+    });
+});
+</script>
+<br>
+<h2>select값이 바뀌면 출력</h2>
+<select name="" id="hss">
+    <option value="one">one</option>
+    <option value="two">two</option>
+    <option value="three">three</option>
+</select>
+<script>
+$(function(){
+    $('select#hss').change(function(){
+        let hy = $('select#hss').val();
+        alert(hy);
+    });
+});
+</script>
+<br>
+52)wrap() : 선택한 요소를 원하는 태그로 감싸줍니다
+<h1>Lorem, ipsum dolor.</h1>
+<p>hello world</p>
+<p class="a">goodbye world</p>
+<script>
+$(function(){
+    $('p.a').wrap($('<blockquote></blockquote>'));
+});
+</script>
+
+53)wrapAll()
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
