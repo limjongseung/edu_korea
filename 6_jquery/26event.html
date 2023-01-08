@@ -41,7 +41,7 @@
                     <p>this is paragraph</p>
                     <p>this is another paragraph</p>
                     <p>this is the other paragraph</p>
-                    <script>
+             <!--        <script>
                         $(function(){
                             $("p").each(function(i){
                                 $(this).on("click",{x:i}, function(event){
@@ -49,7 +49,7 @@
                                 })
                             })
                         })
-                    </script>
+                    </script> -->
                     3)event.delegateTarget : 현재 호출된 jquery이벤트 핸들러가 연결된 요소를 리턴
                     - 이속성은 처리중인 요소의 조상에 이벤트 핸들러가 연결된 on ()메서드로 연결된 위임된 
                     이벤트에 유용합니다.
@@ -81,10 +81,45 @@
                             });
                         });
                     </script>
-                    event.namespace : ㅇㅣ
-                    6)evnet.isPropagationStopped(): 이베트에 대해 event.stopPropagation()이 호출되었는지 확인
+                    event.namespace : 이벤트 트리거 되었을때 사용자 지정 네임스페이스를 리턴
+                    <p class="name">click on this para</p>
+                    <button class="btn btn-info">remove namespace</button>
+                    <script>
+                        $(function(){
+                            $("p.name").on("custom.someNamespace",function(e){
+                                alert(e.namespace);
+                            });
+                            $("p.name").click(function(){
+                                $(this).trigger("custom.someNamespace");
+                            });
+                            $("button.btn-info").click(function(){})
+                            $("p.name").off("custom.someNamespace");
+                        })
+                    </script>
+                    6)evnet.isPropagationStopped(): 이벤트에 대해 event.stopPropagation()이 호출되었는지 확인
                     7)event.target : 이벤트를 트리거한 요소를 리턴
+                    <h1>Lorem ipsum dolor sit.</h1>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <button class="btn btn-primary">triger</button>
+                    <div class="blue"></div>
+                    <script>
+                        $(function(){
+                            $("p, button, h1").click(function(e){
+                                $("div.blue").html("트리거는 " + e.target.nodeName);
+                            })
+                        })
+                    </script>
+                    
                     8)event.timeStamp : 이벤트가 트리거된 1970년 1월 1일 이후의 밀리초수를 리턴
+                    <p>the click event ocuured <span class="red"></span></p>
+                    <button class="btn btn-secondary">click</button>
+                    <script>
+                        $(function(){
+                            $("button.btn-secondary").click(function(e){
+                                $("span.red").text(e.timeStamp);
+                            })
+                        });
+                    </script>
                     8)event.type : 트리거된 이벤트 유형을 리턴합니다.
                     9)focus : 이벤트 요소가 포커스를 받을 때 (마우스클릭또는 탭탐색으로 요소를 연결했을때)발생합니다.
                     이 메서드는 주로 blur()와 함계 사용됩니다.

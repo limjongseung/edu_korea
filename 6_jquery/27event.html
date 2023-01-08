@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">-->
+
+    <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!--최신버전 유지-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="custom.css" />
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <pre>
+                    8)event.timeStamp : 이벤트가 트리거된 1970년 1월 1일 이후의 밀리초수를 리턴
+                    <div>time stamp : <span class="text text-danger"></span></div>
+                    <button>click</button>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                    <script>
+                    $(document).ready(function(){
+                      $("button").click(function(e){
+                        $("span").text(e.timeStamp);
+                      });
+                    });
+                    </script>                                        
+                    8)event.type : 트리거된 이벤트 유형을 리턴합니다.                                                                                                                  
+                    <aside>
+                        이태그에 click,더블클릭,마우스오버 마우스 아웃 이벤트 정의 되어 있습니다.
+                        이벤트중 하나를 트리거 하면 아래 여소에 이벤트 유형이 표시됩니다.                                                         
+                    </aside>
+                    <div class="view"></div>
+                    <script>
+                        $(function(){
+                            $("aside").on("click dbclick mouseover mouseout",function(event){
+                                $("div.view").html("Event" + event.type);
+                            });
+                        });
+                    </script>
+                    event.which : 이벤트에 대해 눌린 키보드키또는 마우스 버튼을 리턴
+                    Enter your name : <input type="text" class="form-control">
+                    <div class="view2"></div>
+                    <script>
+                      $(function(){
+                        $("input.form-control").keydown(function(event){
+                            $("div.view2").html("key : " + event.which)
+                        });
+                      });
+                    </script>
+                    9)focus : 이벤트 요소가 포커스를 받을 때 (마우스클릭또는 탭탐색으로 요소를 연결했을때)발생합니다.
+                    이 메서드는 주로 blur()와 함계 사용됩니다.
+                    focusin, focusout
+                    <input type="text">
+                    <span class="dn">nice to meet oy!</span>
+                    <script>
+                        $(function(){
+                            $("input").focus(function(){
+                                $("span.dn").css("display","inline").fadeOut(2000)
+                            });
+                        });
+                    </script>
+                    focusin:이벤트 요소(또는 요소 내부의 모든 요소)
+                    focusout: 이벤트 요소(또는 요소 내부의 모든요소)포커스를 잃을때 발생
+                    11) off(): on() 메서드와 연결된 이벹느 핸들러를 제거 할때
+                    <section>click</section>
+                    <section>click</section>
+                    <button class="btn btn-warning">remove</button>
+                    <script>
+                        $(function(){
+                            $("section").on("click",function(){
+                                $(this).css("background","pink");
+                            });
+                            $("button.btn-warning").click(function(){
+                                $("section").off("click");
+                            })
+                        });
+                    </script>
+                    12)one() : 선택한 요소에 대해 하나이상의 이벤트핸들러를 연결하고 발생할때 실행할 함수를 지정합니다.
+                    <main>this is size up</main>
+                    <script>
+                        $(function(){
+                            $("main").click(function(){
+                              $(this).animate({fontSize : "+=32px"})  
+                            })
+                        })
+                    </script>
+                    13)$.proxy: 기존함수를 사용하고 특정 컨텍스트가 포함된 새 함수를 리턴
+                    <button class="btn btn-light">proxy</button>
+                    <p></p>
+             <!--        <script>
+                        $(function(){
+                            let objPerson = {
+                                name : "jongseung",
+                                age : 46,
+                                text: function(){
+                                    $("p").after("Name:"  + this.name +"<br> Age:" + this.age)
+                                }
+                                $("button.btn-light").click($.proxy(objPerson, "test"))
+                            }
+                        })
+                    </script> -->
+                    14).resize : 선택한 요소에 대한 크기조정 이벤트를 트리거
+                    <!-- <div>window <span></span></div>
+                    <script>
+                        let x=0
+                        $(function(){
+                            $(window).resize(function(){
+                                $("span").text(x +=1);
+
+                            })
+                        })
+                    </script> -->
+                    15.scroll : 선택한 요소에 대한 스크롤이벤트
+                    <nav>scrolled <span class="count"></span>times</nav>       
+                    <script>
+                        let q  = 0;
+                        $(function(){
+                            $(window).scroll(function(){
+                                $("span.count").text( q += 1);
+                            })
+                        })
+                    </script>             
+
+                    16) .select : 텍스트필드에서 텍스트가 선택(표시)될때 발생합니다.(텍스트를 긁었을때)
+                    <input type="text" class="form-control" value="저를 드래그하세요">
+                    <script>
+                        $(function(){
+                            $("input").select(function(){
+                                alert("text marked")
+                            })
+                        })
+                    </script>
+                    17.trigger() : 선택한 요소에 대해 지정된 이벤트 및 이벤트의 기보동작(양식제출)을 트리거 합니다.
+                    <input type="text" value="hello">
+                    <button>click</button>
+                    <script>
+                        $(function(){
+                            $("input").select(function(){
+                                $("input").after("Text Marked")
+                            });
+                            $("button").click(function(){
+                                $("input").trigger("select");
+                            });
+                        });
+                    </script>
+                    18) .triggerHandler : 선택한 요소에 대한 지정된 이벤트를 트리거 합니다.
+                    <input type="text" value="world">
+                    <button>
+                        trigger
+                    </button>
+                    <script>
+                        $(function(){
+                            $("input").select(function(){
+                                $("input").after("Select event triggerd")
+                            })
+                        })
+                    </script>
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

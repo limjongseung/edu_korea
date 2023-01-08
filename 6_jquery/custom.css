@@ -22,3 +22,12 @@ div.box { height:50px; border:1px solid #bcbcbc; background:#dadada; }
     border: 1px solid blue;
     background: lightblue;
 }
+.blue{
+    color:blue;
+}
+.dn{
+    display: none;
+}
+
+
+
