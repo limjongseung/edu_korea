@@ -30,9 +30,45 @@
                 - 형제 자매는 같은 부모를 공유합니다.
                 - 종류
                 siblings(): 선택한 요소의 모든 형제 요소를 리턴
+                <div>div
+                  <p>p</p>
+                  <span>span</span>
+                  <h2>h2</h2>
+                </div>
+                <script>
+              $(document).ready(function(){
+                $("h2").siblings().css("color","red");
+              })
+                </script>
                 next(): 선택한 요소의 다음  형제 요소를 리턴
+                <div>div
+                  <p>p</p>
+                  <span>span</span>
+                  <h2 class="h">h2</h2>
+                  <p>h2</p>
+                </div>
+                <script>
+               $(document).ready(function(){
+                $("h2.h").nextAll().css("border","2px solid red");
+               });
+                </script>
                 nextAll(): 선택한 요소의 모든 다음 형제요소를 리턴
-                nextUbtyil: 주어진 두 인수 사이의 모든 다음 형제요소를 리터
+                nextUbtyil: 주어진 두 인수 사이의 모든 다음 형제요소를 리턴
+                <div>div
+                  <p>p</p>
+                  <span>span</span>
+                  <h2 class="h2">h2</h2>
+                  <h3>h3</h3>
+                  <h4>h4</h4>
+                  <h5>h5</h5>
+                  <h6 class="h6">h6</h6>
+                  <p>h2</p>
+                </div>
+                <script>
+                  $(function(){
+                    $("h2.h2").nextAll("h6.h6").css({"color":"red","border":"2px solid black"})
+                  })
+                </script>
                 prev(): 선택한 요소의 리전 형제 요소를 리턴
                 prevAll(): 선택한 요소의 이전 다음 형제 요소를 리턴
                 prevUntill(): 주어진 두 인수 사이의 모든 이전 형제요소를 리턴
